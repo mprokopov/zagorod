@@ -1,0 +1,72 @@
+barish:
+  id: "1"	
+  name: "Баришевский"
+bilocerk:
+  id: "2"	
+  name: "Белоцерковский"
+boguslav:
+  id: "3"	
+  name: "Богуславский"
+borisp:
+  id: "4"	
+  name: "Бориспольский"
+borodyan:
+  id: "5"	
+  name: "Бородянский"
+brovarsk:
+  id: "6"
+  name: "Броварской"
+vasil:
+  id: "7"
+  name: "Васильковский"
+vyshg:
+  id: "8"	
+  name: "Вишгородский"
+volodar:
+  id: "9"
+  name: "Володарский"
+zgurov:
+  id: "10"	
+  name: "Згуровский"
+ivankov:
+  id: "11"	
+  name: "Иванковский"
+kagarl:
+  id: "12"	
+  name: "Кагарлыкский"
+kievosvyat:
+  id: "13"	
+  name: "Киево-Святошинский"
+makarov:
+  id: "14"	
+  name: "Макаровский"
+mironov:
+  id: "15"	
+  name: "Мироновский"
+obuhov:
+  id: "16"	
+  name: "Обуховский"
+perevyaslav:
+  id: "17"	
+  name: "Переяслав-Хмельницкий"
+polsess:
+  id: "18"	
+  name: "Полесский"
+rakityan:
+  id: "19"	
+  name: "Ракитянский"
+skvirsk:
+  id: "20"	
+  name: "Сквирский"
+tarashch:
+  id: "21"	
+  name: "Таращанский"
+tetiev:
+  id: "22"	
+  name: "Тетиевский"
+fastov:
+  id: "23"	
+  name: "Фастовский"
+yagotin:
+  id: "24"	
+  name: "Яготинский"

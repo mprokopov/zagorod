@@ -1,0 +1,28 @@
+﻿<map>
+ <point x="200" y="200">
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+ </point>
+ <point name="point2" x="200" y="50">
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+ </point>
+ <point name="point3" x="250" y="250">
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+ </point>
+ <point name="point4" x="350" y="550">
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+ </point>
+
+ <point name="point4" x="350" y="350">
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+  <lot name="с. Пологи-Чобитки" id="1234" image="map/foto1.jpg" region="Переяслав-Хмельницкий район" area="1,25 га" price="$1,000" cost="$25,000" link="/view.php?id=123" kiev="55 км" gas="до 100 м" electric="до 100 м" wood="более 100 м" feature1="Озеро примыкает" feature2="Асфальт до самого участка"></lot>
+  <else count="5" link="/else/blablabla"></else>
+ </point>
+
+</map>

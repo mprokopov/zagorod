@@ -1,0 +1,364 @@
+--- 
+buildings_lots_048: 
+  lot_id: "3065"
+  building_id: "4"
+buildings_lots_103: 
+  lot_id: "3094"
+  building_id: "2"
+buildings_lots_076: 
+  lot_id: "3080"
+  building_id: "4"
+buildings_lots_049: 
+  lot_id: "3067"
+  building_id: "2"
+buildings_lots_104: 
+  lot_id: "3094"
+  building_id: "4"
+buildings_lots_077: 
+  lot_id: "3081"
+  building_id: "2"
+buildings_lots_105: 
+  lot_id: "3095"
+  building_id: "2"
+buildings_lots_078: 
+  lot_id: "3081"
+  building_id: "4"
+buildings_lots_106: 
+  lot_id: "3095"
+  building_id: "4"
+buildings_lots_020: 
+  lot_id: "3050"
+  building_id: "5"
+buildings_lots_079: 
+  lot_id: "3082"
+  building_id: "2"
+buildings_lots_107: 
+  lot_id: "3096"
+  building_id: "1"
+buildings_lots_021: 
+  lot_id: "3051"
+  building_id: "1"
+buildings_lots_108: 
+  lot_id: "3096"
+  building_id: "3"
+buildings_lots_050: 
+  lot_id: "3067"
+  building_id: "4"
+buildings_lots_022: 
+  lot_id: "3051"
+  building_id: "3"
+buildings_lots_051: 
+  lot_id: "3068"
+  building_id: "2"
+buildings_lots_023: 
+  lot_id: "3051"
+  building_id: "5"
+buildings_lots_109: 
+  lot_id: "3096"
+  building_id: "5"
+buildings_lots_052: 
+  lot_id: "3068"
+  building_id: "4"
+buildings_lots_024: 
+  lot_id: "3052"
+  building_id: "1"
+buildings_lots_080: 
+  lot_id: "3082"
+  building_id: "4"
+buildings_lots_025: 
+  lot_id: "3052"
+  building_id: "3"
+buildings_lots_081: 
+  lot_id: "3083"
+  building_id: "2"
+buildings_lots_053: 
+  lot_id: "3069"
+  building_id: "2"
+buildings_lots_026: 
+  lot_id: "3052"
+  building_id: "5"
+buildings_lots_082: 
+  lot_id: "3083"
+  building_id: "4"
+buildings_lots_054: 
+  lot_id: "3069"
+  building_id: "4"
+buildings_lots_027: 
+  lot_id: "3053"
+  building_id: "1"
+buildings_lots_083: 
+  lot_id: "3084"
+  building_id: "2"
+buildings_lots_055: 
+  lot_id: "3070"
+  building_id: "2"
+buildings_lots_110: 
+  lot_id: "3097"
+  building_id: "1"
+buildings_lots_028: 
+  lot_id: "3053"
+  building_id: "3"
+buildings_lots_084: 
+  lot_id: "3084"
+  building_id: "4"
+buildings_lots_056: 
+  lot_id: "3070"
+  building_id: "4"
+buildings_lots_111: 
+  lot_id: "3097"
+  building_id: "3"
+buildings_lots_029: 
+  lot_id: "3053"
+  building_id: "5"
+buildings_lots_085: 
+  lot_id: "3085"
+  building_id: "2"
+buildings_lots_057: 
+  lot_id: "3071"
+  building_id: "2"
+buildings_lots_112: 
+  lot_id: "3097"
+  building_id: "5"
+buildings_lots_086: 
+  lot_id: "3085"
+  building_id: "4"
+buildings_lots_058: 
+  lot_id: "3071"
+  building_id: "4"
+buildings_lots_113: 
+  lot_id: "3103"
+  building_id: "1"
+buildings_lots_087: 
+  lot_id: "3086"
+  building_id: "2"
+buildings_lots_059: 
+  lot_id: "3072"
+  building_id: "2"
+buildings_lots_114: 
+  lot_id: "3103"
+  building_id: "4"
+buildings_lots_115: 
+  lot_id: "3104"
+  building_id: "1"
+buildings_lots_088: 
+  lot_id: "3086"
+  building_id: "4"
+buildings_lots_001: 
+  lot_id: "3001"
+  building_id: "2"
+buildings_lots_116: 
+  lot_id: "3104"
+  building_id: "2"
+buildings_lots_030: 
+  lot_id: "3054"
+  building_id: "1"
+buildings_lots_089: 
+  lot_id: "3087"
+  building_id: "2"
+buildings_lots_002: 
+  lot_id: "3001"
+  building_id: "3"
+buildings_lots_117: 
+  lot_id: "3104"
+  building_id: "4"
+buildings_lots_031: 
+  lot_id: "3054"
+  building_id: "3"
+buildings_lots_003: 
+  lot_id: "3002"
+  building_id: "4"
+buildings_lots_118: 
+  lot_id: "3105"
+  building_id: "2"
+buildings_lots_004: 
+  lot_id: "3003"
+  building_id: "1"
+buildings_lots_060: 
+  lot_id: "3072"
+  building_id: "4"
+buildings_lots_032: 
+  lot_id: "3054"
+  building_id: "5"
+buildings_lots_119: 
+  lot_id: "3105"
+  building_id: "4"
+buildings_lots_005: 
+  lot_id: "3003"
+  building_id: "3"
+buildings_lots_061: 
+  lot_id: "3073"
+  building_id: "2"
+buildings_lots_033: 
+  lot_id: "3058"
+  building_id: "2"
+buildings_lots_006: 
+  lot_id: "3046"
+  building_id: "1"
+buildings_lots_090: 
+  lot_id: "3087"
+  building_id: "4"
+buildings_lots_062: 
+  lot_id: "3073"
+  building_id: "4"
+buildings_lots_034: 
+  lot_id: "3058"
+  building_id: "4"
+buildings_lots_007: 
+  lot_id: "3046"
+  building_id: "3"
+buildings_lots_091: 
+  lot_id: "3088"
+  building_id: "2"
+buildings_lots_063: 
+  lot_id: "3074"
+  building_id: "2"
+buildings_lots_035: 
+  lot_id: "3059"
+  building_id: "2"
+buildings_lots_008: 
+  lot_id: "3046"
+  building_id: "5"
+buildings_lots_092: 
+  lot_id: "3088"
+  building_id: "4"
+buildings_lots_064: 
+  lot_id: "3074"
+  building_id: "4"
+buildings_lots_036: 
+  lot_id: "3059"
+  building_id: "4"
+buildings_lots_120: 
+  lot_id: "3106"
+  building_id: "5"
+buildings_lots_009: 
+  lot_id: "3047"
+  building_id: "1"
+buildings_lots_093: 
+  lot_id: "3089"
+  building_id: "2"
+buildings_lots_065: 
+  lot_id: "3075"
+  building_id: "2"
+buildings_lots_037: 
+  lot_id: "3060"
+  building_id: "2"
+buildings_lots_121: 
+  lot_id: "3107"
+  building_id: "2"
+buildings_lots_094: 
+  lot_id: "3089"
+  building_id: "4"
+buildings_lots_066: 
+  lot_id: "3075"
+  building_id: "4"
+buildings_lots_038: 
+  lot_id: "3060"
+  building_id: "4"
+buildings_lots_067: 
+  lot_id: "3076"
+  building_id: "2"
+buildings_lots_039: 
+  lot_id: "3061"
+  building_id: "2"
+buildings_lots_095: 
+  lot_id: "3090"
+  building_id: "2"
+buildings_lots_068: 
+  lot_id: "3076"
+  building_id: "4"
+buildings_lots_096: 
+  lot_id: "3090"
+  building_id: "4"
+buildings_lots_010: 
+  lot_id: "3047"
+  building_id: "3"
+buildings_lots_069: 
+  lot_id: "3077"
+  building_id: "2"
+buildings_lots_097: 
+  lot_id: "3091"
+  building_id: "2"
+buildings_lots_098: 
+  lot_id: "3091"
+  building_id: "4"
+buildings_lots_011: 
+  lot_id: "3047"
+  building_id: "5"
+buildings_lots_040: 
+  lot_id: "3061"
+  building_id: "4"
+buildings_lots_099: 
+  lot_id: "3092"
+  building_id: "2"
+buildings_lots_012: 
+  lot_id: "3048"
+  building_id: "1"
+buildings_lots_041: 
+  lot_id: "3062"
+  building_id: "2"
+buildings_lots_013: 
+  lot_id: "3048"
+  building_id: "3"
+buildings_lots_070: 
+  lot_id: "3077"
+  building_id: "4"
+buildings_lots_042: 
+  lot_id: "3062"
+  building_id: "4"
+buildings_lots_014: 
+  lot_id: "3048"
+  building_id: "5"
+buildings_lots_071: 
+  lot_id: "3078"
+  building_id: "2"
+buildings_lots_043: 
+  lot_id: "3063"
+  building_id: "2"
+buildings_lots_015: 
+  lot_id: "3049"
+  building_id: "1"
+buildings_lots_072: 
+  lot_id: "3078"
+  building_id: "4"
+buildings_lots_044: 
+  lot_id: "3063"
+  building_id: "4"
+buildings_lots_016: 
+  lot_id: "3049"
+  building_id: "3"
+buildings_lots_073: 
+  lot_id: "3079"
+  building_id: "2"
+buildings_lots_045: 
+  lot_id: "3064"
+  building_id: "2"
+buildings_lots_100: 
+  lot_id: "3092"
+  building_id: "4"
+buildings_lots_017: 
+  lot_id: "3049"
+  building_id: "5"
+buildings_lots_046: 
+  lot_id: "3064"
+  building_id: "4"
+buildings_lots_101: 
+  lot_id: "3093"
+  building_id: "2"
+buildings_lots_018: 
+  lot_id: "3050"
+  building_id: "1"
+buildings_lots_074: 
+  lot_id: "3079"
+  building_id: "4"
+buildings_lots_047: 
+  lot_id: "3065"
+  building_id: "2"
+buildings_lots_102: 
+  lot_id: "3093"
+  building_id: "4"
+buildings_lots_019: 
+  lot_id: "3050"
+  building_id: "3"
+buildings_lots_075: 
+  lot_id: "3080"
+  building_id: "2"

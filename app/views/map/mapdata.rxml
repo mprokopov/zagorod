@@ -1,0 +1,16 @@
+xml.instruct! :xml, :version=>"1.0" 
+xml.map{
+#  for lot in @lots
+  @grouped_lots.each {|num, lots|
+      xml.point(:x=>lots.first.point_x, :y=>lots.first.point_y){
+        @lot_counter=0
+    lots.each { |lot|
+        @photo = Photo.find_by_id(lot.selected_photo_id)
+        @lot_counter+=1
+          image=url_for_file_column('photo','image','preview') if @photo
+          xml.lot('',{:name=>lot.area, :id=>"%05d" % lot.id.to_s, :region=>lot.region.name, :image=>image,:area=>"%.2f" % lot.square, :price=>"%d" % lot.price_per_square, :cost=>"%d" % lot.full_price, :link=>'/catalogue/'+lot.id.to_s, :kiev=>"%d" % lot.distance_to_city, :gas=>lot.gas.distance, :electric=>lot.electricity.distance, :feature1name=>'Асфальт',:feature1=>lot.lotroad_distance.distance, :feature2name=>lot.feature1name, :feature2=>lot.feature1,:feature3=>lot.feature2,:feature3name=>lot.feature2name}) unless @lot_counter>4
+      }
+    xml.else(:count=>lots.length, :link=>"/catalogue/?search[point_x]=#{lots.first.point_x}&amp;search[point_y]=#{lots.first.point_y}") if lots.length>4
+    }
+  }
+}

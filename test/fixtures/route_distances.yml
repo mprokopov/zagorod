@@ -1,0 +1,22 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: route_distances
+#
+#  id       :integer(11)   not null, primary key
+#  distance :string(150)   default(), not null
+#
+
+--- 
+route_distances_004: 
+  id: "4"
+  distance: "более 5 км"
+route_distances_001: 
+  id: "1"
+  distance: "до 1 км"
+route_distances_002: 
+  id: "2"
+  distance: "1-3 км"
+route_distances_003: 
+  id: "3"
+  distance: "3-5 км" 

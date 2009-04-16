@@ -1,0 +1,166 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: pages
+#
+#  id            :integer(11)   not null, primary key
+#  parent_id     :integer(11)   default(0)
+#  url           :string(255)   
+#  text          :text          
+#  is_published  :integer(4)    
+#  in_top_menu   :string(0)     default()
+#  has_left_menu :integer(11)   default(0)
+#  title         :string(255)   
+#  preview       :text          
+#  keywords      :text          default(), not null
+#  description   :text          default(), not null
+#
+
+--- 
+pages_008: 
+  has_left_menu: "1"
+  title: "\xD0\xAD\xD0\xBA\xD1\x81\xD0\xBF\xD0\xB5\xD1\x80\xD1\x82\xD0\xBD\xD0\xB0\xD1\x8F \xD0\xBE\xD1\x86\xD0\xB5\xD0\xBD\xD0\xBA\xD0\xB0"
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: expertise
+  id: "8"
+  description: ""
+  preview: ""
+  parent_id: "3"
+  keywords: ""
+pages_009: 
+  has_left_menu: "1"
+  title: "\xD0\xA1\xD0\xB5\xD0\xBB. / \xD0\x9F\xD0\xBE\xD1\x81\xD0\xB5\xD0\xBB. \xD1\x81\xD0\xBE\xD0\xB2\xD0\xB5\xD1\x82\xD1\x8B"
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: selsovet
+  id: "10"
+  description: ""
+  preview: ""
+  parent_id: "3"
+  keywords: ""
+pages_010: 
+  has_left_menu: "0"
+  title: "\xD0\xA1\xD0\xBE\xD0\xBE\xD0\xB1\xD1\x89\xD0\xB5\xD0\xBD\xD0\xB8\xD0\xB5 \xD0\xBE \xD1\x83\xD1\x81\xD0\xBF\xD0\xB5\xD1\x88\xD0\xBD\xD0\xBE\xD0\xBC \xD1\x81\xD0\xBE\xD1\x85\xD1\x80\xD0\xB0\xD0\xBD\xD0\xB5\xD0\xBD\xD0\xB8\xD0\xB8 \xD0\xBA\xD0\xB0\xD1\x80\xD1\x82\xD0\xBE\xD1\x87\xD0\xBA\xD0\xB8"
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: finish
+  id: "12"
+  description: ""
+  preview: ""
+  parent_id: "0"
+  keywords: ""
+pages_011: 
+  has_left_menu: "0"
+  title: "\xD0\xA1\xD0\xBE\xD0\xBE\xD0\xB1\xD1\x89\xD0\xB5\xD0\xBD\xD0\xB8\xD0\xB5 \xD0\xBE\xD0\xB1 \xD1\x83\xD1\x81\xD0\xBF\xD0\xB5\xD1\x88\xD0\xBD\xD0\xBE\xD0\xB9 \xD0\xBE\xD1\x82\xD0\xBF\xD1\x80\xD0\xB0\xD0\xB2\xD0\xBA\xD0\xB8 \xD0\xBE\xD0\xB1\xD1\x80\xD0\xB0\xD1\x82\xD0\xBD\xD0\xBE\xD0\xB9 \xD1\x81\xD0\xB2\xD1\x8F\xD0\xB7\xD0\xB8"
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: feedback_thanks
+  id: "13"
+  description: ""
+  preview: ""
+  parent_id: "0"
+  keywords: ""
+pages_012: 
+  has_left_menu: "0"
+  title: "\xD0\x97\xD0\xB0\xD0\xBF\xD1\x80\xD0\xBE\xD1\x81 \xD0\xBF\xD1\x80\xD0\xB8\xD0\xBD\xD1\x8F\xD1\x82 \xD0\xB2 \xD0\xBE\xD0\xB1\xD1\x80\xD0\xB0\xD0\xB1\xD0\xBE\xD1\x82\xD0\xBA\xD1\x83"
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: request_saved
+  id: "14"
+  description: ""
+  preview: ""
+  parent_id: "0"
+  keywords: ""
+pages_001: 
+  has_left_menu: "0"
+  title: "\xD0\x9E \xD0\xBF\xD1\x80\xD0\xBE\xD0\xB5\xD0\xBA\xD1\x82\xD0\xB5"
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: about
+  id: "1"
+  description: ""
+  preview: ""
+  parent_id: "0"
+  keywords: ""
+pages_002: 
+  has_left_menu: "0"
+  title: "\xD0\x9D\xD0\xB0\xD1\x88\xD0\xB8 \xD1\x83\xD1\x81\xD0\xBB\xD1\x83\xD0\xB3\xD0\xB8"
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: services
+  id: "2"
+  description: ""
+  preview: ""
+  parent_id: "0"
+  keywords: ""
+pages_003: 
+  has_left_menu: "1"
+  title: "\xD0\x9F\xD0\xBE\xD0\xBB\xD0\xB5\xD0\xB7\xD0\xBD\xD0\xB0\xD1\x8F \xD0\xB8\xD0\xBD\xD1\x84\xD0\xBE\xD1\x80\xD0\xBC\xD0\xB0\xD1\x86\xD0\xB8\xD1\x8F"
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: useful
+  id: "3"
+  description: ""
+  preview: ""
+  parent_id: "0"
+  keywords: ""
+pages_004: 
+  has_left_menu: "0"
+  title: "\xD0\x9E\xD0\xB1\xD1\x80\xD0\xB0\xD1\x82\xD0\xBD\xD0\xB0\xD1\x8F \xD1\x81\xD0\xB2\xD1\x8F\xD0\xB7\xD1\x8C"
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: feedback
+  id: "4"
+  description: ""
+  preview: ""
+  parent_id: "0"
+  keywords: ""
+pages_005: 
+  has_left_menu: "1"
+  title: !binary |
+    0JHQotCY
+
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: bti
+  id: "5"
+  description: ""
+  preview: ""
+  parent_id: "3"
+  keywords: ""
+pages_006: 
+  has_left_menu: "1"
+  title: !binary |
+    0J3QvtGC0LDRgNC40YPRgdGL
+
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: notarius
+  id: "6"
+  description: ""
+  preview: ""
+  parent_id: "3"
+  keywords: ""
+pages_007: 
+  has_left_menu: "1"
+  title: "\xD0\x97\xD0\xB5\xD0\xBC\xD0\xB5\xD0\xBB\xD1\x8C\xD0\xBD\xD1\x8B\xD0\xB5 \xD1\x80\xD0\xB5\xD1\x81\xD1\x83\xD1\x80\xD1\x81\xD1\x8B"
+  text: ""
+  in_top_menu: ""
+  is_published: 
+  url: resources
+  id: "7"
+  description: ""
+  parent_id: "3"
+  keywords: ""

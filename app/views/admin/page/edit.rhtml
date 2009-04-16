@@ -1,0 +1,18 @@
+<% @url="/pages/#{@page.url}"%>
+<% @page_title="Изменить страницу #{@page.title}" %>
+<div id="ajaxnotice" class="notice"></div>
+<%= start_form_tag(:action=>'update', :id=>@page.id)%>
+    <%= hidden_field_tag("preview")%>
+    <%= text_area_tag('text', @page.text,:size => "140x32") %>
+    <br/>
+    <%= submit_tag('Публиковать',:id=>'save')%>
+    <%= submit_to_preview('notice','Сохранить для предпросмотра', :url => { :action => :update_preview, :id=>@page.id },:class=>'save2')%>
+    <%= link_to(icon('window','предпросмотр'), {:controller=>'/page', :action=>'index', :url=>@page.url, :preview=>'yes'}, :target=>'_blank')%>
+    <%= link_to(icon('cancel','Отмена'),  :action=>'list') %>
+<%= end_form_tag() %>
+
+<%= javascript_tag("function updatePreview()
+    {
+      document.forms[0].elements[\'preview\'].value=tinyMCE.getContent();
+      return true;
+    }") %>              

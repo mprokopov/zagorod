@@ -1,0 +1,9 @@
+<%= @flash[:notice] if @flash[:notice] %>
+<% if @errors %>
+<div class="subtext">
+  <% @errors.each do |error| %>
+  <div class="brown">* <%= error%></div>
+  <% end %>
+</div>
+<% end %>
+

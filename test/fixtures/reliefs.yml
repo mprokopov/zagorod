@@ -1,0 +1,19 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: reliefs
+#
+#  id     :integer(11)   not null, primary key
+#  relief :string(200)   default(), not null
+#
+
+--- 
+plain:
+  id: "1"	
+  relief: "ровный"
+on_hill:
+  id: "2"
+  relief: "на склоне"
+curves:
+  id: "3"	
+  relief: "ямы на участке/яр"

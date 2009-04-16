@@ -1,0 +1,2 @@
+<% @page_title='Запрос принят в обработку' %>
+<%= render :partial => '/shared/main_block', :locals=>{:text=>Page.find_by_url('request_saved').text} %>

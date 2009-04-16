@@ -1,0 +1,60 @@
+		 <!--карточка участка-->
+		 <table cellpadding="0" cellspacing="7" border="0" width="100%" bgcolor="#FFFFFF">
+		  <tr>
+                    <td valign="top" align="center">
+                      <% @photo = Photo.find_by_id(lot.selected_photo_id) %>
+                      <%= link_to(image_tag(url_for_file_column("photo","image","preview"),{:width=>"121", :height=>"88", :border=>"3",:class=>"preview"}),{:action=>'details',:id=>lot},{:class=>'detail'}) if @photo%>
+                 <br /><img src="/images/empty.gif" width="1" height="20" border="0" align="absmiddle" alt="" /><b># <%= "%05d" % lot.id%></b>
+		   </td>
+		   <td width="50%" valign="top">
+		    <span class="text12"><%= lot.area%>,<br />
+			<b><%= lot.region.name%></b></span>
+			<br /><img src="/images/empty.gif" width="1" height="8" border="0" alt="" /><br />
+			<table width="100%" cellpadding="1" cellspacing="0" border="0" class="line">
+			 <tr>
+			  <td width="50%">Площадь</td>
+			  <td class="value" width="50%"><img src="/images/dots4.gif" width="1" height="17" border="0" align="absmiddle" hspace="5" alt="" /><%= "%.2f" % lot.square%> га</td>			  
+			 </tr>
+			 <tr>
+			  <td>Цена за 0.01га</td>
+			  <td class="value"><img src="/images/dots4.gif" width="1" height="17" border="0" align="absmiddle" hspace="5" alt="" />$<%= "%d" % lot.price_per_square.to_i%></td>			  
+			 </tr>
+			 <tr>
+			  <td>Стоимость</td>
+			  <td class="value"><img src="/images/dots4.gif" width="1" height="17" border="0" align="absmiddle" hspace="5" alt="" />$<%= "%d" %lot.full_price.to_i%></td>
+			 </tr>
+			</table>
+			<img src="/images/empty.gif" width="1" height="5" border="0" alt="" /><br />
+			<%= link_to('подробнее'+image_tag('arrow.gif',{:width=>'11',:height=>'11',:hspace=>'3',:border=>'0',:align=>"absmiddle"}),{:action=>'details',:id=>lot},{:class=>'detail'})%>
+		   </td>		   
+		   <td width="50%" valign="top">
+			<table width="100%" cellpadding="1" cellspacing="0" border="0" class="line">
+			 <tr>
+			  <td width="50%">Расстояние до Киева</td>
+			  <td class="value2" width="50%"><img src="/images/dots4.gif" width="1" height="17" border="0" align="absmiddle" hspace="5" alt="" /><%= "%.1f" % lot.distance_to_city%> км</td>
+			 </tr>
+			 <tr>
+			  <td>Газ</td>
+			  <td class="value2"><img src="/images/dots4.gif" width="1" height="17" border="0" align="absmiddle" hspace="5" alt="" /><%= lot.gas.distance%></td> 
+			 </tr>
+			 <tr>
+			  <td>Электричество</td>
+			  <td class="value2"><img src="/images/dots4.gif" width="1" height="17" border="0" align="absmiddle" hspace="5" alt="" /><%= lot.electricity.distance%></td>			  
+			 </tr>
+                         <tr>
+			  <td>Асфальт</td>
+			  <td class="value2"><img src="/images/dots4.gif" width="1" height="17" border="0" align="absmiddle" hspace="5" alt="" /><%= lot.lotroad_distance.distance%></td>			  			  
+			 </tr>
+<!-- природа -->
+		     <% for nature in lot.natures%>
+                     <tr>
+			  <td><%= nature.nature_type.nature%></td>
+			  <td class="value2"><img src="/images/dots4.gif" width="1" height="17" border="0" align="absmiddle" hspace="5" alt="" /><%= nature.nature_distance.distance if nature.nature_type.has_distance==1%></td>
+			 </tr>
+                         <% end %>
+			</table>
+		   </td>		   		   
+		  </tr>
+		 </table>
+		 <!--конец: карточка участка-->
+		<br />

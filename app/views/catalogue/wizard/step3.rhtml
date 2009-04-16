@@ -1,0 +1,101 @@
+<!-- здесь будет загрузка картинок -->
+<!-- скопировать форму загрузки с step2-->
+<!--основная часть-->
+<!-- покажем уже загруженные фотографии -->
+  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+   <tr>
+    <td width="20%" valign="top">
+     <table cellpadding="0" cellspacing="0" border="0" width="100%">		
+       <tr>
+         <td bgcolor="#EFEDC6"><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>
+         <td bgcolor="#EFEDC6" class="headerleft" width="100%">Шаг 3. <span class="normal">Добавить фотографии</span></td>
+         <td><img src="/images/p16.gif" width="2" height="19" border="0" alt="" /><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>		
+      </tr>
+	  <tr>
+	   <td></td>
+	   <td class="search">
+             <ul class="arrow">
+               <li><%= link_to("Вернуться к: Шагу 2",{:action=>'step2'},{:class=>"detail"})%></li>
+             </ul>
+            <% begin %>
+            <%= Page.find_by_url('step3').text %>
+            <% rescue %>
+            <% end %>
+           </td>
+             </ul>	 
+           <td></td>		   
+         </tr>
+       </table>
+     </td>
+     <td style="background:url('/images/dots1.gif') repeat-y center;"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td>		
+     <td width="80%" valign="top">
+
+       <table cellpadding="0" cellspacing="0" border="0" width="100%">
+         <tr>
+           <td><img src="/images/empty.gif" width="7" height="1" border="0" alt="" /></td>
+           <td>
+             <table cellpadding="0" cellspacing="0" border="0" width="100%">
+               <tr>
+                 <td>
+                   <p class="pageheader" style="margin-bottom:5px;">ФОТОГРАФИИ ОБЪЕКТА</p>
+                    <%=  form_tag({},{:multipart=>true}) %> 
+                        <!-- обработка ошибок --> 
+                        <% if @errors %>
+                        <div class="subtext">
+                          <% @errors.each do |error| %>
+                          <div class="brown">* <%= error%></div>
+                          <% end %>
+                        </div>
+                        <% end %>
+                        <!-- /обработка --> 
+                    
+                   <table cellpadding="5" cellspacing="0" border="0" width="100%">
+                   <!-- начало списка -->
+                   <% i=0 %>
+                    <% @lot.photos.each do |@photo| %>
+                    <% i+=1 %>
+                    <!-- проверка на обязательные -->
+                    <% star= i<=5 ? "star" : "empty" %>
+                      <tr>
+                       <td class="subtext" width="30%"><label for="photo[2]">фото #<%= i %></label></td>
+                       <td valign="top"><img src="/images/<%=star-%>.gif" width="11" height="11" border="0" alt="" /></td>
+                       <td class="text12" width="40%"><%= image_tag(url_for_file_column('photo','image','thumb'),{:width=>'174', :height=>'121', :border=>'0',:class=>'preview'})%>
+                       </td>
+                     </tr>
+                     <% end %>
+                     <!-- конец списка -->
+                   
+                     <tr bgcolor="#ffffff">
+                       <td class="subtext" width="30%"><label for="photo">загрузите фото </label></td>
+                       <td valign="top"><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                       <td class="text12" width="40%">
+                         <input name="photo" id="photo" type="file" style="width:100%;" /></td>
+                       <td width="30%" bgcolor="#FCFCF1" class="help" rowspan="7" valign="top"><b>требования к файлам</b>:<br /> jpeg, цветной, минимальный формат 800x600, рекомендуемый объем одной фотографии не более 2 Мб<br/><br/>
+                         Не принимаются для размещения на сайте фотографии, сделанные: камерой с матрицей менее 1.5 megapixels, мобильным телефоном, а также не качественные не разборчивые снимки.</td>
+                     </tr>
+                      <tr> 
+            			  <td colspan="3" class="text12" align="center">
+            			  <%= submit_tag('Сохранить и добавить еще фото',:style=>'font-size:12px;')%>
+            			  <% if i>4 %>
+            			  <%= submit_tag('Сохранить и отправить анкету',:style=>'font-size:12px;')  %>
+            			  <% else%>
+            			  <p>минимальное количество фотографий - 5</p>
+            			  <% end %>
+            			  </td>
+            			  <td></td>
+            		 </tr>		
+                   </table>
+                   <%= end_form_tag %>
+
+                 </td>
+               </tr>
+             </table>  
+             <img src="/images/empty.gif" width="1" height="7" border="0" alt="" />
+           </td>
+           <td><img src="/images/empty.gif" width="7" height="1" border="0" alt="" /></td>
+         </tr>
+       </table> 
+     </td>
+   </tr>
+ </table> 			
+ <!--конец:основная часть-->	  

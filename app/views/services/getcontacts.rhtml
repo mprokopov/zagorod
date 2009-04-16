@@ -1,0 +1,45 @@
+<% @text=capture do %>
+<b>Спасибо что проявили интерес к нашим участкам.</b>
+<p> 
+Вас заинтересовал участок # <b><%= "%05d" % @lot.id.to_s %></b>
+</p>
+<% begin %>
+<%= Page.find_by_url('getcontacts').text %>
+<% rescue %>
+<% end %>
+<%= start_form_tag({:action=>'save'},{:class=>'myform'})%>
+<%= hidden_field_tag "contacts[lot_id]", @lot.id.to_s %>
+<table>
+  <tr><td><label for="contacts_name">Имя:</label></td><td><%= text_field :contacts, :name %></td></tr>
+  <tr><td><label for="contacts_phone">Контактный телефон:</label></td><td><%= text_field :contacts, :phone %></tr></td>
+  <tr><td><label for="contacts_email">e-mail:</label></td><td> <%= text_field :contacts, :email %></td></tr>
+  <tr><td colspan="2">
+      <br/>
+      Мы свяжемся с Вами в течение ближайших двух (2) часов для координации дальнейшей работы.<br/><br/>
+<%= submit_tag 'Получить контакты' %>
+  </td></tr>
+</table>
+<%= end_form_tag %>
+<% end %>
+<%= render :partial => '/shared/main_block', :locals=>{:text=>@text} %>
+ 
+
+<%= javascript_include_tag 'fieldvalidator' %>
+<script type="text/javascript">
+			var oFieldValidator1 = new FieldValidator('contacts_name', null, SetFieldState, SetFieldState)
+			var oFieldValidator2 = new FieldValidator('contacts_phone', null, SetFieldState, SetFieldState)
+			var oFieldValidator3 = new FieldValidator('contacts_email', 'Email', SetFieldState, SetFieldState)
+			function SetFieldState()
+			{
+				var sId = this.oFieldNode.getAttribute('id')
+				var aLabels = this.oFieldNode.form.getElementsByTagName('label')
+				for( var i=0; i<aLabels.length; i++ )
+				{
+					if( aLabels[i].htmlFor == sId )
+					{
+						aLabels[i].style.color = this.bValidated ? '' : 'red'
+						break
+					}
+                                }
+                        }
+</script>

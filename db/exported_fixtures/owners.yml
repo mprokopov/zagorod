@@ -1,0 +1,55 @@
+--- 
+owners_001: 
+  is_other_contacts_allowed: "1"
+  created_on: 2006-10-09 13:55:39
+  fio: !binary |
+    0J/QtdGC0YA=
+
+  updated_on: 2006-10-10 15:16:40
+  preferred_contact_type: "\xD0\x9F\xD0\xBE \xD1\x82\xD0\xB5\xD0\xBB\xD0\xB5\xD1\x84\xD0\xBE\xD0\xBD\xD1\x83"
+  id: "30"
+  phone_city: (050) 410 6418
+  phone: (067) 4793747
+  another_contact_phone: (050) 410 6418
+  email: him@bigmir.net
+  another_contact_fio: !binary |
+    0J/QtdGC0YA=
+
+owners_002: 
+  is_other_contacts_allowed: "1"
+  created_on: 2006-10-23 16:45:05
+  fio: !binary |
+    0YTQv9C+0Ls=
+
+  updated_on: 2006-10-23 17:25:40
+  preferred_contact_type: "\xD0\x9F\xD0\xBE \xD1\x82\xD0\xB5\xD0\xBB\xD0\xB5\xD1\x84\xD0\xBE\xD0\xBD\xD1\x83"
+  id: "32"
+  phone_city: !binary |
+    0L/QtNC70LLQvg==
+
+  phone: !binary |
+    0YvQtNC/0L4=
+
+  another_contact_phone: !binary |
+    0YvQv9C+0Ls=
+
+  email: salfj@msgdk.net
+  another_contact_fio: !binary |
+    0YvQv9C00LvQvg==
+
+owners_003: 
+  is_other_contacts_allowed: "1"
+  created_on: 2006-10-24 09:43:57
+  fio: !binary |
+    0J/QtdGC0YA=
+
+  updated_on: 2006-10-24 09:43:57
+  preferred_contact_type: "\xD0\x9F\xD0\xBE \xD1\x82\xD0\xB5\xD0\xBB\xD0\xB5\xD1\x84\xD0\xBE\xD0\xBD\xD1\x83"
+  id: "33"
+  phone_city: (050) 410 6418
+  phone: (067) 4793747
+  another_contact_phone: (067) 4343434
+  email: him@bigmir.net
+  another_contact_fio: !binary |
+    0J/QtdGC0YA=
+

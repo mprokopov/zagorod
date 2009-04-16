@@ -1,0 +1,355 @@
+--- 
+greens_lots_118: 
+  green_id: "2"
+  lot_id: "3107"
+greens_lots_004: 
+  green_id: "4"
+  lot_id: "3001"
+greens_lots_061: 
+  green_id: "1"
+  lot_id: "3076"
+greens_lots_032: 
+  green_id: "7"
+  lot_id: "3063"
+greens_lots_005: 
+  green_id: "3"
+  lot_id: "3002"
+greens_lots_090: 
+  green_id: "3"
+  lot_id: "3090"
+greens_lots_062: 
+  green_id: "3"
+  lot_id: "3076"
+greens_lots_033: 
+  green_id: "1"
+  lot_id: "3064"
+greens_lots_006: 
+  green_id: "4"
+  lot_id: "3002"
+greens_lots_091: 
+  green_id: "1"
+  lot_id: "3091"
+greens_lots_063: 
+  green_id: "1"
+  lot_id: "3077"
+greens_lots_034: 
+  green_id: "3"
+  lot_id: "3064"
+greens_lots_007: 
+  green_id: "5"
+  lot_id: "3003"
+greens_lots_092: 
+  green_id: "3"
+  lot_id: "3091"
+greens_lots_035: 
+  green_id: "4"
+  lot_id: "3064"
+greens_lots_008: 
+  green_id: "1"
+  lot_id: "3059"
+greens_lots_093: 
+  green_id: "1"
+  lot_id: "3092"
+greens_lots_064: 
+  green_id: "3"
+  lot_id: "3077"
+greens_lots_036: 
+  green_id: "6"
+  lot_id: "3064"
+greens_lots_094: 
+  green_id: "3"
+  lot_id: "3092"
+greens_lots_065: 
+  green_id: "1"
+  lot_id: "3078"
+greens_lots_037: 
+  green_id: "7"
+  lot_id: "3064"
+greens_lots_009: 
+  green_id: "3"
+  lot_id: "3059"
+greens_lots_066: 
+  green_id: "3"
+  lot_id: "3078"
+greens_lots_038: 
+  green_id: "1"
+  lot_id: "3065"
+greens_lots_095: 
+  green_id: "1"
+  lot_id: "3093"
+greens_lots_067: 
+  green_id: "1"
+  lot_id: "3079"
+greens_lots_039: 
+  green_id: "3"
+  lot_id: "3065"
+greens_lots_096: 
+  green_id: "3"
+  lot_id: "3093"
+greens_lots_068: 
+  green_id: "3"
+  lot_id: "3079"
+greens_lots_069: 
+  green_id: "1"
+  lot_id: "3080"
+greens_lots_097: 
+  green_id: "1"
+  lot_id: "3094"
+greens_lots_010: 
+  green_id: "4"
+  lot_id: "3059"
+greens_lots_040: 
+  green_id: "4"
+  lot_id: "3065"
+greens_lots_098: 
+  green_id: "3"
+  lot_id: "3094"
+greens_lots_011: 
+  green_id: "6"
+  lot_id: "3059"
+greens_lots_041: 
+  green_id: "6"
+  lot_id: "3065"
+greens_lots_099: 
+  green_id: "1"
+  lot_id: "3095"
+greens_lots_012: 
+  green_id: "7"
+  lot_id: "3059"
+greens_lots_070: 
+  green_id: "3"
+  lot_id: "3080"
+greens_lots_013: 
+  green_id: "1"
+  lot_id: "3060"
+greens_lots_071: 
+  green_id: "1"
+  lot_id: "3081"
+greens_lots_042: 
+  green_id: "7"
+  lot_id: "3065"
+greens_lots_014: 
+  green_id: "3"
+  lot_id: "3060"
+greens_lots_072: 
+  green_id: "3"
+  lot_id: "3081"
+greens_lots_043: 
+  green_id: "1"
+  lot_id: "3067"
+greens_lots_015: 
+  green_id: "4"
+  lot_id: "3060"
+greens_lots_073: 
+  green_id: "1"
+  lot_id: "3082"
+greens_lots_044: 
+  green_id: "3"
+  lot_id: "3067"
+greens_lots_016: 
+  green_id: "6"
+  lot_id: "3060"
+greens_lots_045: 
+  green_id: "1"
+  lot_id: "3068"
+greens_lots_100: 
+  green_id: "3"
+  lot_id: "3095"
+greens_lots_017: 
+  green_id: "7"
+  lot_id: "3060"
+greens_lots_074: 
+  green_id: "3"
+  lot_id: "3082"
+greens_lots_046: 
+  green_id: "3"
+  lot_id: "3068"
+greens_lots_101: 
+  green_id: "2"
+  lot_id: "3096"
+greens_lots_018: 
+  green_id: "1"
+  lot_id: "3061"
+greens_lots_047: 
+  green_id: "1"
+  lot_id: "3069"
+greens_lots_102: 
+  green_id: "7"
+  lot_id: "3096"
+greens_lots_019: 
+  green_id: "3"
+  lot_id: "3061"
+greens_lots_075: 
+  green_id: "1"
+  lot_id: "3083"
+greens_lots_048: 
+  green_id: "3"
+  lot_id: "3069"
+greens_lots_103: 
+  green_id: "2"
+  lot_id: "3097"
+greens_lots_076: 
+  green_id: "3"
+  lot_id: "3083"
+greens_lots_049: 
+  green_id: "1"
+  lot_id: "3070"
+greens_lots_104: 
+  green_id: "7"
+  lot_id: "3097"
+greens_lots_077: 
+  green_id: "1"
+  lot_id: "3084"
+greens_lots_105: 
+  green_id: "2"
+  lot_id: "3103"
+greens_lots_078: 
+  green_id: "3"
+  lot_id: "3084"
+greens_lots_106: 
+  green_id: "4"
+  lot_id: "3103"
+greens_lots_020: 
+  green_id: "4"
+  lot_id: "3061"
+greens_lots_079: 
+  green_id: "1"
+  lot_id: "3085"
+greens_lots_107: 
+  green_id: "6"
+  lot_id: "3103"
+greens_lots_050: 
+  green_id: "3"
+  lot_id: "3070"
+greens_lots_021: 
+  green_id: "6"
+  lot_id: "3061"
+greens_lots_051: 
+  green_id: "1"
+  lot_id: "3071"
+greens_lots_022: 
+  green_id: "7"
+  lot_id: "3061"
+greens_lots_108: 
+  green_id: "2"
+  lot_id: "3104"
+greens_lots_052: 
+  green_id: "3"
+  lot_id: "3071"
+greens_lots_023: 
+  green_id: "1"
+  lot_id: "3062"
+greens_lots_080: 
+  green_id: "3"
+  lot_id: "3085"
+greens_lots_109: 
+  green_id: "3"
+  lot_id: "3104"
+greens_lots_024: 
+  green_id: "3"
+  lot_id: "3062"
+greens_lots_081: 
+  green_id: "1"
+  lot_id: "3086"
+greens_lots_025: 
+  green_id: "4"
+  lot_id: "3062"
+greens_lots_082: 
+  green_id: "3"
+  lot_id: "3086"
+greens_lots_053: 
+  green_id: "1"
+  lot_id: "3072"
+greens_lots_026: 
+  green_id: "6"
+  lot_id: "3062"
+greens_lots_083: 
+  green_id: "1"
+  lot_id: "3087"
+greens_lots_054: 
+  green_id: "3"
+  lot_id: "3072"
+greens_lots_027: 
+  green_id: "7"
+  lot_id: "3062"
+greens_lots_084: 
+  green_id: "3"
+  lot_id: "3087"
+greens_lots_055: 
+  green_id: "1"
+  lot_id: "3073"
+greens_lots_110: 
+  green_id: "4"
+  lot_id: "3104"
+greens_lots_028: 
+  green_id: "1"
+  lot_id: "3063"
+greens_lots_085: 
+  green_id: "1"
+  lot_id: "3088"
+greens_lots_056: 
+  green_id: "3"
+  lot_id: "3073"
+greens_lots_111: 
+  green_id: "6"
+  lot_id: "3104"
+greens_lots_029: 
+  green_id: "3"
+  lot_id: "3063"
+greens_lots_057: 
+  green_id: "1"
+  lot_id: "3074"
+greens_lots_112: 
+  green_id: "2"
+  lot_id: "3105"
+greens_lots_086: 
+  green_id: "3"
+  lot_id: "3088"
+greens_lots_058: 
+  green_id: "3"
+  lot_id: "3074"
+greens_lots_113: 
+  green_id: "3"
+  lot_id: "3105"
+greens_lots_087: 
+  green_id: "1"
+  lot_id: "3089"
+greens_lots_059: 
+  green_id: "1"
+  lot_id: "3075"
+greens_lots_114: 
+  green_id: "5"
+  lot_id: "3105"
+greens_lots_115: 
+  green_id: "1"
+  lot_id: "3106"
+greens_lots_030: 
+  green_id: "4"
+  lot_id: "3063"
+greens_lots_088: 
+  green_id: "3"
+  lot_id: "3089"
+greens_lots_001: 
+  green_id: "1"
+  lot_id: "3000"
+greens_lots_116: 
+  green_id: "4"
+  lot_id: "3106"
+greens_lots_089: 
+  green_id: "1"
+  lot_id: "3090"
+greens_lots_002: 
+  green_id: "2"
+  lot_id: "3000"
+greens_lots_117: 
+  green_id: "6"
+  lot_id: "3106"
+greens_lots_003: 
+  green_id: "3"
+  lot_id: "3001"
+greens_lots_060: 
+  green_id: "3"
+  lot_id: "3075"
+greens_lots_031: 
+  green_id: "6"
+  lot_id: "3063"

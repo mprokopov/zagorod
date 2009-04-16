@@ -1,0 +1,14 @@
+== Creating the test database
+
+The default name for the test databases is "acts_as_dropdown_plugin_test". If you 
+want to use another database name then be sure to update the database name with the
+database you want to test with in test/connection.rb. 
+If you are using MySQL, you can import the schema file found at test/fixtures/mysql.sql.
+
+== Running by hand
+
+Unit tests are located in the test directory. To execute the test do the following:
+
+   ruby dropdown_test.rb
+   
+This will execute the test with the information found in the connection.rb file.

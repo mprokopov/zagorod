@@ -1,0 +1,44 @@
+<html>
+<head>
+<title><%= @page_title %> // Админзона сайта Chieftec</title>
+<meta http-equiv="Content-Type" content='text/html; charset=UTF-8' />
+<%= stylesheet_link_tag('admin')%>
+<% # Include TinyMCE before other JS to avoid problems -%>
+<%= javascript_include_tag('pic_browser') if using_tiny_mce? %>
+<%= javascript_include_tiny_mce_if_used %>
+<%= tiny_mce if using_tiny_mce? %>
+
+
+<%= javascript_include_tag('prototype')%>
+<%= javascript_include_tag('effects')%>
+<%= @content_for_javascript %>
+</head>
+<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff">
+<table width="100%">
+    	<tr>
+    	   <td width="80%"><%= render_partial('admin/topbar')%></td>
+        	<td align="right"><%= link_to(icon('admin')+"Logout #{session['user'].login}",:controller=>'/admin',:action=>'logout')%></td>
+    	</tr>
+</table>
+<table border="0" cellpadding="0" width="100%" cellspacing="0">
+ <tr>
+  <td valign="top" width="20%"><%= sidebar() %>	</td>
+	  <td valign="top">
+	   <fieldset class="main">
+    <legend><%= @page_title if @page_title%></legend>
+	   <% if @flash[:notice] %>
+	       <div id="notice"><%= image_tag('notice.gif', :align=>'absmiddle')+'&nbsp;'+@flash[:notice]%></div>
+	   <% end %>
+   <% if @flash[:error] %>
+	       <div id="error"><%= image_tag('error.gif', :align=>'absmiddle')+'&nbsp;'+@flash[:error]%></div><br/>
+	   <% end %>	   
+      <div id="ajaxdiv">
+            <%= @content_for_layout %>
+      </div>
+      </fieldset>
+ </td>
+ </tr>
+</table>
+</body>
+</html>
+

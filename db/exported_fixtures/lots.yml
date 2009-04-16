@@ -1,0 +1,113 @@
+--- 
+lots_001: 
+  feature2name: "\xD0\xA5\xD0\xBE\xD0\xBB\xD0\xBC\xD0\xB8\xD1\x81\xD1\x82\xD0\xB0\xD1\x8F \xD0\xBC\xD0\xB5\xD1\x81\xD1\x82\xD0\xBD\xD0\xBE\xD1\x81\xD1\x82\xD1\x8C"
+  created_on: 2006-10-09 14:32:51
+  noise_id: "1"
+  ground_another: ""
+  nearest_commerce_another: ""
+  nearest_shop_distance: "2"
+  square_for_building: "0.21"
+  lot_shape: "\xD0\xBD\xD0\xB5\xD0\xBF\xD1\x80\xD0\xB0\xD0\xB2\xD0\xB8\xD0\xBB\xD1\x8C\xD0\xBD\xD0\xBE\xD0\xB9 \xD1\x84\xD0\xBE\xD1\x80\xD0\xBC\xD1\x8B"
+  nearest_kiosk_distance: "2"
+  placement_another: "\xD0\xB2 \xD0\xBB\xD0\xB5\xD1\x81\xD1\x83"
+  lotroad_width_id: "2"
+  updated_on: 2006-10-20 17:13:47
+  lotroad_surface_another: ""
+  full_price: "462000"
+  placement_id: "4"
+  price_per_square: "6000"
+  noise_source_another: ""
+  is_price_changeble: "1"
+  feature1: !binary |
+    0L/RgNC40LzRi9C60LDQtdGC
+
+  is_reviewed: "1"
+  nearest_shop_distance_another: ""
+  nature_types_another: ""
+  gas_id: "5"
+  lotroad_distance_id: "7"
+  distance_to_city: "21.8"
+  id: "3125"
+  feature1name: !binary |
+    0JvQtdGB
+
+  feature2: ""
+  region_id: "7"
+  building_another: ""
+  lot_width: "80"
+  area: !binary |
+    0JrRgNGD0YjQuNC90LrQsA==
+
+  owner_id: "30"
+  green_another: ""
+  water_id: "1"
+  square: "0.77"
+  ground_id: "5"
+  point_x: "193"
+  groundwater_level_id: "3"
+  lot_length: "90"
+  electricity_id: "5"
+  is_another_routes: "1"
+  lotroad_surface_id: "3"
+  agency_id: 
+  point_y: "362"
+  buildobjects_another: ""
+  relief_another: ""
+  departure_id: "3"
+lots_002: 
+  feature2name: !binary |
+    0J/RgNGD0LQ=
+
+  created_on: 2006-10-09 14:42:43
+  noise_id: "2"
+  ground_another: ""
+  nearest_commerce_another: ""
+  nearest_shop_distance: "4"
+  square_for_building: "0.3"
+  lot_shape: "\xD0\xBD\xD0\xB5\xD0\xBF\xD1\x80\xD0\xB0\xD0\xB2\xD0\xB8\xD0\xBB\xD1\x8C\xD0\xBD\xD0\xBE\xD0\xB9 \xD1\x84\xD0\xBE\xD1\x80\xD0\xBC\xD1\x8B"
+  nearest_kiosk_distance: "4"
+  placement_another: ""
+  lotroad_width_id: "1"
+  updated_on: 2006-10-20 16:56:03
+  lotroad_surface_another: ""
+  full_price: "877500"
+  placement_id: "4"
+  price_per_square: "6500"
+  noise_source_another: ""
+  is_price_changeble: "0"
+  feature1: !binary |
+    0L/RgNC40LzRi9C60LDQtdGC
+
+  is_reviewed: "1"
+  nearest_shop_distance_another: ""
+  nature_types_another: ""
+  gas_id: "1"
+  lotroad_distance_id: "1"
+  distance_to_city: "20.3"
+  id: "3126"
+  feature1name: !binary |
+    0JvQtdGB
+
+  feature2: "\xD0\xB4\xD0\xBE 200 \xD0\xBC\xD0\xB5\xD1\x82\xD1\x80\xD0\xBE\xD0\xB2"
+  region_id: "7"
+  building_another: ""
+  lot_width: "110"
+  area: !binary |
+    0JPQu9C10LLQsNGF0LA=
+
+  owner_id: "30"
+  green_another: ""
+  water_id: "1"
+  square: "1.35"
+  ground_id: "2"
+  point_x: "192"
+  groundwater_level_id: "3"
+  lot_length: "110"
+  electricity_id: "1"
+  is_another_routes: "1"
+  lotroad_surface_id: "2"
+  agency_id: 
+  point_y: "354"
+  buildobjects_another: ""
+  relief_another: ""
+  departure_id: "3"

@@ -1,0 +1,19 @@
+--- 
+old_house:
+  id: "1"
+  building: "старый дом"
+fundament:
+  id: "2"
+  building: "фундамент"
+nedostroy:
+  id: "3"
+  building: "недостроенный дом"
+bytovka:
+  id: "4"
+  building: "бытовка/вагончик"
+absent:
+  id: "5"
+  building: "отсутствуют"
+other:
+  id: "6"
+  building: "другое"

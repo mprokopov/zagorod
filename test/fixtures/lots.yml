@@ -1,0 +1,441 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: lots
+#
+#  id                            :integer(11)   not null, primary key
+#  area                          :string(200)   default(), not null
+#  square                        :float         default(0.0), not null
+#  price_per_square              :integer(11)   default(0), not null
+#  is_price_changeble            :boolean(1)    not null
+#  distance_to_city              :float         default(0.0), not null
+#  departure_id                  :integer(11)   default(0), not null
+#  lotroad_distance_id           :integer(11)   default(0), not null
+#  lotroad_surface_id            :integer(11)   default(0), not null
+#  lotroad_width_id              :integer(11)   default(0), not null
+#  is_another_routes             :boolean(1)    not null
+#  gas_id                        :integer(11)   default(0), not null
+#  electricity_id                :integer(11)   default(0), not null
+#  water_id                      :integer(11)   default(0), not null
+#  nearest_shop_distance         :float         default(0.0)
+#  nearest_kiosk_distance        :float         default(0.0)
+#  nearest_commerce_another      :text          
+#  placement_id                  :integer(11)   default(0), not null
+#  placement_another             :text          default(), not null
+#  nature_types_another          :text          default(), not null
+#  lot_length                    :float         default(0.0), not null
+#  lot_width                     :float         default(0.0), not null
+#  lot_shape                     :string(200)   default(), not null
+#  ground_id                     :integer(11)   default(0), not null
+#  ground_another                :text          default(), not null
+#  building_another              :text          default(), not null
+#  green_another                 :string(200)   default(), not null
+#  relief_another                :text          default(), not null
+#  groundwater_level_id          :integer(11)   default(0), not null
+#  noise_source_another          :text          default(), not null
+#  buildobjects_another          :text          default(), not null
+#  extra_info                    :text          default(), not null
+#  region_id                     :integer(11)   default(0), not null
+#  square_for_building           :float         default(0.0), not null
+#  noise_id                      :integer(11)   default(0), not null
+#  full_price                    :integer(11)   default(0), not null
+#  lotroad_surface_another       :string(200)   default(), not null
+#  nearest_shop_distance_another :string(200)   default(), not null
+#  is_reviewed                   :boolean(1)    not null
+#  point_x                       :integer(11)   default(0), not null
+#  point_y                       :integer(11)   default(0), not null
+#  agency_id                     :integer(11)   
+#  owner_id                      :integer(11)   
+#  created_on                    :datetime      
+#  updated_on                    :datetime      
+#
+
+--- 
+lots_001: 
+  created_on: 
+  noise_id: "1"
+  ground_another: ""
+  nearest_commerce_another: ""
+  nearest_shop_distance: "5"
+  square_for_building: "1"
+  lot_shape: 00001.jpg
+  nearest_kiosk_distance: "10"
+  placement_another: ""
+  lotroad_width_id: "5"
+  updated_on: 
+  lotroad_surface_another: ""
+  full_price: "5000"
+  placement_id: "6"
+  price_per_square: "200"
+  noise_source_another: "\xD1\x88\xD1\x83\xD0\xBC\xD0\xB8\xD1\x82 \xD0\xB2\xD0\xBE\xD0\xB4\xD0\xBE\xD0\xBF\xD0\xB0\xD0\xB4"
+  is_price_changeble: "1"
+  is_reviewed: "1"
+  nearest_shop_distance_another: ""
+  nature_types_another: ""
+  gas_id: "3"
+  lotroad_distance_id: "1"
+  distance_to_city: "25"
+  id: "3096"
+  region_id: "1"
+  building_another: "\xD0\xB4\xD1\x80\xD1\x83\xD0\xB3\xD0\xBE\xD0\xB5 \xD1\x81\xD1\x82\xD1\x80\xD0\xBE\xD0\xB5\xD0\xBD\xD0\xB8\xD0\xB5"
+  lot_width: "40"
+  area: !binary |
+    0KLQsNGC0LDRgNC60LA=
+
+  owner_id: "1"
+  extra_info: "\xD0\xB4\xD0\xBE\xD0\xBF\xD0\xBE\xD0\xBB\xD0\xBD\xD0\xB8\xD1\x82\xD0\xB5\xD0\xBB\xD1\x8C\xD0\xBD\xD0\xB0\xD1\x8F \xD0\xB8\xD0\xBD\xD1\x84\xD0\xBE\xD1\x80\xD0\xBC\xD0\xB0\xD1\x86\xD0\xB8\xD1\x8F"
+  green_another: ""
+  water_id: "2"
+  square: "25"
+  ground_id: "3"
+  point_x: "80"
+  groundwater_level_id: "1"
+  lot_length: "50"
+  electricity_id: "5"
+  is_another_routes: "0"
+  lotroad_surface_id: "2"
+  agency_id: 
+  point_y: "100"
+  buildobjects_another: "\xD0\xB4\xD1\x80\xD1\x83\xD0\xB3\xD0\xBE\xD0\xB5 \xD0\xBD\xD0\xB0\xD1\x85\xD0\xBE\xD0\xB4\xD0\xB8\xD1\x82\xD1\x81\xD1\x8F"
+  relief_another: "\xD0\xB8 \xD0\xB4\xD1\x80\xD1\x83\xD0\xB3\xD0\xBE\xD0\xB9 \xD1\x80\xD0\xB5\xD0\xBB\xD1\x8C\xD0\xB5\xD1\x84"
+  departure_id: "7"
+lots_002: 
+  created_on: 
+  noise_id: "1"
+  ground_another: ""
+  nearest_commerce_another: ""
+  nearest_shop_distance: "5"
+  square_for_building: "1"
+  lot_shape: 00001.jpg
+  nearest_kiosk_distance: "10"
+  placement_another: ""
+  lotroad_width_id: "5"
+  updated_on: 
+  lotroad_surface_another: ""
+  full_price: "5000"
+  placement_id: "6"
+  price_per_square: "200"
+  noise_source_another: "\xD1\x88\xD1\x83\xD0\xBC\xD0\xB8\xD1\x82 \xD0\xB2\xD0\xBE\xD0\xB4\xD0\xBE\xD0\xBF\xD0\xB0\xD0\xB4"
+  is_price_changeble: "1"
+  is_reviewed: "1"
+  nearest_shop_distance_another: ""
+  nature_types_another: ""
+  gas_id: "3"
+  lotroad_distance_id: "1"
+  distance_to_city: "25"
+  id: "3097"
+  region_id: "1"
+  building_another: "\xD0\xB4\xD1\x80\xD1\x83\xD0\xB3\xD0\xBE\xD0\xB5 \xD1\x81\xD1\x82\xD1\x80\xD0\xBE\xD0\xB5\xD0\xBD\xD0\xB8\xD0\xB5"
+  lot_width: "40"
+  area: !binary |
+    0KLQsNGC0LDRgNC60LA=
+
+  owner_id: 
+  extra_info: "\xD0\xB4\xD0\xBE\xD0\xBF\xD0\xBE\xD0\xBB\xD0\xBD\xD0\xB8\xD1\x82\xD0\xB5\xD0\xBB\xD1\x8C\xD0\xBD\xD0\xB0\xD1\x8F \xD0\xB8\xD0\xBD\xD1\x84\xD0\xBE\xD1\x80\xD0\xBC\xD0\xB0\xD1\x86\xD0\xB8\xD1\x8F"
+  green_another: ""
+  water_id: "2"
+  square: "25"
+  ground_id: "3"
+  point_x: "80"
+  groundwater_level_id: "2"
+  lot_length: "50"
+  electricity_id: "5"
+  is_another_routes: "0"
+  lotroad_surface_id: "2"
+  agency_id: "1"
+  point_y: "100"
+  buildobjects_another: "\xD0\xB4\xD1\x80\xD1\x83\xD0\xB3\xD0\xBE\xD0\xB5 \xD0\xBD\xD0\xB0\xD1\x85\xD0\xBE\xD0\xB4\xD0\xB8\xD1\x82\xD1\x81\xD1\x8F"
+  relief_another: "\xD0\xB8 \xD0\xB4\xD1\x80\xD1\x83\xD0\xB3\xD0\xBE\xD0\xB9 \xD1\x80\xD0\xB5\xD0\xBB\xD1\x8C\xD0\xB5\xD1\x84"
+  departure_id: "7"
+lots_003: 
+  created_on: 
+  noise_id: "1"
+  ground_another: ""
+  nearest_commerce_another: ""
+  nearest_shop_distance: 
+  square_for_building: "34"
+  lot_shape: ""
+  nearest_kiosk_distance: 
+  placement_another: ""
+  lotroad_width_id: "2"
+  updated_on: 
+  lotroad_surface_another: ""
+  full_price: "1156"
+  placement_id: "2"
+  price_per_square: "34"
+  noise_source_another: ""
+  is_price_changeble: "0"
+  is_reviewed: "1"
+  nearest_shop_distance_another: ""
+  nature_types_another: ""
+  gas_id: "1"
+  lotroad_distance_id: "1"
+  distance_to_city: "44"
+  id: "3102"
+  region_id: "1"
+  building_another: ""
+  lot_width: "343"
+  area: "34"
+  owner_id: 
+  extra_info: ""
+  green_another: ""
+  water_id: "1"
+  square: "34"
+  ground_id: "2"
+  point_x: "150"
+  groundwater_level_id: "2"
+  lot_length: "34"
+  electricity_id: "1"
+  is_another_routes: "0"
+  lotroad_surface_id: "4"
+  agency_id: "2"
+  point_y: "250"
+  buildobjects_another: ""
+  relief_another: ""
+  departure_id: "1"
+lots_004: 
+  created_on: 
+  noise_id: "1"
+  ground_another: ""
+  nearest_commerce_another: ""
+  nearest_shop_distance: 
+  square_for_building: "4"
+  lot_shape: 3.jpg
+  nearest_kiosk_distance: 
+  placement_another: ""
+  lotroad_width_id: "2"
+  updated_on: 
+  lotroad_surface_another: ""
+  full_price: "170"
+  placement_id: "2"
+  price_per_square: "5"
+  noise_source_another: ""
+  is_price_changeble: "1"
+  is_reviewed: "1"
+  nearest_shop_distance_another: ""
+  nature_types_another: ""
+  gas_id: "1"
+  lotroad_distance_id: "1"
+  distance_to_city: "2"
+  id: "3103"
+  region_id: "1"
+  building_another: ""
+  lot_width: "5"
+  area: !binary |
+    0KPQutGA0LDQuNC90L7QstC60LA=
+
+  owner_id: 
+  extra_info: !binary |
+    0LTQvtC/0L7Qu9C90LjRgtC10LvRjNC90L4=
+
+  green_another: ""
+  water_id: "1"
+  square: "34"
+  ground_id: "2"
+  point_x: "0"
+  groundwater_level_id: "2"
+  lot_length: "4"
+  electricity_id: "1"
+  is_another_routes: "0"
+  lotroad_surface_id: "1"
+  agency_id: "6"
+  point_y: "0"
+  buildobjects_another: ""
+  relief_another: ""
+  departure_id: "3"
+lots_005: 
+  created_on: 
+  noise_id: "1"
+  ground_another: ""
+  nearest_commerce_another: ""
+  nearest_shop_distance: 
+  square_for_building: "4"
+  lot_shape: 3.jpg
+  nearest_kiosk_distance: 
+  placement_another: ""
+  lotroad_width_id: "2"
+  updated_on: 
+  lotroad_surface_another: ""
+  full_price: "170"
+  placement_id: "2"
+  price_per_square: "5"
+  noise_source_another: ""
+  is_price_changeble: "1"
+  is_reviewed: "1"
+  nearest_shop_distance_another: ""
+  nature_types_another: ""
+  gas_id: "1"
+  lotroad_distance_id: "1"
+  distance_to_city: "2"
+  id: "3104"
+  region_id: "1"
+  building_another: ""
+  lot_width: "5"
+  area: !binary |
+    0KPQutGA0LDQuNC90L7QstC60LA=
+
+  owner_id: 
+  extra_info: !binary |
+    0LTQvtC/0L7Qu9C90LjRgtC10LvRjNC90L4=
+
+  green_another: ""
+  water_id: "1"
+  square: "34"
+  ground_id: "2"
+  point_x: "0"
+  groundwater_level_id: "2"
+  lot_length: "4"
+  electricity_id: "1"
+  is_another_routes: "0"
+  lotroad_surface_id: "1"
+  agency_id: "6"
+  point_y: "0"
+  buildobjects_another: ""
+  relief_another: ""
+  departure_id: "3"
+lots_006: 
+  created_on: 
+  noise_id: "2"
+  ground_another: ""
+  nearest_commerce_another: ""
+  nearest_shop_distance: 
+  square_for_building: "0.26"
+  lot_shape: Yanyk3.jpg
+  nearest_kiosk_distance: 
+  placement_another: ""
+  lotroad_width_id: "2"
+  updated_on: 
+  lotroad_surface_another: ""
+  full_price: "26"
+  placement_id: "2"
+  price_per_square: "100"
+  noise_source_another: ""
+  is_price_changeble: "0"
+  is_reviewed: "1"
+  nearest_shop_distance_another: ""
+  nature_types_another: ""
+  gas_id: "1"
+  lotroad_distance_id: "2"
+  distance_to_city: "15"
+  id: "3105"
+  region_id: "7"
+  building_another: ""
+  lot_width: "53"
+  area: !binary |
+    0JPQu9C10LLQsNGF0LA=
+
+  owner_id: "4"
+  extra_info: ""
+  green_another: ""
+  water_id: "1"
+  square: "0.26"
+  ground_id: "3"
+  point_x: "0"
+  groundwater_level_id: "3"
+  lot_length: "25"
+  electricity_id: "1"
+  is_another_routes: "0"
+  lotroad_surface_id: "1"
+  agency_id: 
+  point_y: "0"
+  buildobjects_another: ""
+  relief_another: ""
+  departure_id: "7"
+lots_007: 
+  created_on: 
+  noise_id: "1"
+  ground_another: ""
+  nearest_commerce_another: ""
+  nearest_shop_distance: "1"
+  square_for_building: "25"
+  lot_shape: ""
+  nearest_kiosk_distance: "1"
+  placement_another: ""
+  lotroad_width_id: "2"
+  updated_on: 
+  lotroad_surface_another: ""
+  full_price: "74000"
+  placement_id: "1"
+  price_per_square: "2000"
+  noise_source_another: ""
+  is_price_changeble: "0"
+  is_reviewed: "1"
+  nearest_shop_distance_another: ""
+  nature_types_another: ""
+  gas_id: "1"
+  lotroad_distance_id: "2"
+  distance_to_city: "28"
+  id: "3106"
+  region_id: "14"
+  building_another: !binary |
+    0L7RgtGB0YPRgtGB0YLQstGD0Y7Rgg==
+
+  lot_width: "43"
+  area: !binary |
+    0K/RgdC90L7Qs9C+0YDQvtC00LrQsA==
+
+  owner_id: 
+  extra_info: ""
+  green_another: ""
+  water_id: "1"
+  square: "37"
+  ground_id: "1"
+  point_x: "0"
+  groundwater_level_id: "3"
+  lot_length: "95"
+  electricity_id: "1"
+  is_another_routes: "0"
+  lotroad_surface_id: "2"
+  agency_id: "7"
+  point_y: "0"
+  buildobjects_another: ""
+  relief_another: ""
+  departure_id: "8"
+lots_008: 
+  created_on: 2006-09-08 10:52:40
+  noise_id: "2"
+  ground_another: ""
+  nearest_commerce_another: ""
+  nearest_shop_distance: 
+  square_for_building: "2"
+  lot_shape: !binary |
+    0L/RgNGP0LzQvtGD0LPQvtC70YzQvdC40Lo=
+
+  nearest_kiosk_distance: 
+  placement_another: ""
+  lotroad_width_id: "2"
+  updated_on: 2006-09-08 10:53:11
+  lotroad_surface_another: ""
+  full_price: "4"
+  placement_id: "2"
+  price_per_square: "2"
+  noise_source_another: ""
+  is_price_changeble: "0"
+  is_reviewed: "1"
+  nearest_shop_distance_another: ""
+  nature_types_another: ""
+  gas_id: "1"
+  lotroad_distance_id: "2"
+  distance_to_city: "2"
+  id: "3107"
+  region_id: "1"
+  building_another: ""
+  lot_width: "2"
+  area: "\xD0\xA2\xD0\xB5\xD1\x80\xD0\xB5\xD0\xBC\xD0\xBA\xD0\xB8 1"
+  owner_id: "8"
+  extra_info: ""
+  green_another: ""
+  water_id: "2"
+  square: "2"
+  ground_id: "2"
+  point_x: "0"
+  groundwater_level_id: "2"
+  lot_length: "2"
+  electricity_id: "3"
+  is_another_routes: "0"
+  lotroad_surface_id: "7"
+  agency_id: "8"
+  point_y: "0"
+  buildobjects_another: ""
+  relief_another: ""
+  departure_id: "1"

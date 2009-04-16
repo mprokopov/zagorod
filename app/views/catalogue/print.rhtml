@@ -1,0 +1,263 @@
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+ <tr>
+  <td><img src="/images/logo.gif" width="225" height="62" border="0" alt=""></td>
+  <td><img src="/images/empty.gif" width="30" height="1" border="0" alt=""></td>
+
+  <td width="100%">
+    <b>Все загород!</b><br/>Хотите купить-продать земельный участок?<br/>
+<a href="http://www.vsezagorod.com.ua">http://www.vsezagorod.com.ua</a>
+  </td>
+ </tr>
+</table>  
+<hr size="1" color="#000000" width="100%"/>
+<br/>
+<br/>
+
+                     <% if @lot.agency %>			
+			<div class="info1"  align="left">
+			  <b class="brown">Координаты посредника</b><br>
+                          тел. <%= @lot.agency.phone1%><br>
+			  тел. <%= @lot.agency.phone2%>			  
+                        </div>
+                        <% end %>
+                     <% if @lot.owner %>
+                     <div class="info1"  align="left">
+                       <b class="brown">Координаты владельца</b><br>
+                       тел. <%= @lot.owner.phone%><br>
+                       email: <%= mail_to @lot.owner.email, @lot.owner.email,:encode=>'javascript'%>			  
+                     </div>
+                     <% end %>
+                          <p class="brown">УЧАСТОК # <span class="number"><%= "%05d" % @lot.id.to_s %></span>  
+			  
+			<p class="text12">
+                        <%= @lot.region.name%><br />
+
+                        <b><%= @lot.area%></b>
+			</p>
+
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" class="block">
+			 <tr>
+			  <td width="40%">Общая площадь</td>
+                          <td class="value" width="60%"><%= "%.2f" % @lot.square%> га</td>			  
+			 </tr>
+
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>
+			 <tr>
+			  <td width="40%">Под застройку</td>
+                          <td class="value" width="60%"><%= "%.2f" % @lot.square_for_building%> га</td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>
+			 
+			 <tr>
+			  <td>Цена за 0,01га</td>
+
+                          <td class="value">$<%= "%d" % @lot.price_per_square%></td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 
+			 <tr>
+			  <td>Полная стоимость</td>
+                          <td class="value">$<%= "%d" % @lot.full_price%>&#160;&#160;&#160;<span class="black"><b>Возможен торг</b></span></td>			  
+			 </tr>
+			</table>
+
+			
+			<p class="header12"><b>Подъезные пути</b></p>
+     		<table width="100%" cellpadding="0" cellspacing="0" border="0" class="block">
+			 <tr>
+			  <td width="40%">Расстояние до участка от Киева</td>
+                          <td class="value" width="60%"><%= "%d" % @lot.distance_to_city%> км&#160;&#160;&#160;<span class="black">от <a href="#"><%= @lot.departure.departure%></a></span></td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+
+			  <td colspan="2"><b>Отрезок пути от земельного участка до ближайшей асфальтированной дороги</b></td>
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 			 
+			 <tr>
+			  <td class="subtext">Расстояние</td>
+                          <td class="value"><%= @lot.lotroad_distance.distance%></td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+
+			  <td class="subtext">Покрытие</td>
+                          <td class="value"><%= @lot.lotroad_surface.surface%><%= ", #{@lot.lotroad_surface_another}" unless @lot.lotroad_surface_another.empty?%></td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+			  <td width="40%" class="subtext">Ширина</td>
+                          <td class="value" width="60%"><%= @lot.lotroad_width.width%></td>			  
+			 </tr>
+
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+			  <td>Другие подъезды к участку</td>
+                          <td class="value"><%= if @lot.is_another_routes=='1' then 'да' else 'нет' end %></td>			  
+			 </tr>
+			</table>
+			
+			<p class="header12"><b>Коммуникации и Инфраструктура</b></p>
+     		<table width="100%" cellpadding="0" cellspacing="0" border="0" class="block">
+
+			 <tr>
+			  <td width="40%">Газ <br />(ГРП/труба к которой можно подключиться)</td>
+                          <td class="value" width="60%"><%= @lot.gas.distance%></td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+			  <td>Электричество<br /> (Трансформатор 220в/ближайший столб)</td>
+
+                          <td class="value"><%= @lot.electricity.distance%></td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+			  <td>Вода</td>
+                          <td class="value"><%= @lot.water.object%></td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+
+			  <td colspan="2"><b>Сообщение с Киевом:</b></td>
+			 </tr> 
+                         <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 			 
+                         <% for route in @lot.routes %>
+             <tr>
+               <td class="subtext"><%= route.route_type.route%></td>
+               <td class="value"><%= route.route_distance.distance%></td>
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 			 
+                         <% end %>
+                         <% if @lot.nearest_shop_distance || @lot.nearest_kiosk_distance || !@lot.nearest_commerce_another.empty?%>
+			 <tr><td colspan="2"><b>Магазины, развлечения, другое</b></td></tr>
+                         <% if @lot.nearest_kiosk_distance %>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 			 
+                         <tr><td class="subtext">Ближайший киоск</td><td class="value"><%= @lot.nearest_shop_distance %> км</td></tr>
+                         <% end %>
+                         <% if @lot.nearest_shop_distance %>
+                         <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 	
+                         <tr><td class="subtext">Прод. магазин</td><td class="value"><%= @lot.nearest_kiosk_distance%> км</td></tr>
+                         <% end %>
+                         <% if !@lot.nearest_commerce_another.empty? %>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 	
+                         <tr><td class="subtext">Другое</td><td class="value"><%= @lot.nearest_commerce_another%></td></tr>
+                         <% end %>
+                         <% end %>
+                       </table>		
+
+			
+			<p class="header12"><b>Расположение</b></p>
+
+     		<table width="100%" cellpadding="0" cellspacing="0" border="0" class="block">
+			 <tr>
+			  <td width="40%">Участок расположен</td>
+                          <td class="value" width="60%"><%= @lot.placement.placement%> <%= ", "+@lot.placement_another unless @lot.placement_another.empty? %></td>
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+                           <td colspan="2" ><b>Соседи</b></td>
+                         </tr>
+                         <% for neighbour in @lot.neighbours %>
+                         <tr>
+                           <td class="subtext"><%= neighbour.neighbour_type.neighbour%></td>
+                           <td class="value"><%= neighbour.neighbour_distance.distance if neighbour.neighbour_type.has_distance==1%></td>
+                           </tr>
+                          <% end %>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr><td colspan="2"><b>Пейзаж и окружение</b></td></tr>
+                         <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 			 
+                         <% for nature in @lot.natures %>
+                         <tr><td class="subtext"><%= nature.nature_type.nature%></td><td class="value"><%= nature.nature_distance.distance if nature.nature_type.has_distance==1%></td></tr>
+             <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>
+             <% end %>
+			</table>				
+
+			<p class="header12"><b>Об участке</b></p>
+     		<table width="100%" cellpadding="0" cellspacing="0" border="0" class="block">
+			 <tr>
+			  <td width="40%">Размеры (приблизительно)</td>
+                          <td class="value" width="60%"><%= "%d" % @lot.lot_width%> метров х <%= "%d" % @lot.lot_length%> метров (<%= @lot.lot_shape %>)</td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+
+			  <td>Тип грунта</td>
+			  <td class="value"><%= @lot.ground.ground%><%= ", "+@lot.ground_another unless @lot.ground_another.empty?()%></td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+			  <td>Насаждения</td>
+			  <td class="value"><% for green in @lot.greens%>
+                            <%= green.green%><%= ", " unless green==@lot.greens.last%>
+			  <% end %>			  
+                            <%= ", "+@lot.green_another unless @lot.green_another.empty? %></td>
+			 </tr>
+
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+			  <td width="40%">Строения</td>
+			  <td class="value" width="60%"><% for building in @lot.buildings%>
+			     <%= building.building%><%= ", " unless building==@lot.buildings.last-%>
+			  <% end -%><%= ", "+@lot.building_another unless @lot.building_another.empty?()%>
+                        </td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+			  <td>Рельеф</td>
+			  <td class="value"><% for relief in @lot.reliefs%>
+			     <%= relief.relief%><%= ", " unless relief==@lot.reliefs.last-%>
+			  <% end -%>
+			  <%= ", "+@lot.relief_another unless @lot.relief_another.empty?()%>
+                        </td>			  
+			 </tr>
+
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+			  <td>Уровень грунтовых вод</td>
+			  <td class="value"><%= @lot.groundwater_level.level%></td>			  
+			 </tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr>
+			  <td>Шум на участке</td>
+			  <td class="value"><%= @lot.noise.noise%> 
+			  <% if !@lot.noise_sources.empty?()%>
+			  (<% for noise_source in @lot.noise_sources%>
+			     <%= noise_source.source%><%= ", " unless noise_source==@lot.noise_sources.last-%>
+			  <% end -%><%= ", "+@lot.noise_source_another unless @lot.noise_source_another.empty?()%>
+			  )<% end %>
+                        </td>	
+			 </tr>
+
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 
+			 <tr><td colspan="2"><b>Возле  участка находится</b></td></tr>
+			 <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>			 			 			 
+                         <% for buildobject in @lot.buildobjects %>
+                         <tr><td colspan="2" class="subtext"><%= buildobject.name%></td></tr>
+                         <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>
+                         <% end %>
+                         <% if !@lot.buildobjects_another.empty? %>
+                         <tr><td class="subtext" colspan="2"><%= @lot.buildobjects_another %></td></tr>
+                         <tr><td colspan="2"><hr size="1" color="#cccccc" width="100%"></td></tr>
+                         <% end %>
+			</table>		
+				
+			
+			<p class="header12"><b>Дополнительная информация</b></p>
+
+     		<table width="100%" cellpadding="3" cellspacing="1" border="0" class="block">
+			 <tr>
+                           <td width="40%">
+                             <%= @lot.extra_info%>
+			  </td>
+			 </tr>
+			</table>
+			
+<br/>
+<br/>
+<br/>
+
+<hr size=1 color=black width="100%"/>
+
+<b>Все загород!</b> © 2006<br />
+Хотите купить-продать земельный участок?<br/>
+<a href="http://www.vsezagorod.com.ua">http://www.vsezagorod.com.ua</a>  
+

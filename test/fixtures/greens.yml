@@ -1,0 +1,34 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: greens
+#
+#  id    :integer(11)   not null, primary key
+#  green :string(200)   default(), not null
+#
+
+--- 
+trava:
+  id: "1"	
+  green: "трава/газон"
+bushes:
+  id: "2"
+  green: "кусты"
+burjan:
+  id: "3"
+  green: "бурьян"
+some_trees:
+  id: "4"
+  green: "несколько деревьев"
+lot_trees_forest:
+  id: "5"
+  green: "много деревьев/лес"
+garden:
+  id: "6"
+  green: "сад"
+fruits:
+  id: "7"
+  green: "плодово-ягодные"
+fruits:
+  id: "8"
+  green: "отсутствуют"

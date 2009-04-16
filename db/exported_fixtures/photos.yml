@@ -1,0 +1,677 @@
+--- 
+photos_159: 
+  id: "183"
+  image: 9.jpg
+  lot_id: "3125"
+photos_045: 
+  id: "46"
+  image: 00003.jpg
+  lot_id: "3094"
+photos_100: 
+  id: "116"
+  image: 12.jpg
+  lot_id: "3114"
+photos_017: 
+  id: "18"
+  image: 00002.jpg
+  lot_id: "3088"
+photos_073: 
+  id: "89"
+  image: RIMG0004.jpg
+  lot_id: "3109"
+photos_046: 
+  id: "47"
+  image: 00004.jpg
+  lot_id: "3094"
+photos_101: 
+  id: "117"
+  image: 12.jpg
+  lot_id: "3114"
+photos_018: 
+  id: "19"
+  image: ""
+  lot_id: "3088"
+photos_074: 
+  id: "90"
+  image: RIMG0006.jpg
+  lot_id: "3109"
+photos_130: 
+  id: "146"
+  image: IMG_1850.jpg
+  lot_id: "3120"
+photos_047: 
+  id: "48"
+  image: 00001.jpg
+  lot_id: "3095"
+photos_102: 
+  id: "118"
+  image: 12.jpg
+  lot_id: "3114"
+photos_019: 
+  id: "20"
+  image: 00004.jpg
+  lot_id: "3088"
+photos_075: 
+  id: "91"
+  image: RIMG0001.jpg
+  lot_id: "3110"
+photos_131: 
+  id: "147"
+  image: IMG_1846.jpg
+  lot_id: "3120"
+photos_048: 
+  id: "49"
+  image: 00001.jpg
+  lot_id: "3095"
+photos_103: 
+  id: "119"
+  image: 12.jpg
+  lot_id: "3114"
+photos_076: 
+  id: "92"
+  image: RIMG0002.jpg
+  lot_id: "3110"
+photos_160: 
+  id: "184"
+  image: 7.jpg
+  lot_id: "3125"
+photos_132: 
+  id: "148"
+  image: IMG_1853.jpg
+  lot_id: "3120"
+photos_104: 
+  id: "120"
+  image: 12.jpg
+  lot_id: "3114"
+photos_077: 
+  id: "93"
+  image: RIMG0003.jpg
+  lot_id: "3110"
+photos_049: 
+  id: "50"
+  image: 00003.jpg
+  lot_id: "3095"
+photos_161: 
+  id: "186"
+  image: 6.jpg
+  lot_id: "3126"
+photos_133: 
+  id: "149"
+  image: IMG_1828.jpg
+  lot_id: "3121"
+photos_105: 
+  id: "121"
+  image: 12.jpg
+  lot_id: "3114"
+photos_078: 
+  id: "94"
+  image: RIMG0004.jpg
+  lot_id: "3110"
+photos_162: 
+  id: "188"
+  image: aaa.jpg
+  lot_id: "3126"
+photos_134: 
+  id: "150"
+  image: IMG_1850.jpg
+  lot_id: "3121"
+photos_020: 
+  id: "21"
+  image: ""
+  lot_id: "3088"
+photos_079: 
+  id: "95"
+  image: RIMG0006.jpg
+  lot_id: "3110"
+photos_106: 
+  id: "122"
+  image: IMG_1860.jpg
+  lot_id: "3118"
+photos_163: 
+  id: "189"
+  image: 7.jpg
+  lot_id: "3127"
+photos_135: 
+  id: "151"
+  image: IMG_1850.jpg
+  lot_id: "3121"
+photos_021: 
+  id: "22"
+  image: 00006.jpg
+  lot_id: "3089"
+photos_107: 
+  id: "123"
+  image: IMG_1860.jpg
+  lot_id: "3118"
+photos_164: 
+  id: "190"
+  image: 7.jpg
+  lot_id: "3127"
+photos_136: 
+  id: "152"
+  image: IMG_1846.jpg
+  lot_id: "3121"
+photos_022: 
+  id: "23"
+  image: 00001.jpg
+  lot_id: "3089"
+photos_108: 
+  id: "124"
+  image: IMG_1860.jpg
+  lot_id: "3118"
+photos_050: 
+  id: "51"
+  image: 00004.jpg
+  lot_id: "3095"
+photos_165: 
+  id: "191"
+  image: 7.jpg
+  lot_id: "3127"
+photos_137: 
+  id: "153"
+  image: IMG_1853.jpg
+  lot_id: "3121"
+photos_023: 
+  id: "24"
+  image: 00002.jpg
+  lot_id: "3089"
+photos_109: 
+  id: "125"
+  image: IMG_1860.jpg
+  lot_id: "3118"
+photos_051: 
+  id: "52"
+  image: 00001.jpg
+  lot_id: "3096"
+photos_166: 
+  id: "192"
+  image: 7.jpg
+  lot_id: "3127"
+photos_138: 
+  id: "154"
+  image: IMG_1869.jpg
+  lot_id: "3122"
+photos_024: 
+  id: "25"
+  image: ""
+  lot_id: "3089"
+photos_080: 
+  id: "96"
+  image: Srub.jpg
+  lot_id: "3111"
+photos_052: 
+  id: "53"
+  image: 00002.jpg
+  lot_id: "3096"
+photos_167: 
+  id: "193"
+  image: 7.jpg
+  lot_id: "3127"
+photos_139: 
+  id: "155"
+  image: IMG_1869.jpg
+  lot_id: "3122"
+photos_025: 
+  id: "26"
+  image: 00004.jpg
+  lot_id: "3089"
+photos_081: 
+  id: "97"
+  image: Srub.jpg
+  lot_id: "3111"
+photos_053: 
+  id: "54"
+  image: 00003.jpg
+  lot_id: "3096"
+photos_168: 
+  id: "194"
+  image: 8.jpg
+  lot_id: "3126"
+photos_026: 
+  id: "27"
+  image: ""
+  lot_id: "3089"
+photos_082: 
+  id: "98"
+  image: Srub.jpg
+  lot_id: "3111"
+photos_054: 
+  id: "55"
+  image: 00004.jpg
+  lot_id: "3096"
+photos_169: 
+  id: "195"
+  image: 6.jpg
+  lot_id: "3126"
+photos_027: 
+  id: "28"
+  image: 00006.jpg
+  lot_id: "3090"
+photos_083: 
+  id: "99"
+  image: Srub.jpg
+  lot_id: "3111"
+photos_055: 
+  id: "71"
+  image: janyk_xuilo.jpg
+  lot_id: "3105"
+photos_110: 
+  id: "126"
+  image: IMG_1860.jpg
+  lot_id: "3118"
+photos_084: 
+  id: "100"
+  image: Srub.jpg
+  lot_id: "3111"
+photos_056: 
+  id: "72"
+  image: SP_A0023.jpg
+  lot_id: "3105"
+photos_111: 
+  id: "127"
+  image: IMG_1860.jpg
+  lot_id: "3118"
+photos_028: 
+  id: "29"
+  image: 00001.jpg
+  lot_id: "3090"
+photos_140: 
+  id: "156"
+  image: IMG_1866.jpg
+  lot_id: "3122"
+photos_085: 
+  id: "101"
+  image: Srub.jpg
+  lot_id: "3111"
+photos_057: 
+  id: "73"
+  image: Yanyk1.jpg
+  lot_id: "3105"
+photos_112: 
+  id: "128"
+  image: 3.jpg
+  lot_id: "3097"
+photos_029: 
+  id: "30"
+  image: 00002.jpg
+  lot_id: "3090"
+photos_141: 
+  id: "157"
+  image: IMG_1868.jpg
+  lot_id: "3122"
+photos_086: 
+  id: "102"
+  image: Srub.jpg
+  lot_id: "3111"
+photos_058: 
+  id: "74"
+  image: Yanyk2.jpg
+  lot_id: "3105"
+photos_113: 
+  id: "129"
+  image: RIMG0001.jpg
+  lot_id: "3097"
+photos_142: 
+  id: "158"
+  image: IMG_1868.jpg
+  lot_id: "3122"
+photos_087: 
+  id: "103"
+  image: 12.jpg
+  lot_id: "3112"
+photos_059: 
+  id: "75"
+  image: Yanyk4.jpg
+  lot_id: "3105"
+photos_114: 
+  id: "130"
+  image: 3.jpg
+  lot_id: "3106"
+photos_143: 
+  id: "159"
+  image: IMG_1868.jpg
+  lot_id: "3122"
+photos_115: 
+  id: "131"
+  image: RIMG0011.jpg
+  lot_id: "3102"
+photos_088: 
+  id: "104"
+  image: 12.jpg
+  lot_id: "3112"
+photos_001: 
+  id: "1"
+  image: img1.jpg
+  lot_id: "3059"
+photos_144: 
+  id: "160"
+  image: IMG_1868.jpg
+  lot_id: "3122"
+photos_116: 
+  id: "132"
+  image: RIMG0010.jpg
+  lot_id: "3102"
+photos_089: 
+  id: "105"
+  image: 12.jpg
+  lot_id: "3112"
+photos_002: 
+  id: "2"
+  image: img2.jpg
+  lot_id: "3059"
+photos_030: 
+  id: "31"
+  image: 00004.jpg
+  lot_id: "3090"
+photos_145: 
+  id: "161"
+  image: IMG_1828.jpg
+  lot_id: "3124"
+photos_117: 
+  id: "133"
+  image: RIMG0008.jpg
+  lot_id: "3097"
+photos_003: 
+  id: "3"
+  image: 00003.jpg
+  lot_id: "0"
+photos_031: 
+  id: "32"
+  image: 00006.jpg
+  lot_id: "3091"
+photos_146: 
+  id: "162"
+  image: IMG_1829.jpg
+  lot_id: "3124"
+photos_118: 
+  id: "134"
+  image: 00001.jpg
+  lot_id: "3104"
+photos_004: 
+  id: "4"
+  image: 00003.jpg
+  lot_id: "0"
+photos_060: 
+  id: "76"
+  image: RIMG0001.jpg
+  lot_id: "3107"
+photos_032: 
+  id: "33"
+  image: 00001.jpg
+  lot_id: "3091"
+photos_147: 
+  id: "163"
+  image: IMG_1818.jpg
+  lot_id: "3124"
+photos_119: 
+  id: "135"
+  image: 00002.jpg
+  lot_id: "3104"
+photos_005: 
+  id: "5"
+  image: 00003.jpg
+  lot_id: "3078"
+photos_061: 
+  id: "77"
+  image: RIMG0002.jpg
+  lot_id: "3107"
+photos_033: 
+  id: "34"
+  image: 00002.jpg
+  lot_id: "3091"
+photos_148: 
+  id: "164"
+  image: IMG_1819.jpg
+  lot_id: "3124"
+photos_006: 
+  id: "6"
+  image: 00003.jpg
+  lot_id: "3079"
+photos_090: 
+  id: "106"
+  image: 12.jpg
+  lot_id: "3112"
+photos_062: 
+  id: "78"
+  image: RIMG0003.jpg
+  lot_id: "3107"
+photos_034: 
+  id: "35"
+  image: 00004.jpg
+  lot_id: "3091"
+photos_149: 
+  id: "165"
+  image: IMG_1825.jpg
+  lot_id: "3124"
+photos_091: 
+  id: "107"
+  image: 12.jpg
+  lot_id: "3112"
+photos_063: 
+  id: "79"
+  image: RIMG0004.jpg
+  lot_id: "3107"
+photos_035: 
+  id: "36"
+  image: 00006.jpg
+  lot_id: "3092"
+photos_007: 
+  id: "7"
+  image: 00003.jpg
+  lot_id: "3080"
+photos_064: 
+  id: "80"
+  image: RIMG0006.jpg
+  lot_id: "3107"
+photos_036: 
+  id: "37"
+  image: 00001.jpg
+  lot_id: "3092"
+photos_008: 
+  id: "8"
+  image: 00001.jpg
+  lot_id: "3086"
+photos_092: 
+  id: "108"
+  image: 12.jpg
+  lot_id: "3112"
+photos_120: 
+  id: "136"
+  image: 00001.jpg
+  lot_id: "3103"
+photos_065: 
+  id: "81"
+  image: RIMG0001.jpg
+  lot_id: "3108"
+photos_037: 
+  id: "38"
+  image: 00002.jpg
+  lot_id: "3092"
+photos_009: 
+  id: "9"
+  image: 00002.jpg
+  lot_id: "3086"
+photos_093: 
+  id: "109"
+  image: 12.jpg
+  lot_id: "3112"
+photos_121: 
+  id: "137"
+  image: 00002.jpg
+  lot_id: "3103"
+photos_066: 
+  id: "82"
+  image: RIMG0002.jpg
+  lot_id: "3108"
+photos_038: 
+  id: "39"
+  image: 00004.jpg
+  lot_id: "3092"
+photos_094: 
+  id: "110"
+  image: RIMG0001.jpg
+  lot_id: "3113"
+photos_150: 
+  id: "166"
+  image: IMG_1827.jpg
+  lot_id: "3124"
+photos_122: 
+  id: "138"
+  image: IMG_1825.jpg
+  lot_id: "3119"
+photos_067: 
+  id: "83"
+  image: RIMG0003.jpg
+  lot_id: "3108"
+photos_039: 
+  id: "40"
+  image: 00006.jpg
+  lot_id: "3093"
+photos_095: 
+  id: "111"
+  image: RIMG0002.jpg
+  lot_id: "3113"
+photos_151: 
+  id: "167"
+  image: IMG_1827.jpg
+  lot_id: "3124"
+photos_123: 
+  id: "139"
+  image: IMG_1830.jpg
+  lot_id: "3119"
+photos_068: 
+  id: "84"
+  image: RIMG0004.jpg
+  lot_id: "3108"
+photos_096: 
+  id: "112"
+  image: RIMG0003.jpg
+  lot_id: "3113"
+photos_152: 
+  id: "168"
+  image: 6.jpg
+  lot_id: "3125"
+photos_124: 
+  id: "140"
+  image: IMG_1817.jpg
+  lot_id: "3119"
+photos_069: 
+  id: "85"
+  image: RIMG0006.jpg
+  lot_id: "3108"
+photos_097: 
+  id: "113"
+  image: RIMG0004.jpg
+  lot_id: "3113"
+photos_010: 
+  id: "11"
+  image: 00004.jpg
+  lot_id: "3086"
+photos_153: 
+  id: "171"
+  image: 2.jpg
+  lot_id: "3125"
+photos_125: 
+  id: "141"
+  image: IMG_1828.jpg
+  lot_id: "3119"
+photos_098: 
+  id: "114"
+  image: RIMG0007.jpg
+  lot_id: "3113"
+photos_011: 
+  id: "12"
+  image: 00001.jpg
+  lot_id: "3087"
+photos_154: 
+  id: "172"
+  image: 3.jpg
+  lot_id: "3125"
+photos_126: 
+  id: "142"
+  image: IMG_1825.jpg
+  lot_id: "3119"
+photos_040: 
+  id: "41"
+  image: 00001.jpg
+  lot_id: "3093"
+photos_099: 
+  id: "115"
+  image: 12.jpg
+  lot_id: "3114"
+photos_012: 
+  id: "13"
+  image: 00002.jpg
+  lot_id: "3087"
+photos_155: 
+  id: "173"
+  image: 4.jpg
+  lot_id: "3125"
+photos_127: 
+  id: "143"
+  image: IMG_1825.jpg
+  lot_id: "3119"
+photos_041: 
+  id: "42"
+  image: 00002.jpg
+  lot_id: "3093"
+photos_013: 
+  id: "14"
+  image: ""
+  lot_id: "3087"
+photos_156: 
+  id: "177"
+  image: 1.jpg
+  lot_id: "3126"
+photos_128: 
+  id: "144"
+  image: IMG_1828.jpg
+  lot_id: "3120"
+photos_070: 
+  id: "86"
+  image: RIMG0001.jpg
+  lot_id: "3109"
+photos_042: 
+  id: "43"
+  image: 00004.jpg
+  lot_id: "3093"
+photos_014: 
+  id: "15"
+  image: 00004.jpg
+  lot_id: "3087"
+photos_157: 
+  id: "178"
+  image: 2.jpg
+  lot_id: "3126"
+photos_129: 
+  id: "145"
+  image: IMG_1850.jpg
+  lot_id: "3120"
+photos_043: 
+  id: "44"
+  image: 00001.jpg
+  lot_id: "3094"
+photos_015: 
+  id: "16"
+  image: 00006.jpg
+  lot_id: "3088"
+photos_071: 
+  id: "87"
+  image: RIMG0002.jpg
+  lot_id: "3109"
+photos_158: 
+  id: "182"
+  image: 8.jpg
+  lot_id: "3125"
+photos_044: 
+  id: "45"
+  image: 00001.jpg
+  lot_id: "3094"
+photos_016: 
+  id: "17"
+  image: 00001.jpg
+  lot_id: "3088"
+photos_072: 
+  id: "88"
+  image: RIMG0003.jpg
+  lot_id: "3109"

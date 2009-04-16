@@ -1,0 +1,22 @@
+--- 
+in_country:
+  id: "1"
+  placement: "в селе"
+cottege_town:
+  id: "2"
+  placement: "в застроенном коттеджном городке"
+building_cottege_town:
+  id: "3"
+  placement: "в строящемся коттеджном городке"
+self_territory:
+  id: "4"
+  placement: "на обособленной территории"
+empty_field:
+  id: "5"
+  placement: "в поле"
+cooperative:
+  id: "6"
+  placement: "в дачном кооперативе"
+other_place:
+  id: "7"
+  placement: "в другом месте"

@@ -1,0 +1,6 @@
+mysqldump --no-create-info --skip-add-drop-table -c -uzagorod -pzagorod256 -h gate-vasil2 zagorod_development pages>db/pages_data.sql
+#rake extract_fixtures
+#cp db/fixed_fixtures/* db/exported_fixtures
+#rake load_exported_fixtures
+#mysql -uzagorod -pzagorod256 -h gate-vasil2 zagorod_development<db/pages_data.sql
+#mysql -uzagorod -pzagorod256 -hit-link.com.ua zagorod_production<db/pages_data.sql

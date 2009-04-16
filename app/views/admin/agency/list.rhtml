@@ -1,0 +1,30 @@
+<% @page_title="Список агентств"%>
+<table>
+  <tr>
+    <td></td>
+    <td class="header">Имя</td>
+    <td class="header">Участки</td>
+    <td class="header">Название</td>
+    <td class="header">Адрес</td>
+    <td class="header">телефоны</td>
+    <td/>
+     <td/>
+  </tr>
+  <% for agency in @agencies do %>
+  <% agency_lots=agency.lots.collect{|lot| lot.id.to_s}%>
+  <tr>
+    <td><%= icon('admin') %></td>
+    <td><%= agency.fio %></td>
+    <td><% for lot in agency_lots %>
+      <%= link_to(lot, {:controller=>'/admin/catalogue', :action=>'edit', :id=>lot})%>
+      <%= "," unless lot==agency_lots.last %>
+      <% end %>
+    </td>
+    <td><%= agency.name %></td>
+    <td><%= agency.address %></td>
+    <td width="150">тел1: <%= agency.phone1 %><br/>тел2:<%= agency.phone2 %></td>
+    <%= nobr_td(link_to(icon('edit',"редактировать"), :action=>"edit", :id=>agency))%>
+    <%= nobr_td(link_to(icon('delete',"удалить"), {:action=>"delete", :id=>agency}, :confirm=>"Действительно хотите удалить агентство? Ему принадлежит #{agency_lots.length} участков: #{agency_lots.join(',')}"))%>
+  </tr>
+<% end %>
+</table>

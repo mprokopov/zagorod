@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>setup (RMagickRequiresImageTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File test/magick_test.rb, line 95</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup</span>
+    <span class="ruby-constant">Entry</span>.<span class="ruby-identifier">file_column</span> <span class="ruby-identifier">:image</span>, <span class="ruby-identifier">:magick</span> =<span class="ruby-operator">&gt;</span> { 
+      <span class="ruby-identifier">:size</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;100x100&gt;&quot;</span>,
+      <span class="ruby-identifier">:image_required</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>,
+      <span class="ruby-identifier">:versions</span> =<span class="ruby-operator">&gt;</span> {
+        <span class="ruby-identifier">:thumb</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;80x80&gt;&quot;</span>,
+        <span class="ruby-identifier">:large</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">:size</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;200x200&gt;&quot;</span>, <span class="ruby-identifier">:lazy</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>}
+      }
+    }
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

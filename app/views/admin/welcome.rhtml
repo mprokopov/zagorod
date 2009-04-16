@@ -1,0 +1,16 @@
+
+<div class="memo">
+    <h3>Welcome</h3>
+
+    <p>You are now logged into the system...</p>
+    <p>
+    Since you are here it's safe to assume the application never called store_location, otherwise
+    you would have been redirected somewhere else after a successful login.
+    </p>
+
+    <p>
+    <%= link_to("Не отображено участков: #{@lot_for_review.length}",:controller=>'/admin/catalogue',:action=>'not_reviewed')%><br/>
+    <%= link_to("Не указана карта участков: #{@lot_without_map.length}",:controller=>'/admin/catalogue',:action=>'without_map')%>
+    </p>
+    <%= link_to "&#171; logout", :action=>"logout"%>  
+</div>

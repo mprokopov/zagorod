@@ -1,0 +1,46 @@
+<html>
+<head>
+<%= stylesheet_link_tag 'admin'%>
+<%= stylesheet_link_tag 'styles'%>
+<%= javascript_include_tag 'prototype' %>
+<%= javascript_include_tag 'effects' %>
+<%= javascript_include_tag 'tiny_mce/tiny_mce_popup' %>
+
+<script language="Javascript">
+        var hint_hidden=true, preview, element
+
+
+        function insertURL(url) {
+                eval("window.opener.myBrowserInstance.postUrlBack('"+url+"');");
+                top.close();
+        }
+        function doChangeDir()
+        {
+                dirs.submit();
+        }
+        function ShowHint(obj)
+        {
+        if(hint_hidden){
+            element=document.getElementById(obj)
+            pos=Position.cumulativeOffset(element)
+            preview=document.getElementById('preview');
+            preview.style.left=pos[0]+100;
+            preview.style.top=pos[1]+100;
+            Element.update('preview','Loading ...');
+            new Ajax.Request('/picbrowser/details?filename='+obj, {asynchronous:true, evalScripts:true});              
+            Element.show('preview');
+            hint_hidden=false;
+         }
+        }
+        function HideHint()
+        {
+            Element.hide('preview')
+            hint_hidden=true;
+        }
+</script>
+</head>
+<body>
+<div id="preview" style="display:none;" onclick="HideHint();"></div>
+    <%= @content_for_layout%>
+</body>
+</html>

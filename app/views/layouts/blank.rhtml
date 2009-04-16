@@ -1,0 +1,38 @@
+<html>
+<head>
+<title><%= @page_title%></title>
+<%= stylesheet_link_tag('styles')%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script>
+ function end(id) {
+// alert(id);
+
+//ie
+// alert(window.opener.document.getElementById('kievpoint').value);
+
+//firefox
+//alert(window.opener.document.all.kievpoint.value);
+window.opener.document.all.kievpoint.value=id;
+
+//opera
+// alert(window.opener.document.all.kievpoint.value);
+
+
+//if (window.opener && !window.opener.closed) {
+window.opener.focus();
+// window.opener.document.getElementById('kievpoint').value=id;
+//window.opener.document.all.kievpoint.value;
+// alert(window.opener.document.getElementById('kievpoint').value);
+ window.close();
+// }
+ //else {window.open("http://www.terrasoft.ua/academy/expertise/","");window.close();}
+
+}
+</script>
+
+</head>
+
+<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+<%= @content_for_layout%>
+</body>
+</html>

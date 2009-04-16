@@ -1,0 +1,45 @@
+   <!--основная часть-->
+	  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <% @map_link = capture do %>
+              <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td><img src="/images/search1.gif" width="3" height="136" border="0" alt="" /></td>
+                  <td style="background:url('/images/search.gif') no-repeat center;" width="100%" valign="bottom"><p class="searchmap"><a href="/map"><img src="/images/empty.gif" width="130" height="110" border="0" alt="Поиск по карте" /><br />Поиск по карте</a></p></td>
+                  <td><img src="/images/search2.gif" width="3" height="136" border="0" alt="" /></td>			  
+                </tr>
+              </table>
+              <% end %>
+              <%= render :partial => '/shared/search_block' %>
+              <td width="80%" valign="top">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td><img src="/images/empty.gif" width="7" height="1" border="0" alt="" /></td>
+                    <td width="100%">
+                      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                          <td><span class="pageheader">РЕЗУЛЬТАТЫ ПОИСКА</span>&#160;&#160;&#160;<b><%= @lot_pages.current.first_item%>-<%= @lot_pages.current.last_item%></b> из <%= @lot_pages.item_count%></td>
+                          <td align="right" class="sorting">Сортировать: <%= sort_header_tag('region_id', :title => 'район') %>&#160;&#160;|&#160;&#160;<%= sort_header_tag('square', :title => 'площадь') %>&#160;&#160;|&#160;&#160;<%= sort_header_tag('price_per_square', :title => 'цена') %>&#160;&#160;|&#160;&#160;<%= sort_header_tag('distance_to_city', :title => 'расстояние') %></td>
+                        </tr>
+                      </table>  
+                      <img src="/images/empty.gif" width="1" height="7" border="0" alt="" />
+                    </td>
+                    <td><img src="/images/empty.gif" width="7" height="1" border="0" alt="" /></td>
+                  </tr>
+                  <tr>
+                    <td></td> 
+                    <td>
+                      <%= render_partial_collection 'lot',@lots %>
+                      <br />
+                      <!--пейджер-->
+                      <%= render_partial 'paginator', @lot_pages %>
+                      <!--конец:пейджер-->		 
+                    </td>
+                    <td></td> 
+                  </tr>
+                </table> 
+
+              </td>
+            </tr>
+          </table> 			
+          <!--конец:основная часть-->	

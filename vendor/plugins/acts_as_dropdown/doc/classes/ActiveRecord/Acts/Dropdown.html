@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: ActiveRecord::Acts::Dropdown</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">ActiveRecord::Acts::Dropdown</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/lib/acts_as_dropdown_rb.html">
+                lib/acts_as_dropdown.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Specify this act if you want to your model be used easily with the
+<tt>select</tt> form helper. By default the plugin assumes you want to use
+the <tt>id</tt> attribute for the option&#8217;s value and the
+<tt>name</tt> attribute for the option&#8217;s text.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  class State &lt; ActiveRecord::Base
+    acts_as_dropdown
+  end
+
+  State.to_dropdown   # =&gt; [[&quot;Alabama&quot;, 1], [&quot;Alaska&quot;, 2], [&quot;Arizona&quot;, 3], [&quot;California&quot;, 4], [&quot;Colorado&quot;, 5]]
+</pre>
+<p>
+The <tt>value</tt>, <tt>text</tt>, <tt>conditions</tt>, and <tt>order</tt>
+can also be altered from the default configuration by using the options
+hash.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  class State &lt; ActiveRecord::Base
+    acts_as_dropdown :text =&gt; &quot;abbreviation&quot;, :conditions =&gt; &quot;id &lt; 4&quot;
+  end
+
+  State.to_dropdown   # =&gt; [[&quot;AL&quot;, 1], [&quot;AK&quot;, 2], [&quot;AZ&quot;, 3], [&quot;CA&quot;, 4]]
+</pre>
+<p>
+The class method <tt>to_dropdown</tt> can also alter the default class
+configuration using the same options hash.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  class State &lt; ActiveRecord::Base
+    acts_as_dropdown :text =&gt; &quot;abbreviation&quot;, :conditions =&gt; &quot;id &lt; 4&quot;
+  end
+
+  State.to_dropdown :text =&gt; &quot;name&quot;, :conditions =&gt; nil   # =&gt; [[&quot;Alabama&quot;, 1], [&quot;Alaska&quot;, 2], [&quot;Arizona&quot;, 3], [&quot;California&quot;, 4], [&quot;Colorado&quot;, 5]]
+</pre>
+<p>
+See <a
+href="Dropdown/ClassMethods.html#M000002">ActiveRecord::Acts::Dropdown::ClassMethods#acts_as_dropdown</a>
+for configuration options
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Module <a href="Dropdown/ClassMethods.html" class="link">ActiveRecord::Acts::Dropdown::ClassMethods</a><br />
+
+    </div>
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

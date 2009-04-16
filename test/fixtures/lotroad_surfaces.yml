@@ -1,0 +1,37 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: lotroad_surfaces
+#
+#  id      :integer(11)   not null, primary key
+#  surface :string(200)   default(), not null
+#
+
+--- 
+normal:
+  id: "1"
+  surface: "хороший асфальт"
+bad:
+  id: "2"
+  surface: "плохой асфальт (разбитая дорога)"
+shceben:
+  id: "3"
+  surface: "щебень"
+pesok:
+  id: "4"
+  surface: "песок"
+glina:
+  id: "5"
+  surface: "глина"
+grunt:
+  id: "6"
+  surface: "грунт"
+betonka:
+  id: "7"
+  surface: "бетонка"
+graviy:
+  id: "8"
+  surface: "гравий"
+other:
+  id: "9"
+  surface: "другое"

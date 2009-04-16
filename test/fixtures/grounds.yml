@@ -1,0 +1,28 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: grounds
+#
+#  id     :integer(11)   not null, primary key
+#  ground :string(200)   default(), not null
+#
+
+--- 
+chernozem:
+  id: "1"
+  ground: "чернозем"
+pesok:
+  id: "2"
+  ground: "песок"
+glina:
+  id: "3"
+  ground: "глина"
+torf:
+  id: "4"
+  ground: "торф"
+mixed:
+  id: "5"
+  ground: "смешанный"
+another:
+  id: "6"
+  ground: "другое"

@@ -1,0 +1,14 @@
+<% @page_title="Список страниц"%>
+
+<% for page in @pages do %>
+<div class="feature">
+<table border="0">
+<tr>
+  <td width="80%">
+    <%= link_to(icon('window'),{:controller=>'/page', :action=>"index", :url=>page.url}, :target=>"_blank")%>
+    <%= "#{page.parent.title} / " if page.parent_id.to_i>0%><%= page.title%></td>
+    <%= nobr_td(link_to(icon('edit',"редактировать"), :action=>"edit", :id=>page))%>
+</tr>
+</table>
+</div>
+<% end %>

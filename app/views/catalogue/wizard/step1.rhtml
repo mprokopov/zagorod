@@ -1,0 +1,214 @@
+<%= javascript_include_tag 'hide' %>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+
+    <td width="20%" valign="top">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">		
+        <tr>
+          <td bgcolor="#EFEDC6"><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>
+          <td bgcolor="#EFEDC6" class="headerleft" width="100%">Шаг 1. <span class="normal">Карточка продавца</span></td>
+          <td><img src="/images/p16.gif" width="2" height="19" border="0" alt="" /><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>		
+        </tr>
+        <tr>
+          <td></td>
+
+          <td class="search">
+            <% begin %>
+            <%= Page.find_by_url('step1').text %>
+            <% rescue %>
+            <% end %>
+          </td>
+          <td></td>		   
+        </tr>
+
+      </table>
+    </td>
+    <td style="background:url('/images/dots1.gif') repeat-y center;"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td>		
+    <td width="80%" valign="top">
+
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+          <td><img src="/images/empty.gif" width="7" height="1" border="0" alt="" /></td>
+          <td width="100%">
+
+            <!-- обработка ошибок --> 
+            <%= render :partial => '/catalogue/errors' %>
+            <!-- /обработка --> 
+            <% if @flash[:notice] %>
+            <div class="notice">
+              <%= @flash[:notice]%> 
+            </div>
+            <% end %>
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+
+              <tr>
+                <td width="100%">
+                  <p class="pageheader" style="margin-bottom:5px;">КТО ВЫ?</p>
+                  <input type="radio" id="radio1" name="who" value="1" <%= "checked='1'" unless @agency%> onclick="checkWho(this.value);" /> <label for="radio1" class="text12">Хозяин</label>&#160;&#160;&#160;<input type="radio" id="radio2" name="who" value="2" onclick="checkWho(this.value);" <%= "checked='1'" if @agency%>/> <label for="radio2" class="text12">Посредник</label>
+
+                  <p class="pageheader" style="margin-bottom:5px;">КОНТАКТНАЯ ИНФОРМАЦИЯ</p>
+                  <div id="owner" style="position: relative; display: <%= @agency?"none":"block"%>;">
+                    <%= form_tag %>
+                    <table cellpadding="5" cellspacing="0" border="0" width="100%">
+                      <tr bgcolor="#ffffff">
+                        <td class="text12" width="30%"><label for="owner[fio]">Имя</label></td>
+                        <td><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td class="text12" width="40%"><%= text_field("owner","fio",:style=>'width:100%',:id=>'owner[fio]')%></td>
+                        <td width="30%" bgcolor="#FCFCF1"></td>
+                      </tr>
+
+                      <tr>
+                        <td class="text12"><label for="owner[phone_city]">Основной телефон для контакта</label></td>
+                        <td><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td><%= text_field("owner","phone_city",:style=>'width:100%',:id=>'owner[phone_city]')%></td>
+                        <td class="help"></td>
+                      </tr>
+                      <tr bgcolor="#ffffff">
+                        <td class="text12"><label for="owner[phone]">Дополнительный телефон</label></td>
+
+                        <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td class="text12"><%= text_field("owner","phone",:style=>'width:100%',:id=>'owner[phone]')%></td>
+                        <td width="40%" bgcolor="#FCFCF1"></td>
+                      </tr>
+                      <tr>
+                        <td class="text12"><label for="owner[another_contact_fio]">В случае Вашего отсутствия связаться c ... (укажите имя)</label></td>
+                        <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td><%= text_field("owner","another_contact_fio",:style=>'width:100%',:id=>'owner[another_contact_fio]')%></td>
+
+                        <td class="help"></td>
+                      </tr>
+                      <tr bgcolor="#ffffff">
+                        <td class="text12"><label for="owner[another_contact_phone]">... по телефону</label></td>
+                        <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td class="text12"><%= text_field("owner","another_contact_phone",:style=>'width:100%',:id=>'owner[another_contact_phone]')%></td>
+                        <td width="40%" bgcolor="#FCFCF1"></td>
+                      </tr>
+
+                      <tr>
+                        <td class="text12"><label for="owner[email]">E-mail</label></td>
+                        <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td><%= text_field("owner","email",:style=>'width:100%',:id=>'owner[email]')%></td>
+                        <td class="help"></td>
+                      </tr>				 
+                      <tr bgcolor="#ffffff">
+                        <td class="text12"><label for="owner[is_other_contacts_allowed]">Хотите ли вы получать звонки от посредников</label></td>
+
+                        <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td>
+                          <%= radio_button("owner","is_other_contacts_allowed","1",{:checked=>"yes"})%>
+                          <label for="owner_is_other_contacts_allowed_1">Да</label>&#160;&#160;&#160;&#160;
+                          <%= radio_button("owner","is_other_contacts_allowed","0",{:id=>'owner[is_other_contacts_allowed_0]'})%>
+                          <label for="owner_is_other_contacts_allowed_0">Нет</label></td>
+                        <td class="help" bgcolor="#FCFCF1"></td>
+                      </tr>		
+                      <tr>
+                        <td class="text12"><label for="owner[preferred_contact_type]">Предпочтительный способ контакта</label></td>
+
+                        <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td>
+                          
+                          <%= radio_button("owner","preferred_contact_type","По телефону",{:checked=>"yes"})%>
+                          <label for="owner_preferred_contact_type_По_телефону">По телефону</label>&#160;&#160;&#160;&#160;
+                          <%= radio_button("owner","preferred_contact_type","По e-mail",{})%>
+                          <label for="owner_preferred_contact_type_По_email">По e-mail</label>
+                          </td>
+                        <td class="help"></td>
+                      </tr>
+                    </table>
+                  <table cellpadding="5" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td class="text12" width="100%" align="center"><br /><input type="submit" name="is_owner" style="width:150px; font-size:12px;" value="Продолжить к Шагу 2" /></td>
+
+                    </tr>		
+                  </table> 														
+                  </div>
+                  <%= end_form_tag %>				
+                  <div id="agent" style="position: relative; display: <%= @agency?"block":"none"%>;">
+                    <%= form_tag %>
+                    <table cellpadding="5" cellspacing="0" border="0" width="100%">
+                      <tr bgcolor="#ffffff">
+                        <td class="text12" width="30%"><label for="agency[fio]">Ваше имя</label></td>
+                        <td><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td class="text12" width="40%"><%= text_field("agency","fio",:style=>'width:100%',:id=>'agency[fio]')%></td>
+                        <td width="30%" bgcolor="#FCFCF1"></td>
+                      </tr>
+                      <tr>
+                        <td class="text12"><label for="agency[phone1]">Основной телефон для контакта</label></td>
+                        <td><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td><%= text_field("agency","phone1",:style=>'width:100%',:id=>'agency[phone1]')%></td>
+                        <td class="help"></td>
+
+                      </tr>
+                      <tr bgcolor="#ffffff">
+                        <td class="text12"><label for="agency[phone2]">Дополнительный телефон</label></td>
+                        <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td class="text12"><%= text_field("agency","phone2",:style=>'width:100%',:id=>'agency[phone2]')%></td>
+                        <td width="40%" bgcolor="#FCFCF1"></td>
+                      </tr>				 
+                      <tr>
+                        <td class="text12"><label for="agency[name]">Название aгентства</label></td>
+                        <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td><%= text_field("agency","name",:style=>'width:100%',:id=>'agency[name]')%></td>
+                        <td class="help"></td>
+                      </tr>
+                      <tr bgcolor="#ffffff">
+                        <td class="text12"><label for="agency[address]">Адрес агентства</label></td>
+                        <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+
+                        <td class="text12"><%= text_field("agency","address",:style=>'width:100%',:id=>'agency[address]')%></td>
+                        <td width="40%" bgcolor="#FCFCF1"></td>
+                      </tr>
+                      <tr>
+                        <td class="text12"><label for="agency[email]">E-mail</label></td>
+
+                        <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                        <td><%= text_field("agency","email",:style=>'width:100%',:id=>'agency[email]')%></td>
+                        <td class="help"></td>
+                      </tr>
+                    </table>
+
+                  <table cellpadding="5" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td class="text12" width="100%" align="center"><br /><input type="submit" name="is_agency" style="width:150px; font-size:12px;" value="Продолжить к шагу 2" /></td>
+
+                    </tr>		
+                  </table> 														
+                    <%= end_form_tag %>				
+                  </div>		
+                </td>
+              </tr>
+            </table>  
+            <img src="/images/empty.gif" width="1" height="7" border="0" alt="" />
+          </td>
+          <td><img src="/images/empty.gif" width="7" height="1" border="0" alt="" /></td>
+        </tr>
+
+      </table> 
+
+    </td>
+  </tr>
+</table> 			
+
+
+<!--конец:основная часть-->	  
+
+<%= javascript_include_tag 'fieldvalidator' %>
+<script type="text/javascript">
+			var oFieldValidator1 = new FieldValidator('owner[fio]', null, SetFieldState, SetFieldState)
+			var oFieldValidator2 = new FieldValidator('owner[phone_city]', null, SetFieldState, SetFieldState)
+			var oFieldValidator7 = new FieldValidator('agency[fio]', null, SetFieldState, SetFieldState)
+			var oFieldValidator10 = new FieldValidator('agency[phone1]', null, SetFieldState, SetFieldState)
+			function SetFieldState()
+			{
+				var sId = this.oFieldNode.getAttribute('id')
+				var aLabels = this.oFieldNode.form.getElementsByTagName('label')
+				for( var i=0; i<aLabels.length; i++ )
+				{
+					if( aLabels[i].htmlFor == sId )
+					{
+						aLabels[i].style.color = this.bValidated ? '' : 'red'
+						break
+					}
+				}
+                                }
+		</script>

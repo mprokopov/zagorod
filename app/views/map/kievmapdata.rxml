@@ -1,0 +1,6 @@
+xml.instruct! :xml, :version=>"1.0" 
+xml.map{
+  for departure in @departures
+    xml.point('',{:x=>departure.xpoint,:y=>departure.ypoint,:id=>departure.id, :name=>departure.name,:title=>departure.title,:image=>"/images/kiev/departures_small/#{departure.image}",:image2=>"/images/kiev/departures_small/#{departure.image2}"})
+  end
+}

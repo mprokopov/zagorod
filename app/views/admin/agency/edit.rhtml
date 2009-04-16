@@ -1,0 +1,15 @@
+<% @page_title="Редактировать агентство"%>
+<% form_for :agency, @agency,:html=>{:class=>"myform",:id=>"myform"} do |f| %>
+<%= f.hidden_field :id %>
+<div class="info">
+Дата добавления:  <%= @agency.created_on.strftime("%c") if @agency.created_on %><br/>
+Дата последнего изменения: <%= @agency.updated_on.strftime("%c") if @agency.updated_on %>
+</div>
+<label for="agency_fio">Имя:</label><%= f.text_field :fio %><br/>
+<label for="agency_name">Название:</label><%= f.text_field :name %><br/>
+<label for="agency_address">Адрес:</label><%= f.text_field :address %><br/>
+<label for="agency_phone1">Тел. 1:</label><%= f.text_field :phone1 %><br/>
+<label for="agency_phone2">Тел. 2:</label><%= f.text_field :phone2 %><br/>
+<label for="agency_email">email:</label><%= f.text_field :email %><br/>
+<%= submit_tag "Сохранить" %>
+<% end %>

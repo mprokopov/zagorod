@@ -1,0 +1,14 @@
+<% if @flash[:notice] %>
+<div class="notice">
+  <%= @flash[:notice] %>
+</div>
+<% end %>
+<% if @errors %>
+<div class="subtext">
+  <% @errors.each do |error| %>
+  <div class="brown">* <%= error%></div>
+  <% end %>
+</div>
+<% end %>
+<% @text=Page.find_by_url('finish').text %>
+<%= render :partial => 'shared/main_block', :locals=>{:text=>@text} %>

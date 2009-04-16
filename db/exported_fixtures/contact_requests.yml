@@ -1,0 +1,83 @@
+--- 
+contact_requests_002: 
+  created_on: 2006-09-28 12:34:42
+  name: !binary |
+    0JzQsNC60YHQuNC8
+
+  updated_on: 2006-09-28 12:34:42
+  id: "11"
+  phone: "222333444"
+  lot_id: "3114"
+  email: mp@it-lnk.com.ua
+contact_requests_003: 
+  created_on: 2006-09-28 17:15:57
+  name: !binary |
+    0J/QtdGC0YA=
+
+  updated_on: 2006-09-28 17:15:57
+  id: "17"
+  phone: "20384230854"
+  lot_id: "3114"
+  email: pdmitrenko@it-link.com.ua
+contact_requests_004: 
+  created_on: 2006-09-29 13:53:06
+  name: Peter
+  updated_on: 2006-09-29 13:53:06
+  id: "18"
+  phone: 0930902909
+  lot_id: "3120"
+  email: him@bigmir.net
+contact_requests_005: 
+  created_on: 2006-09-29 15:19:11
+  name: "\xD0\x92\xD0\xB0\xD1\x81\xD1\x8F "
+  updated_on: 2006-09-29 15:19:11
+  id: "19"
+  phone: 0504349349
+  lot_id: "3120"
+  email: fdkgj@yandex.ru
+contact_requests_006: 
+  created_on: 2006-10-03 09:59:24
+  name: !binary |
+    0JLQsNGB0Y8=
+
+  updated_on: 2006-10-03 09:59:24
+  id: "20"
+  phone: 0445748575
+  lot_id: "3120"
+  email: him@bigmir.net
+contact_requests_007: 
+  created_on: 2006-10-04 16:52:35
+  name: !binary |
+    0YvQtNC/0L4=
+
+  updated_on: 2006-10-04 16:52:35
+  id: "22"
+  phone: "234235235"
+  lot_id: "3124"
+  email: fdlkgh@mai.ru
+contact_requests_008: 
+  created_on: 2006-10-04 16:55:49
+  name: !binary |
+    0JzQsNC60YHQuNC8
+
+  updated_on: 2006-10-04 16:55:49
+  id: "23"
+  phone: "196"
+  lot_id: "3124"
+  email: mprokopov@gmail.com
+contact_requests_009: 
+  created_on: 2006-10-06 15:53:00
+  name: Peter
+  updated_on: 2006-10-06 15:53:00
+  id: "24"
+  phone: "293840285"
+  lot_id: "3120"
+  email: peter@gj.cm
+contact_requests_001: 
+  created_on: 2006-09-28 11:11:46
+  name: Nexus
+  updated_on: 2006-09-28 11:11:46
+  id: "3"
+  phone: "23"
+  lot_id: "3110"
+  email: mp@it-lnk.com.ua

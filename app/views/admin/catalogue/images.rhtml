@@ -1,0 +1,30 @@
+<% @page_title="Редактирования изображений участка # #{@lot.id.to_s}" %>
+<%=  form_tag({},{:class=>'myform'}) %> 
+<table>
+<th>
+Изображений: <%= @lot.photos.count %>
+</th>
+<% @lot.photos.find_all(nil,'weight DESC').each do |@photo| %>
+<tr>
+  <% checked=@lot.selected_photo_id == @photo.id %>
+  <td width="10px"><%= radio_button_tag 'selected_photo_id',@photo.id.to_s, checked %></td>
+  <td width="30px">Вес: <%= text_field_tag "weights[#{@photo.id.to_s}]",@photo.weight %></td>
+  <td>
+    <%= image_tag(url_for_file_column('photo','image','thumb'),{:width=>'174', :height=>'121', :border=>'0',:class=>'preview'}) %>
+  </td>
+  <td><%= link_to icon('delete')+'удалить изображение', {:action=>'delete_image', :id=>@lot, :image=>@photo}, :confirm=>'Вы действительно хотите удалить изображение' %></a>
+</td>
+</tr>
+<% end %>
+</table>
+<%= submit_tag 'Сохранить изменения' %>
+<%= end_form_tag %>
+<%=  form_tag({:action=>'addimage',:id=>@lot},{:multipart=>true,:class=>'myform'}) %> 
+<table>
+<tr>
+<td>
+  <label for="newphoto_image">Добавить новое изображение</label></td>
+<td> <%= file_column_field('newphoto','image') %>
+<%= submit_tag 'Отправить' %></td></tr>
+</table>
+<%= end_form_tag %>

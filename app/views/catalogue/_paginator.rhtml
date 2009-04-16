@@ -1,0 +1,21 @@
+ <!--пейджер-->
+ <table cellpadding="0" cellspacing="3" border="0" align="center">
+  <tr>
+   <td class="button">
+   <%= link_to(image_tag('prev.gif', {:width=>"16",:height=>"16",:border=>"0"}),:page => paginator.current.previous) if paginator.current.previous%>
+   </td>
+   <% if paginator.page_count>1 %>
+   <% paginator.each do |page|%>
+        <%if page==paginator.current_page then%>
+          <td class="pageact"><%= page.number %></a></td>	
+        <% else %>
+        <td class="page"><%= link_to(page.number,{:page=>page},{:title=>"Показать участки c #{paginator[page.number].first_item} по #{paginator[page.number].last_item}"})%></td>	
+       <% end %>	   		   		   
+   <% end %>
+   <% end %>
+   <td class="button">
+      <%= link_to(image_tag('next.gif', {:width=>"16",:height=>"16",:border=>"0"}),:page => paginator.current.next) if paginator.current.next%>
+   </td>
+  </tr>
+ </table>
+ <!--конец:пейджер-->		 

@@ -1,0 +1,21 @@
+--- 
+squares_001: 
+  id: "1"
+  max_square: "0.14"
+  square: "\xD0\xB4\xD0\xBE 0.14 \xD0\xB3\xD0\xB0"
+  min_square: "0"
+squares_002: 
+  id: "2"
+  max_square: "0.34"
+  square: "0.15-0.34\xD0\xB3\xD0\xB0"
+  min_square: "0.15"
+squares_003: 
+  id: "3"
+  max_square: "1"
+  square: "0.35-1\xD0\xB3\xD0\xB0"
+  min_square: "0.35"
+squares_004: 
+  id: "4"
+  max_square: 1e+07
+  square: "\xD0\xB1\xD0\xBE\xD0\xBB\xD0\xB5\xD0\xB5 1\xD0\xB3\xD0\xB0"
+  min_square: "1.01"

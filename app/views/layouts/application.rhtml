@@ -1,0 +1,206 @@
+<html>
+<head>
+<title><%= @page_title%> | Все за город!</title>
+<%= stylesheet_link_tag 'styles'%>
+<%= @content_for_javascript %>
+<%= javascript_include_tag 'input'%>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0" bgcolor="#7FC87E" background="/images/bg.jpg" style="background-repeat:repeat-x;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="background:url('/images/top1.jpg') center top repeat-x;" height="100%">
+<tr>
+<td valign="top"><table align="center" border="0" cellpadding="0" cellspacing="0"><tr><td width="1200" align="center">
+
+   <table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td><td>  
+ 
+ 
+   <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+   <% if @page_title=='Главная' %>
+   <tr>
+   <td valign="top" width="50%"><img src="/images/logo.png" width="400" height="89" border="0" class="png" alt="ВСЕ ЗАГОРОД! - Земельные участки Киевской области" /></td>
+   <% else %><tr>
+   <td valign="top" width="50%"><a href="/"><img src="/images/logo.png" width="400" height="89" border="0" class="png" alt="ВСЕ ЗАГОРОД! - Земельные участки Киевской области" /></a></td>
+   <% end -%>
+   <td valign="top" width="50%" align="right"><a href="/useful"><img src="/images/home.png" width="390" height="87" border="0" class="png" alt="Как продать участок ?" /></a></td>
+          </tr>
+	</table>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%"> 
+	 <tr>
+	  <% if @active_tab=='1' then %>
+	  	  <!--первый активен-->
+        	  <td><img src="/images/p15.gif" width="7" height="26" border="0" alt="" /></td>
+        	  <td class="menutopact"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  
+        	  <td class="menutopact"><%= link_to(content_tag('nobr','КАТАЛОГ УЧАСТКОВ'), :controller=>'/catalogue')%></td>
+        	  <td class="menutopact"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  	  
+        	  <td><img src="/images/p14.gif" width="7" height="26" border="0" alt="" /></td>	
+        	  <td><img src="/images/empty.gif" width="5" height="1" border="0" alt="" /></td>  
+        	  <td><img src="/images/p1.gif" width="7" height="26" border="0" alt="" /></td>
+        	  <td class="menutop"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  	  
+        	  <td class="menutop"><%= link_to(content_tag('nobr','ДОБАВИТЬ ОБЪЕКТ'), :controller=>'/catalogue/wizard', :action=>'step1')%></td>
+        	  <td class="menutop"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  	  
+        	  <td><img src="/images/p3.gif" width="7" height="26" border="0" alt="" /></td>	  
+	  <!--конец: первый активен-->	  
+      <% elsif @active_tab=='2' %>
+       	  <!--второй активен-->
+        	  <td><img src="/images/p1.gif" width="7" height="26" border="0" alt="" /></td>
+        	  <td class="menutop"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  
+        	  <td class="menutop"><%= link_to(content_tag('nobr','КАТАЛОГ УЧАСТКОВ'), :controller=>'/catalogue')%></td>
+        	  <td class="menutop"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  	  
+        	  <td><img src="/images/p3.gif" width="7" height="26" border="0" alt="" /></td>	
+        	  <td><img src="/images/empty.gif" width="5" height="1" border="0" alt="" /></td>  
+        	  <td><img src="/images/p15.gif" width="7" height="26" border="0" alt="" /></td>
+        	  <td class="menutopact"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  	  
+        	  <td class="menutopact"><%= link_to(content_tag('nobr','ДОБАВИТЬ ОБЪЕКТ'), :controller=>'/catalogue/wizard', :action=>'step1')%></td>
+        	  <td class="menutopact"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  	  
+        	  <td><img src="/images/p14.gif" width="7" height="26" border="0" alt="" /></td>	  
+	  <!--конец: второй активен-->	  
+     <% else %>
+	  <!--оба не активны-->
+        	  <td><img src="/images/p1.gif" width="7" height="26" border="0" alt="" /></td>
+        	  <td class="menutop"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  
+        	  <td class="menutop"><%= link_to(content_tag('nobr','КАТАЛОГ УЧАСТКОВ'), :controller=>'/catalogue')%></td>
+        	  <td class="menutop"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  	  
+        	  <td><img src="/images/p3.gif" width="7" height="26" border="0" alt="" /></td>	
+        	  <td><img src="/images/empty.gif" width="5" height="1" border="0" alt="" /></td>  
+        	  <td><img src="/images/p1.gif" width="7" height="26" border="0" alt="" /></td>
+        	  <td class="menutop"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  	  
+        	  <td class="menutop"><%= link_to(content_tag('nobr','ДОБАВИТЬ ОБЪЕКТ'), :controller=>'/catalogue/wizard', :action=>'step1')%></td>
+        	  <td class="menutop"><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>  	  	  
+        	  <td><img src="/images/p3.gif" width="7" height="26" border="0" alt="" /></td>	  
+	  <!--конец: оба не активны-->	  
+      <% end %>
+	  
+	  <td width="100%" align="right">
+	   <table cellpadding="0" cellspacing="0" border="0"> 
+	    <tr>
+            <!--если главная то -->		
+            <% if @page_title=='Главная' %>
+            <td><img src="/images/home_pass.gif" width="13" height="13" border="0" alt="" /></td>
+            <% else %>
+            <td><a href="/"><img src="/images/home.gif" width="13" height="13" border="0" alt="" /></a></td>
+            <% end %>
+
+		 <% if @active_tab=='3'%>
+		 <!--первый пункт активный-->
+		 <td><img src="/images/p11.gif" width="21" height="26" border="0" alt="" /></td>
+		 <td class="menutop2act">О проекте</td>
+		 <td><img src="/images/p4.gif" width="21" height="26" border="0" alt="" /></td>
+		 <td class="menutop2"><%= link_to 'Наши услуги', :controller=>'/services'%></td>
+		 <td><img src="/images/p6.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <td class="menutop2"><%= link_to 'Полезная информация', :controller=>'/page',:url=>'useful',:active_tab=>'5'%></td>
+		 <td><img src="/images/p6.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <td class="menutop2"><%= link_to 'Обратная связь', :controller=>'/feedback',:active_tab=>'6'%></td>		 		 		 
+		 <td><img src="/images/p7.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <!--конец:активный первый пункт-->		 
+		 <% elsif @active_tab=='6'%>
+		 <!-- последний пункт активный-->
+		 <td><img src="/images/p8.gif" width="21" height="26" border="0" alt="" /></td>
+		 <td class="menutop2"><%= link_to 'О проекте', :controller=>'/page',:url=>'about',:active_tab=>'3'%></td>
+		 <td><img src="/images/p6.gif" width="21" height="26" border="0" alt="" /></td>
+		 <td class="menutop2"><%= link_to 'Наши услуги', :controller=>'/services'%></a></td>
+		 <td><img src="/images/p6.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <td class="menutop2"><%= link_to 'Полезная информация', :controller=>'/page',:url=>'useful',:active_tab=>'5'%></td>
+		 <td><img src="/images/p5.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <td class="menutop2act">Обратная связь</td>		 		 		 
+		 <td><img src="/images/p12.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <!--конец:активный последний пункт-->		 		 
+		 <% elsif @active_tab=='4'%>
+		 <!--активный средний пункт-->
+		 <td><img src="/images/p8.gif" width="21" height="26" border="0" alt="" /></td>
+		 <td class="menutop2"><%= link_to 'О проекте', :controller=>'/page',:url=>'about',:active_tab=>'3'%></td>
+		 <td><img src="/images/p5.gif" width="21" height="26" border="0" alt="" /></td>
+		 <td class="menutop2act">Наши услуги</td>
+		 <td><img src="/images/p4.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <td class="menutop2"><%= link_to 'Полезная информация', :controller=>'/page',:url=>'useful',:active_tab=>'5'%></td>
+		 <td><img src="/images/p6.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <td class="menutop2"><%= link_to 'Обратная связь', :controller=>'/feedback',:active_tab=>'6'%></td>		 		 		 
+		 <td><img src="/images/p7.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <!--конец:активный средний пункт-->		 		 
+		 <% elsif @active_tab=='5'%>
+		 <!--активный средний пункт-->
+		 <td><img src="/images/p8.gif" width="21" height="26" border="0" alt="" /></td>
+		 <td class="menutop2"><%= link_to 'О проекте', :controller=>'/page',:url=>'about',:active_tab=>'3'%></td>
+		 <td><img src="/images/p6.gif" width="21" height="26" border="0" alt="" /></td>
+		 <td class="menutop2"><%= link_to 'Наши услуги', :controller=>'/services'%></td>
+		 <td><img src="/images/p5.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <td class="menutop2act">Полезная информация</td>
+		 <td><img src="/images/p4.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <td class="menutop2"><%= link_to 'Обратная связь', :controller=>'/feedback',:active_tab=>'6'%></td>		 		 		 
+		 <td><img src="/images/p7.gif" width="21" height="26" border="0" alt="" /></td>		 
+		 <!--конец:активный средний пункт-->		 		 		 
+		 <% else%>
+		 <!-- ни один не активен -->
+    		 <td><img src="/images/p8.gif" width="21" height="26" border="0" alt="" /></td>
+    		 <td class="menutop2"><%= link_to 'О проекте', :controller=>'/page',:url=>'about',:active_tab=>'3'%></td>
+    		 <td><img src="/images/p6.gif" width="21" height="26" border="0" alt="" /></td>
+    		 <td class="menutop2"><%= link_to 'Наши услуги', :controller=>'/services'%></td>
+    		 <td><img src="/images/p6.gif" width="21" height="26" border="0" alt="" /></td>		 
+    		 <td class="menutop2"><%= link_to 'Полезная информация', :controller=>'/page',:url=>'useful',:active_tab=>'5'%></td>
+    		 <td><img src="/images/p6.gif" width="21" height="26" border="0" alt="" /></td>		 
+    		 <td class="menutop2"><%= link_to 'Обратная связь', :controller=>'/feedback',:active_tab=>'6'%></td>		 		 		 
+    		 <td><img src="/images/p7.gif" width="21" height="26" border="0" alt="" /></td>	
+		 <% end %>
+		</tr>
+	   </table>
+	  </td>
+	 </tr>
+	</table>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%"> 
+	 <tr>
+         <!--если активна закладка "Каталог участников"-->
+         <% if @active_tab=='1' %>
+         <td bgcolor="#FBFAE7"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td>
+         <% else %>
+         <td><img src="/images/c1.gif" width="8" height="8" border="0" alt="" /></td>
+         <% end %>
+	  <td bgcolor="#FAF9E3" width="100%"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td>
+	  <td><img src="/images/c2.gif" width="8" height="8" border="0" alt="" /></td>	  
+	 </tr>
+	 <tr> 
+	  <td bgcolor="#FAF9E3" colspan="3">
+	  <img src="/images/empty.gif" width="1" height="12" border="0" alt="" /><br />
+      <!--основная часть-->
+    <%= @content_for_layout%>
+      <!--конец:основная часть-->	  
+	  </td>
+	 </tr>	  
+	 <tr>
+	  <td><img src="/images/c3.gif" width="8" height="8" border="0" alt="" /></td>
+	  <td bgcolor="#FAF9E3" width="100%"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td>
+	  <td><img src="/images/c4.gif" width="8" height="8" border="0" alt="" /></td>	  
+	 </tr>
+    </table>	  
+	<img src="/images/empty.gif" width="1" height="10" border="0" alt="" /><br />
+    <table cellpadding="0" cellspacing="0" border="0" width="100%"> 
+	 <tr>
+         <td  align="center" width="20%">
+         <!--
+	   <form><table width="100%" cellpadding="0" border="0" cellspacing="7"><tr><td width="100%"><input id="SearchField" type="text" placeholder="поиск по сайту" style="width:100%; border:solid 1px #55A255; background:#B1E0B1; color:#226822; font-size:11px; height:18px;" /></td><td><input type="submit" value="OK" style="width:25px; height:18px; border-top:solid 1px #BCDCBC; border-left:solid 1px #A3CFA3; border-bottom:solid 1px #3A513A; border-right:solid 1px #577A57; background:#8AC28A; color:#ffffff; font-size:11px; font-weight:bold;" /></td></tr></table></form>
+	   <script>if(document.getElementById) var ph = new InputPlaceholder (document.getElementById ('SearchField'), 'поиск по сайту', '', 'emptySearch');</script>
+           -->
+            <%= render :partial=>'shared/bigmir_counter' %>
+	  </td>
+	  <td><img src="/images/line1.gif" width="3" height="31" border="0" alt="" /></td>
+	  <td class="copy" width="30%"><p style="margin-left:7px;">
+	   <b>Все загород!</b> © 2006<br />
+           Хотите купить-продать земельный участок?</p></td>	  	  
+         <td width="20%" align="right">
+         <!--
+           <%= render :partial=>'shared/domik_counter' %>
+          -->
+           <%= link_to content_tag('u','Наши друзья'), {:controller=>'/page', :url=>'partners'},:class=>'copy' %>
+         </td>
+	  <td align="right" width="30%"><p style="margin-right:7px;">
+            <a href="http://zteel.com" target="_blank" class="copy">Дизайн сайта<br /><b>Игорь Стольницкий</b></a></p>
+          <a href="http://it-expert.com.ua" alt="Разработано в IT-Expert"><img src="/images/it-expert88x31_2.gif" border="0" width="88" height=31"/></a>
+	  </td>	  	  	  
+	 </tr>
+	</table>
+	<img src="/images/empty.gif" width="1" height="10" border="0" alt="" /></td><td><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td></tr></table>	
+<img src="/images/empty.gif" width="810" height="1" /><br /></td></tr></table></td>
+ </tr>
+</table>
+<%= render :partial=>'shared/google_analytics' %>
+</body>
+</html>

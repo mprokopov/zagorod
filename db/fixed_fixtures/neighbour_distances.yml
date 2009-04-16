@@ -1,0 +1,16 @@
+--- 
+in_place:
+  id: "1"	
+  distance: "примыкает"
+less_100:
+  id: "2"
+  distance: "до 100 метров"
+less_200:
+  id: "3"
+  distance: "до 200 метров"
+less_500:
+  id: "4"	
+  distance: "до 500 метров"
+more_500:
+  id: "5"
+  distance: "более 500 метров"

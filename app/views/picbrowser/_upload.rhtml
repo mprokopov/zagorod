@@ -1,0 +1,23 @@
+<table border="0" width="100%">
+<tr>
+<td valign="top" >
+<%= start_form_tag %>
+<nobr>
+<select name="current_directory" onchange="<%= remote_function(:url => { :action => :index }) %>">>
+    <%= options_for_select(@directory_list,@current_directory.path)-%>
+</select>
+<%= submit_tag('Сменить рабочий каталог')-%>
+</nobr>
+<%= end_form_tag-%>
+<%= form_tag({:action=>'makedir'},:multipart=>true)%>
+    <%= text_field_tag('new_directory')%>
+    <%= submit_tag('Создать подкаталог')%>
+<%= end_form_tag%>
+</td><td valign="top" align="right">
+<%= form_tag({:action=>'upload'},:multipart=>true)%>
+    <%= file_field_tag('picture')%><br/>
+    <%= submit_tag('Загрузить изображение')%>
+<%= end_form_tag%>
+[ <%= link_to('Обновить изображения для предпросмотра',:action=>:refresh)%> ]
+</td></tr>
+</table>

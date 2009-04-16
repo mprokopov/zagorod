@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>validates_image_size (FileColumn::Validations::ClassMethods)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/validations.rb, line 89</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">validates_image_size</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">attrs</span>)      
+        <span class="ruby-identifier">options</span> = <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">pop</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span><span class="ruby-constant">Hash</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Please include a :min option.&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>[<span class="ruby-identifier">:min</span>]
+        <span class="ruby-identifier">minimums</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:min</span>].<span class="ruby-identifier">scan</span>(<span class="ruby-constant">IMAGE_SIZE_REGEXP</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_i</span>} <span class="ruby-keyword kw">rescue</span> []
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Invalid value for option :min (should be 'XXxYY')&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">minimums</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+
+        <span class="ruby-identifier">require</span> <span class="ruby-value str">'RMagick'</span>
+
+        <span class="ruby-identifier">validates_each</span>(<span class="ruby-identifier">attrs</span>, <span class="ruby-identifier">options</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span>, <span class="ruby-identifier">attr</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">blank?</span>
+            <span class="ruby-keyword kw">begin</span>
+              <span class="ruby-identifier">img</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Magick</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span><span class="ruby-operator">::</span><span class="ruby-identifier">read</span>(<span class="ruby-identifier">value</span>).<span class="ruby-identifier">first</span>
+              <span class="ruby-identifier">record</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value str">'image'</span>, <span class="ruby-node">&quot;слишком мал, размеры не менее #{minimums[0]}x#{minimums[1]}&quot;</span>) <span class="ruby-keyword kw">if</span> ( <span class="ruby-identifier">img</span>.<span class="ruby-identifier">rows</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">minimums</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">img</span>.<span class="ruby-identifier">columns</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">minimums</span>[<span class="ruby-value">0</span>] )
+            <span class="ruby-keyword kw">rescue</span> <span class="ruby-operator">::</span><span class="ruby-constant">Magick</span><span class="ruby-operator">::</span><span class="ruby-constant">ImageMagickError</span>
+              <span class="ruby-identifier">record</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value str">'image'</span>, <span class="ruby-value str">&quot;неверное изображение&quot;</span>)
+            <span class="ruby-keyword kw">end</span>
+            <span class="ruby-identifier">img</span> = <span class="ruby-keyword kw">nil</span>
+            <span class="ruby-constant">GC</span>.<span class="ruby-identifier">start</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

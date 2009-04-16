@@ -1,0 +1,13 @@
+---
+five_and_more:
+  id: "1"
+  width: "5 и более метров"
+four_and_more:
+  id: "2"
+  width: "4 метра"
+three_and_more:
+  id: "3"
+  width: "3 метра"
+less_than_three:
+  id: "4"
+  width: "менее 3х метров"

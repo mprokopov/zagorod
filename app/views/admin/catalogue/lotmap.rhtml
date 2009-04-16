@@ -1,0 +1,111 @@
+<html>
+  <head>
+  <script language="javascript">
+  var posx=0;
+  var posy=0;
+function set_coord(e){
+  if (!e) var e = window.event;
+  if (e.pageX || e.pageY) 	{
+    posx = e.pageX;
+    posy = e.pageY;
+  }
+  else if (e.clientX || e.clientY) 	{
+    posx = e.clientX + document.body.scrollLeft
+      + document.documentElement.scrollLeft;
+    posy = e.clientY + document.body.scrollTop
+      + document.documentElement.scrollTop;
+  }
+  // posx and posy contain the mouse position relative to the document
+  // Do something with this information
+  // window.opener.document.all.lot_point_x.value=posx;
+  // window.opener.document.all.lot_point_y.value=posy;
+  //ie
+  // alert(window.opener.document.getElementById('kievpoint').value);
+
+//firefox
+//alert(window.opener.document.all.kievpoint.value);
+//window.opener.document.all.kievpoint.value=id;
+
+//opera
+// alert(window.opener.document.all.kievpoint.value);
+
+
+//if (window.opener && !window.opener.closed) {
+//window.opener.focus();
+// window.opener.document.getElementById('kievpoint').value=id;
+//window.opener.document.all.kievpoint.value;
+// alert(window.opener.document.getElementById('kievpoint').value);
+// window.close();
+// }
+//else {window.open("http://www.terrasoft.ua/academy/expertise/","");window.close();}
+
+
+  moveDiv(posx-5,posy-5);
+  set_star_status();
+}
+function postback(){
+    window.opener.document.all.lot_point_x.value=posx;
+    window.opener.document.all.lot_point_y.value=posy;
+    window.close();
+}
+function moveDiv(p_left,p_top){
+  var the_style = getStyleObject("star");
+  //var the_left = parseInt(the_style.left) + 100;
+  //var the_top = parseInt(the_style.top) + 100;
+  var the_left = p_left;
+  var the_top = p_top;
+  if (document.layers)
+  {
+    the_style.left = the_left;
+    the_style.top = the_top;
+  }
+  else 
+  {
+    the_style.left = the_left + "px";
+    the_style.top = the_top + "px";  
+  }
+}
+
+function getStyleObject(objectId){
+    // cross-browser function to get an object's style object given its
+    if(document.getElementById && document.getElementById(objectId)) {
+	// W3C DOM
+	return document.getElementById(objectId).style;
+    } else if (document.all && document.all(objectId)) {
+	// MSIE 4 DOM
+	return document.all(objectId).style;
+    } else if (document.layers && document.layers[objectId]) {
+	// NN 4 DOM.. note: this won't find nested layers
+	return document.layers[objectId];
+    } else {
+	return false;
+    }
+} 
+
+function set_visible_star(){
+    var starObj = document.getElementById("star");
+    posx = window.opener.document.all.lot_point_x.value;
+    posy = window.opener.document.all.lot_point_y.value;
+    starObj.style.display='block';
+    moveDiv(posx-5,posy-5);
+    set_star_status();
+}
+
+function set_star_status(){
+  document.getElementById("status").innerHTML=posx+"x"+posy;
+}
+
+
+</script>
+  </head>
+  <body onload="set_visible_star()" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+    <div id="star" style="position:absolute;top:100px;left:10px;">
+      <%= image_tag('star.gif') %>
+    </div>
+    <div id="status" style="position:absolute;bottom:5px;right:5px;">
+    </div>
+    <%= image_tag('map.gif',:onclick=>"set_coord(event);") %><br/>
+    <input type="button" value="Ok" onclick="postback()"/>
+    <input type="button" value="Cancel" onclick="window.close();"/>
+  </body>
+</html>

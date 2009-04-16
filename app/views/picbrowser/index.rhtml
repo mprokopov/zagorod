@@ -1,0 +1,18 @@
+<%= render_partial('upload')%>
+<hr class="picbrowser"/>
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice]%></div>
+<% end %>
+
+
+<% @image_collection.images.each do |i| %>
+<div class="thumbnails" id='<%=i.filename%>'>
+<%= link_to_function(image_tag(i.thumbnail.url),"insertURL('#{i.url}')")%>
+<br/>
+<%= i.filename%>
+<br/>
+[ <%= link_to_function("предпросмотр","ShowHint('#{i.filename}');")%> ]
+<br/>
+[ <%= link_to_remote("удалить", :url=>{:action=>'delete',:filename=>i.filename}, :confirm=>'Хотите удалить изображение?')%> ]
+</div>
+<% end%>

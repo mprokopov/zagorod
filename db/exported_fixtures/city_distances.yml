@@ -1,0 +1,31 @@
+--- 
+less_then_40km: 
+  min_distance: "0"
+  max_distance: "40"
+  id: "5"
+  distance: "до 40 км"
+more_then_40km: 
+  min_distance: "0"
+  max_distance: "99999999"
+  id: "6"
+  distance: "более 40 км"
+less_then_5km: 
+  min_distance: "0"
+  max_distance: "5"
+  id: "1"
+  distance: "до 5 км"
+less_then_10km: 
+  min_distance: "0"
+  max_distance: "10"
+  id: "2"
+  distance: "до 10 км"
+less_then_20km: 
+  min_distance: "0"
+  max_distance: "20"
+  id: "3"
+  distance: "до 20 км"
+less_then_30km: 
+  min_distance: "0"
+  max_distance: "30"
+  id: "4"
+  distance: "до 30 км"

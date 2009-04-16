@@ -1,0 +1,53 @@
+
+
+<html>
+<head>
+<title>Все загород!</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<script>
+ function end(id) {
+// alert(id);
+
+//ie
+// alert(window.opener.document.getElementById('kievpoint').value);
+
+//firefox
+//alert(window.opener.document.all.kievpoint.value);
+window.opener.document.all.kievpoint.value=id;
+
+//opera
+// alert(window.opener.document.all.kievpoint.value);
+
+
+//if (window.opener && !window.opener.closed) {
+window.opener.focus();
+// window.opener.document.getElementById('kievpoint').value=id;
+//window.opener.document.all.kievpoint.value;
+// alert(window.opener.document.getElementById('kievpoint').value);
+ window.close();
+// }
+ //else {window.open("http://www.terrasoft.ua/academy/expertise/","");window.close();}
+ 
+
+}
+</script>
+
+</head>
+
+<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+		
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="400" height="400" id="map" align="middle">
+<param name="movie" value="map/kievmap.swf" />
+<param name="quality" value="best" />
+<param name="bgcolor" value="#FAF9E3" />
+<param name="scale" value="noscale" />
+<embed src="map/kievmap.swf" scale="noscale" quality="best" bgcolor="#FAF9E3" width="400" height="400" name="map" align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+
+			
+		 
+
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+*1.1*
+* Update to fix a bug found by Richard Hull. Additional tests were also created to help resolve this issue.
+
+*1.0* 
+
+* Initial release of the plugin. Includes documentation and tests.

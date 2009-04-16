@@ -1,0 +1,133 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: departures
+#
+#  id        :integer(11)   not null, primary key
+#  departure :string(200)   default(), not null
+#  xpoint    :integer(11)   default(0), not null
+#  ypoint    :integer(11)   default(0), not null
+#  image     :string(150)   default(), not null
+#  image2    :string(150)   default(), not null
+#  title     :string(150)   default(), not null
+#  name      :string(150)   default(), not null
+#
+
+--- 
+staroobuhov: 
+  name: "Кольцевая дорога"
+  title: "(Старообуховская трасса)"
+  xpoint: "210"
+  image2: Staroobuxov2.jpg
+  ypoint: "255"
+  id: "1"
+  image: Staroobuxov1.jpg
+  departure: "Кольцевая дорога (Старообуховская трасса)"
+novoobuhov: 
+  name: "Кольцевая дорога"
+  title: "(Новообуховская трасса)"
+  xpoint: "200"
+  image2: Novoobuxov1.jpg
+  ypoint: "255"
+  id: "2"
+  image: Novoobuxov2.jpg
+  departure: "Кольцевая дорога (Новообуховская трасса)"
+odesskiy_most: 
+  name: "Кольцевая дорога"
+  title: "(Одесская площадь)"
+  xpoint: "155"
+  image2: Odesskoe2.jpg
+  ypoint: "225"
+  id: "3"
+  image: Odesskoe1.jpg
+  departure: "Кольцевая дорога (Одесская площадь)"
+puteprovod: 
+  name: "Кольцевая дорога"
+  title: "(Жулянский путепровод)"
+  xpoint: "130"
+  image2: Puteprovod2.jpg
+  ypoint: "200"
+  id: "4"
+  image: Puteprovod1.jpg
+  departure: "Кольцевая дорога (Жулянский путепровод)"
+autozaz: 
+  name: "Кольцевая дорога"
+  title: "(АвтоЗАЗ)"
+  image2: Avtozaz2.jpg
+  xpoint: "110"
+  ypoint: "185"
+  id: "5"
+  image: Avtozaz1.jpg
+  departure: "Кольцевая дорога (АвтоЗАЗ)"
+sofievka: 
+  name: "Кольцевая дорога"
+  title: "(Софиевская Борщаговка)"
+  xpoint: "100"
+  ypoint: "181"
+  image2: SB2.jpg
+  id: "6"
+  image: SB1.jpg
+  departure: "Кольцевая дорога (Софиевская Борщаговка)"
+dachnaya: 
+  name: "Кольцевая дорога"
+  title: "(автостанция 'Дачная')"
+  xpoint: "77"
+  image2: Dachna2.jpg
+  ypoint: "144"
+  id: "7"
+  image: Dachna1.jpg
+  departure: "Кольцевая дорога (автостанция 'Дачная')"
+gostomelskoe_shosse: 
+  name: "Кольцевая дорога"
+  title: "(Гостомельское шоссе)"
+  xpoint: "61"
+  image2: Varshavka2.jpg
+  ypoint: "51"
+  id: "8"
+  image: Varshavka1.jpg
+  departure: "Кольцевая дорога (Гостомельское шоссе)"
+polesye: 
+  name: "Площадь Шевченко"
+  title: "(автостанция 'Полесье')"
+  xpoint: "153"
+  image2: Polesie2.jpg
+  ypoint: "75"
+  id: "9"
+  image: Polesie1.jpg
+  departure: "Площадь Шевченко (автостанция 'Полесье')"
+obolon: 
+  name: "Завод Оболонь"
+  title: "(Вышгородская трасса)"
+  xpoint: "170"
+  image2: Obolon2.jpg
+  ypoint: "75"
+  id: "10"
+  image: Obolon1.jpg
+  departure: "Завод Оболонь (Вышгородская трасса)"
+global:
+  name: "ТЦ"
+  title: "УА Глобал"
+  xpoint: "230"
+  ypoint: "105"
+  id: "11"
+  image: Troeshina1.jpg
+  image2: Troeshina2.jpg
+  departure: "ТЦ УА Глобал'"
+metro_lesnaya: 
+  name: "метро Лесная"
+  title: "(Броварская трасса)"
+  xpoint: "270"
+  image2: Brovary2.jpg
+  ypoint: "133"
+  id: "12"
+  image: Brovary1.jpg
+  departure: "метро Лесная (Броварская трасса)"
+metro_borispol: 
+  name: "метро Бориспольская"
+  title: "(Бориспольская трасса)"
+  xpoint: "344"
+  image2: Borispol2.jpg
+  ypoint: "208"
+  id: "13"
+  image: Borispol1.jpg
+  departure: "метро Бориспольская (Бориспольская трасса)"

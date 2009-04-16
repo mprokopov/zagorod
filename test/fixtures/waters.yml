@@ -1,0 +1,22 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: waters
+#
+#  id     :integer(11)   not null, primary key
+#  object :string(200)   default(), not null
+#
+
+--- 
+absent:
+  id: "1"
+  object: "отсутствует"
+well:
+  id: "2"
+  object: "есть колодец"
+skvazhina:
+  id: "3"
+  object: "есть скважина"
+central:
+  id: "4"
+  object: "есть централизованная"

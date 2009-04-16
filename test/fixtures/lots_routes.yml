@@ -1,0 +1,477 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: lots_routes
+#
+#  id                :integer(11)   not null, primary key
+#  lot_id            :integer(11)   default(0)
+#  route_distance_id :integer(11)   default(0)
+#  route_type_id     :integer(11)   default(0)
+#
+
+--- 
+lots_routes_092: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "92"
+  lot_id: "3106"
+lots_routes_071: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "71"
+  lot_id: "3091"
+lots_routes_007: 
+  route_type_id: "1"
+  route_distance_id: "2"
+  id: "7"
+  lot_id: "3058"
+lots_routes_028: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "28"
+  lot_id: "3069"
+lots_routes_050: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "50"
+  lot_id: "3080"
+lots_routes_049: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "49"
+  lot_id: "3080"
+lots_routes_093: 
+  route_type_id: "2"
+  route_distance_id: "1"
+  id: "93"
+  lot_id: "3107"
+lots_routes_072: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "72"
+  lot_id: "3091"
+lots_routes_030: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "30"
+  lot_id: "3070"
+lots_routes_029: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "29"
+  lot_id: "3070"
+lots_routes_051: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "51"
+  lot_id: "3081"
+lots_routes_073: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "73"
+  lot_id: "3092"
+lots_routes_052: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "52"
+  lot_id: "3081"
+lots_routes_010: 
+  route_type_id: "3"
+  route_distance_id: "2"
+  id: "10"
+  lot_id: "3059"
+lots_routes_008: 
+  route_type_id: "3"
+  route_distance_id: "2"
+  id: "8"
+  lot_id: "3058"
+lots_routes_031: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "31"
+  lot_id: "3071"
+lots_routes_074: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "74"
+  lot_id: "3092"
+lots_routes_011: 
+  route_type_id: "1"
+  route_distance_id: "2"
+  id: "11"
+  lot_id: "3060"
+lots_routes_009: 
+  route_type_id: "1"
+  route_distance_id: "2"
+  id: "9"
+  lot_id: "3059"
+lots_routes_032: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "32"
+  lot_id: "3071"
+lots_routes_053: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "53"
+  lot_id: "3082"
+lots_routes_075: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "75"
+  lot_id: "3093"
+lots_routes_012: 
+  route_type_id: "3"
+  route_distance_id: "2"
+  id: "12"
+  lot_id: "3060"
+lots_routes_033: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "33"
+  lot_id: "3072"
+lots_routes_054: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "54"
+  lot_id: "3082"
+lots_routes_076: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "76"
+  lot_id: "3093"
+lots_routes_013: 
+  route_type_id: "1"
+  route_distance_id: "2"
+  id: "13"
+  lot_id: "3061"
+lots_routes_034: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "34"
+  lot_id: "3072"
+lots_routes_055: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "55"
+  lot_id: "3083"
+lots_routes_077: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "77"
+  lot_id: "3094"
+lots_routes_014: 
+  route_type_id: "3"
+  route_distance_id: "2"
+  id: "14"
+  lot_id: "3061"
+lots_routes_035: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "35"
+  lot_id: "3073"
+lots_routes_056: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "56"
+  lot_id: "3083"
+lots_routes_078: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "78"
+  lot_id: "3094"
+lots_routes_015: 
+  route_type_id: "1"
+  route_distance_id: "2"
+  id: "15"
+  lot_id: "3062"
+lots_routes_036: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "36"
+  lot_id: "3073"
+lots_routes_057: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "57"
+  lot_id: "3084"
+lots_routes_080: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "80"
+  lot_id: "3095"
+lots_routes_079: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "79"
+  lot_id: "3095"
+lots_routes_016: 
+  route_type_id: "3"
+  route_distance_id: "2"
+  id: "16"
+  lot_id: "3062"
+lots_routes_037: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "37"
+  lot_id: "3074"
+lots_routes_058: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "58"
+  lot_id: "3084"
+lots_routes_081: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "81"
+  lot_id: "3096"
+lots_routes_017: 
+  route_type_id: "1"
+  route_distance_id: "2"
+  id: "17"
+  lot_id: "3063"
+lots_routes_038: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "38"
+  lot_id: "3074"
+lots_routes_060: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "60"
+  lot_id: "3085"
+lots_routes_059: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "59"
+  lot_id: "3085"
+lots_routes_082: 
+  route_type_id: "3"
+  route_distance_id: "4"
+  id: "82"
+  lot_id: "3096"
+lots_routes_018: 
+  route_type_id: "3"
+  route_distance_id: "2"
+  id: "18"
+  lot_id: "3063"
+lots_routes_040: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "40"
+  lot_id: "3075"
+lots_routes_039: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "39"
+  lot_id: "3075"
+lots_routes_061: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "61"
+  lot_id: "3086"
+lots_routes_083: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "83"
+  lot_id: "3097"
+lots_routes_041: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "41"
+  lot_id: "3076"
+lots_routes_062: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "62"
+  lot_id: "3086"
+lots_routes_020: 
+  route_type_id: "3"
+  route_distance_id: "2"
+  id: "20"
+  lot_id: "3064"
+lots_routes_084: 
+  route_type_id: "3"
+  route_distance_id: "4"
+  id: "84"
+  lot_id: "3097"
+lots_routes_063: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "63"
+  lot_id: "3087"
+lots_routes_021: 
+  route_type_id: "1"
+  route_distance_id: "2"
+  id: "21"
+  lot_id: "3065"
+lots_routes_019: 
+  route_type_id: "1"
+  route_distance_id: "2"
+  id: "19"
+  lot_id: "3064"
+lots_routes_042: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "42"
+  lot_id: "3076"
+lots_routes_085: 
+  route_type_id: "2"
+  route_distance_id: "1"
+  id: "85"
+  lot_id: "3105"
+lots_routes_001: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "1"
+  lot_id: "3000"
+lots_routes_022: 
+  route_type_id: "3"
+  route_distance_id: "2"
+  id: "22"
+  lot_id: "3065"
+lots_routes_043: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "43"
+  lot_id: "3077"
+lots_routes_064: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "64"
+  lot_id: "3087"
+lots_routes_086: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "86"
+  lot_id: "3104"
+lots_routes_002: 
+  route_type_id: "2"
+  route_distance_id: "2"
+  id: "2"
+  lot_id: "3000"
+lots_routes_023: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "23"
+  lot_id: "3067"
+lots_routes_044: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "44"
+  lot_id: "3077"
+lots_routes_065: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "65"
+  lot_id: "3088"
+lots_routes_087: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "87"
+  lot_id: "3104"
+lots_routes_003: 
+  route_type_id: "2"
+  route_distance_id: "2"
+  id: "3"
+  lot_id: "3001"
+lots_routes_024: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "24"
+  lot_id: "3067"
+lots_routes_045: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "45"
+  lot_id: "3078"
+lots_routes_066: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "66"
+  lot_id: "3088"
+lots_routes_088: 
+  route_type_id: "1"
+  route_distance_id: "2"
+  id: "88"
+  lot_id: "3105"
+lots_routes_067: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "67"
+  lot_id: "3089"
+lots_routes_004: 
+  route_type_id: "1"
+  route_distance_id: "3"
+  id: "4"
+  lot_id: "3002"
+lots_routes_025: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "25"
+  lot_id: "3068"
+lots_routes_046: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "46"
+  lot_id: "3078"
+lots_routes_090: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "90"
+  lot_id: "3105"
+lots_routes_089: 
+  route_type_id: "2"
+  route_distance_id: "2"
+  id: "89"
+  lot_id: "3105"
+lots_routes_068: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "68"
+  lot_id: "3089"
+lots_routes_005: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "5"
+  lot_id: "3003"
+lots_routes_026: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "26"
+  lot_id: "3068"
+lots_routes_047: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "47"
+  lot_id: "3079"
+lots_routes_091: 
+  route_type_id: "2"
+  route_distance_id: "1"
+  id: "91"
+  lot_id: "3106"
+lots_routes_070: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "70"
+  lot_id: "3090"
+lots_routes_069: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "69"
+  lot_id: "3090"
+lots_routes_006: 
+  route_type_id: "1"
+  route_distance_id: "2"
+  id: "6"
+  lot_id: "3004"
+lots_routes_027: 
+  route_type_id: "1"
+  route_distance_id: "1"
+  id: "27"
+  lot_id: "3069"
+lots_routes_048: 
+  route_type_id: "3"
+  route_distance_id: "1"
+  id: "48"
+  lot_id: "3079"

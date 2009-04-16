@@ -1,0 +1,306 @@
+ <table cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <tr>
+	    <td width="20%" valign="top">
+         <table cellpadding="0" cellspacing="0" border="0" width="100%">		
+		  <tr>
+	       <td bgcolor="#EFEDC6"><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>
+	       <td bgcolor="#EFEDC6" class="headerleft" width="100%">ПОИСК</td>
+	       <td><img src="/images/p16.gif" width="2" height="19" border="0" alt="" /><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>		
+	      </tr>
+		  <tr>
+		   <td></td>
+		   <td class="search">
+		     <ul class="arrow">
+             <li><a href="." class="detail">Вернуться к результатам</a></li>
+			 </ul>
+		   </td>
+		   <td></td>		   
+		  </tr>
+		  <tr>
+	       <td bgcolor="#EFEDC6"><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>
+	       <td bgcolor="#EFEDC6" class="headerleft" width="100%">ИНФОРМАЦИЯ</td>
+	       <td><img src="/images/p16.gif" width="2" height="19" border="0" alt="" /><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>		
+	      </tr>
+		  <tr>
+		   <td></td>
+		   <td class="search">
+                     <ul class="arrow2">
+                       <% Page.find_all_by_parent_id(3).each do |link| %>
+                       <li> <%= link_to(link.title, {:controller=>'/page', :url=>link.url,:active_tab=>'5'},:class=>'detail')%></li>
+                       <% end %>
+                     </ul> 
+                   </td>
+                   <td></td>		   
+                 </tr>
+               </table>
+             </td>
+             <td style="background:url('/images/dots1.gif') repeat-y center;"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td>		
+             <td width="80%" valign="top">
+
+               <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                 <tr>
+                   <td><img src="/images/empty.gif" width="7" height="1" border="0" alt="" /></td>
+                   <td valign="top" width="100%">
+
+                     <% if @lot.agency %>			
+                     <div class="info1"  align="left">
+                       <b class="brown">Координаты посредника</b><br>
+                       тел. <%= @lot.agency.phone1%>
+                       <% if @lot.agency.phone2 %>
+                       <br>тел. <%= @lot.agency.phone2%>			  
+                       <% end %>
+                     </div>
+                     <% end %>
+                     <% if @lot.owner %>
+                     <div class="info1"  align="left">
+                       <b class="brown">Координаты владельца</b><br>
+                       тел. <%= @lot.owner.phone_city%>
+                       <% if @lot.owner.email %>
+                       <br>
+                       email: <%= mail_to @lot.owner.email, @lot.owner.email,:encode=>'javascript' if @lot.owner.email%>
+                       <% end %>
+                     </div>
+                     <!--
+                     <div class="info1" align="left">
+                       <%= link_to("Координаты продавца"+image_tag('arrow4.gif',{:align=>"absmiddle",:border=>"0", :height=>"11",:hspace=>"3",:width=>"11"}),{:controller=>"/services",:action=>'getcontacts',:id=>@lot})%><br/>
+                     </div>
+                     -->
+                        <% end %>
+                     <p class="brown">УЧАСТОК # <span class="number"><%= "%05d" % @lot.id%></span>  
+
+                     <p class="text12">
+                     <%= @lot.region.name%><br />
+                     <b><%= @lot.area%></b>&#160;&#160;|&#160;&#160;<span class="text11">
+                       <%= link_to(image_tag('arrow4.gif',{:width=>"11",:height=>"11",:hspace=>"4",:border=>"0",:align=>"absmiddle"})+"посмотреть на карте", {:controller=>'/map',:action=>'index',"search[id]"=>@lot.id.to_s})%>
+                       </span>&#160;&#160;|&#160;&#160;<span class="text11"><nobr><%= link_to 'Версия для печати', :action=>'print'%><img src="/images/print.gif" width="16" height="16" hspace="4" border="0" align="absmiddle" alt="" /></nobr></span>
+                     </p>
+
+			<table width="100%" cellpadding="0" cellspacing="4" border="0" class="block">
+			 <tr>
+			  <td width="40%">Общая площадь</td>
+			  <td class="value" width="60%"><%= "%.2f" % @lot.square%> га</td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>
+			 <tr>
+			  <td width="40%">Под застройку</td>
+			  <td class="value" width="60%"><%= "%.2f" % @lot.square_for_building%> га</td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>
+			 
+			 <tr>
+			  <td>Цена за 0.01га</td>
+			  <td class="value">$<%= "%d" % @lot.price_per_square%></td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 
+			 <tr>
+			  <td>Полная стоимость</td>
+			  <td class="value">$<%= "%d" % @lot.full_price%>
+			  <% if @lot.is_price_changeble then %>
+			  &#160;&#160;&#160;<span class="black"><b>Возможен торг</b></span></td>			  
+			  <% end %>
+			 </tr>
+			</table>
+			
+			<p class="header12"><b>Подъезные пути</b></p>
+     		<table width="100%" cellpadding="0" cellspacing="4" border="0" class="block">
+			 <tr>
+			  <td width="40%">Расстояние до участка от Киева</td>
+                          <td class="value" width="60%"><%= "%.1f" % @lot.distance_to_city%> км&#160;&#160;&#160;<span class="black">от <%= link_to(@lot.departure.departure,
+                              { :controller=>'map', :action=>'kiev'}, 
+                              {:popup=>['map','width=400,height=400']})%></span></td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <tr>
+			  <td colspan="2"><b>Отрезок пути от земельного участка до ближайшей асфальтированной дороги</b></td>
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 			 
+			 <tr>
+			  <td class="subtext">Расстояние</td>
+			  <td class="value"><%= @lot.lotroad_distance.distance%></td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>
+			 <tr>
+			  <td class="subtext">Покрытие</td>
+                          <td class="value"><%= @lot.lotroad_surface.surface%><%= ", #{@lot.lotroad_surface_another}" unless @lot.lotroad_surface_another.empty?%></td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <tr>
+			  <td width="40%" class="subtext">Ширина</td>
+			  <td class="value" width="60%"><%= @lot.lotroad_width.width%></td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <tr>
+			  <td>Другие подъезды к участку</td>
+			  <td class="value"><%= if @lot.is_another_routes then "Есть" else "Нет" end %></td>
+			 </tr>
+			</table>
+			
+			<p class="header12"><b>Коммуникации и Инфраструктура</b></p>
+     		<table width="100%" cellpadding="0" cellspacing="4" border="0" class="block">
+			 <tr>
+			  <td width="40%">Газ <br />(ГРП/труба к которой можно подключиться)</td>
+			  <td class="value" width="60%"><%= @lot.gas.distance%></td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <tr>
+			  <td>Электричество<br /> (Трансформатор 220в/ближайший столб)</td>
+			  <td class="value"><%= @lot.electricity.distance%></td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <tr>
+			  <td>Вода</td>
+			  <td class="value"><%= @lot.water.object%></td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <tr>
+			  <td colspan="2"><b>Сообщение с Киевом:</b></td>
+			 </tr> 
+			 <% for route in @lot.routes %>
+ 			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 			 
+             <tr>
+			  <td class="subtext"><%= route.route_type.route%></td>
+			  <td class="value"><%= route.route_distance.distance%></td>
+			 </tr>
+			 <% end %>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+                         <% if @lot.nearest_shop_distance || @lot.nearest_kiosk_distance || !@lot.nearest_commerce_another.empty? %>
+			 <tr><td colspan="2"><b>Магазины, развлечения, другое</b></td></tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 			 
+                         <% if @lot.nearest_kiosk_distance %>
+             <tr><td class="subtext">Ближайший киоск</td><td class="value"><%= @lot.nearest_kiosk_distance%> км</td></tr>
+             <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 			  
+             <% end %>
+             <% if @lot.nearest_shop_distance %>
+             <tr><td class="subtext">Прод. магазин</td><td class="value"><%= @lot.nearest_shop_distance%> км</td></tr>
+             <% end %>
+                         <% if !@lot.nearest_commerce_another.empty? %>
+                         <tr><td class="subtext">Другое</td><td class="value"><%= @lot.nearest_commerce_another%></td></tr>
+                         <% end %>
+                         <% end %>
+			</table>		
+			
+			<p class="header12"><b>Расположение</b></p>
+     		<table width="100%" cellpadding="0" cellspacing="4" border="0" class="block">
+			 <tr>
+			  <td width="40%">Участок расположен</td>
+			  <td class="value" width="60%"><%= @lot.placement.placement%>
+                            <%= ", #{@lot.placement_another}" if !@lot.placement_another.empty?%>
+			  </td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>
+			 <% if !@lot.neighbours.empty?() %>
+			 <tr>
+			  <td>Соседи</td>
+			  <td class="value"></td>			  
+			 </tr>
+			 <% for neighbour in @lot.neighbours %>
+ 			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 			 
+             <tr>
+			  <td class="subtext"><%= neighbour.neighbour_type.neighbour%></td>
+			  <td class="value"><%= neighbour.neighbour_distance.distance if neighbour.neighbour_type.has_distance==1 %></td>
+			 </tr>
+			 <% end %>			 
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <% end %>
+			 <% if !@lot.natures.empty?()%>
+			 <tr><td colspan="2"><b>Пейзаж и окружение</b></td></tr>
+			 <% for nature in @lot.natures %>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>
+             <tr><td class="subtext"><%= nature.nature_type.nature%></td><td class="value"><%= nature.nature_distance.distance if nature.nature_type.has_distance==1 %></td></tr>
+             <% end %>
+            <% end %>
+			</table>				
+
+			<p class="header12"><b>Об участке</b></p>
+     		<table width="100%" cellpadding="0" cellspacing="4" border="0" class="block">
+			 <tr>
+			  <td width="40%">Размеры (приблизительно)</td>
+                          <td class="value" width="60%"><%= "%d" % @lot.lot_width%> метров х <%= "%d" % @lot.lot_length%> метров (<%= @lot.lot_shape %>)</td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <tr>
+			  <td>Тип грунта</td>
+			  <td class="value"><%= @lot.ground.ground%><%= ", "+@lot.ground_another unless @lot.ground_another.empty?()%></td>
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <tr>
+			  <td>Насаждения</td>
+			  <td class="value">
+			  <% for green in @lot.greens%> <%= green.green%><%= ", " unless green==@lot.greens.last%><% end -%>
+                             <%= ", "+@lot.green_another unless @lot.green_another.empty? %>
+			  </td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>
+			 <tr>
+			  <td width="40%">Строения</td>
+			  <td class="value" width="60%"><% for building in @lot.buildings%>
+			     <%= building.building-%><%= ", " unless building==@lot.buildings.last-%>
+			  <% end -%><%= ", "+@lot.building_another unless @lot.building_another.empty?()%>
+			  </td>
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <tr>
+			  <td>Рельеф</td>
+			  <td class="value"><% for relief in @lot.reliefs%>
+			     <%= relief.relief%><%= ", " unless relief==@lot.reliefs.last-%>
+			  <% end -%>
+			  <%= ", "+@lot.relief_another unless @lot.relief_another.empty?()%>
+			  </td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <tr>
+			  <td>Уровень грунтовых вод</td>
+			  <td class="value"><%= @lot.groundwater_level.level%></td>			  
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <tr>
+			  <td>Шум на участке</td>
+			  <td class="value"><%= @lot.noise.noise%> 
+			  <% if !@lot.noise_sources.empty?()%>
+			  (<% for noise_source in @lot.noise_sources%>
+			     <%= noise_source.source%><%= ", " unless noise_source==@lot.noise_sources.last-%>
+			  <% end -%><%= ", "+@lot.noise_source_another unless @lot.noise_source_another.empty?()%>
+			  )
+			  <% end %></td>
+			 </tr>
+			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 
+			 <% if !@lot.buildobjects.empty?() %>
+			 <tr><td colspan="2"><b>Возле  участка находится</b></td></tr>
+			 <% for buildobject in @lot.buildobjects %>
+     			 <tr><td class="line2" colspan="2"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td></tr>			 			 			 
+                 <tr><td class="subtext"></td><td class="value"><%= buildobject.name%></td></tr>
+			 <% end %>
+                         <% end %>
+                         <tr><td class="subtext"></td><td class="value">
+                             <%= @lot.buildobjects_another unless @lot.buildobjects_another.empty?()%>
+                         </td></tr>
+
+			</table>		
+				
+			<% if !@lot.extra_info.empty?()%>
+			<p class="header12"><b>Дополнительная информация</b></p>
+     		<table width="100%" cellpadding="3" cellspacing="1" border="0" class="block">
+			 <tr>
+			  <td width="40%">
+			   <%= @lot.extra_info%>
+			  </td>
+			 </tr>
+			</table>
+			<% end %>
+			
+			
+			<img src="/images/empty.gif" width="1" height="7" border="0" alt="" />
+		   </td>
+		   <td><img src="/images/empty.gif" width="15" height="1" border="0" alt="" /></td>
+                   <td valign="top">
+                     <% @lot.photos.find_all(nil,'weight DESC').each do |@photo| %>
+                     <%= link_to(image_tag(url_for_file_column('photo','image','thumb'),{:width=>'174', :height=>'121', :border=>'0',:class=>'preview'}),url_for_file_column('photo','image','large'),{:popup=>['preview','width=800,height=600']})%><br/><br/>
+            <% end %>
+		   </td>
+		   <td><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>
+		  </tr>
+		 </table> 
+		 
+		</td>
+	   </tr>
+	  </table> 	

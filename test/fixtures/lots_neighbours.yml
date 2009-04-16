@@ -1,0 +1,647 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: lots_neighbours
+#
+#  id                    :integer(11)   not null, primary key
+#  lot_id                :integer(11)   default(0)
+#  neighbour_distance_id :integer(11)   default(0)
+#  neighbour_type_id     :integer(11)   default(0)
+#
+
+--- 
+lots_neighbours_051: 
+  id: "51"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3052"
+lots_neighbours_023: 
+  id: "23"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3042"
+lots_neighbours_080: 
+  id: "80"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "3"
+  lot_id: "3064"
+lots_neighbours_109: 
+  id: "109"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3091"
+lots_neighbours_052: 
+  id: "52"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3052"
+lots_neighbours_024: 
+  id: "24"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3043"
+lots_neighbours_081: 
+  id: "81"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3064"
+lots_neighbours_025: 
+  id: "25"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3043"
+lots_neighbours_082: 
+  id: "82"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "3"
+  lot_id: "3065"
+lots_neighbours_053: 
+  id: "53"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3052"
+lots_neighbours_026: 
+  id: "26"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3043"
+lots_neighbours_083: 
+  id: "83"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3065"
+lots_neighbours_054: 
+  id: "54"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3053"
+lots_neighbours_027: 
+  id: "27"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3044"
+lots_neighbours_055: 
+  id: "55"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3053"
+lots_neighbours_110: 
+  id: "110"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3092"
+lots_neighbours_028: 
+  id: "28"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3044"
+lots_neighbours_084: 
+  id: "84"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3066"
+lots_neighbours_056: 
+  id: "56"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3053"
+lots_neighbours_111: 
+  id: "111"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3093"
+lots_neighbours_029: 
+  id: "29"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3044"
+lots_neighbours_085: 
+  id: "85"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3067"
+lots_neighbours_057: 
+  id: "57"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3054"
+lots_neighbours_112: 
+  id: "112"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3094"
+lots_neighbours_086: 
+  id: "86"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3068"
+lots_neighbours_058: 
+  id: "58"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3054"
+lots_neighbours_113: 
+  id: "113"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3095"
+lots_neighbours_087: 
+  id: "87"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3069"
+lots_neighbours_059: 
+  id: "59"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3054"
+lots_neighbours_114: 
+  id: "114"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "1"
+  lot_id: "3096"
+lots_neighbours_115: 
+  id: "115"
+  neighbour_distance_id: "4"
+  neighbour_type_id: "4"
+  lot_id: "3096"
+lots_neighbours_088: 
+  id: "88"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3070"
+lots_neighbours_001: 
+  id: "1"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "1"
+  lot_id: "3000"
+lots_neighbours_116: 
+  id: "116"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "1"
+  lot_id: "3097"
+lots_neighbours_030: 
+  id: "30"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3045"
+lots_neighbours_089: 
+  id: "89"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3071"
+lots_neighbours_002: 
+  id: "2"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "2"
+  lot_id: "3000"
+lots_neighbours_117: 
+  id: "117"
+  neighbour_distance_id: "4"
+  neighbour_type_id: "4"
+  lot_id: "3097"
+lots_neighbours_031: 
+  id: "31"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3045"
+lots_neighbours_003: 
+  id: "3"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "3"
+  lot_id: "3001"
+lots_neighbours_060: 
+  id: "60"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "1"
+  lot_id: "3055"
+lots_neighbours_118: 
+  id: "118"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "3"
+  lot_id: "3104"
+lots_neighbours_004: 
+  id: "4"
+  neighbour_distance_id: "4"
+  neighbour_type_id: "4"
+  lot_id: "3002"
+lots_neighbours_061: 
+  id: "61"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3055"
+lots_neighbours_032: 
+  id: "32"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3045"
+lots_neighbours_119: 
+  id: "119"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "3"
+  lot_id: "3105"
+lots_neighbours_005: 
+  id: "5"
+  neighbour_distance_id: "4"
+  neighbour_type_id: "5"
+  lot_id: "3003"
+lots_neighbours_090: 
+  id: "90"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3072"
+lots_neighbours_033: 
+  id: "33"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3046"
+lots_neighbours_006: 
+  id: "6"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3037"
+lots_neighbours_091: 
+  id: "91"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3073"
+lots_neighbours_062: 
+  id: "62"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3055"
+lots_neighbours_034: 
+  id: "34"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3046"
+lots_neighbours_007: 
+  id: "7"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3037"
+lots_neighbours_092: 
+  id: "92"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3074"
+lots_neighbours_063: 
+  id: "63"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "1"
+  lot_id: "3056"
+lots_neighbours_035: 
+  id: "35"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3046"
+lots_neighbours_008: 
+  id: "8"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3037"
+lots_neighbours_093: 
+  id: "93"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3075"
+lots_neighbours_064: 
+  id: "64"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3056"
+lots_neighbours_036: 
+  id: "36"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3047"
+lots_neighbours_120: 
+  id: "120"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "1"
+  lot_id: "3103"
+lots_neighbours_009: 
+  id: "9"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3038"
+lots_neighbours_094: 
+  id: "94"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3076"
+lots_neighbours_065: 
+  id: "65"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3056"
+lots_neighbours_037: 
+  id: "37"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3047"
+lots_neighbours_121: 
+  id: "121"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3103"
+lots_neighbours_066: 
+  id: "66"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "3"
+  lot_id: "3057"
+lots_neighbours_038: 
+  id: "38"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3047"
+lots_neighbours_122: 
+  id: "122"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "1"
+  lot_id: "3104"
+lots_neighbours_067: 
+  id: "67"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3057"
+lots_neighbours_039: 
+  id: "39"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3048"
+lots_neighbours_095: 
+  id: "95"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3077"
+lots_neighbours_123: 
+  id: "123"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3104"
+lots_neighbours_068: 
+  id: "68"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "3"
+  lot_id: "3058"
+lots_neighbours_096: 
+  id: "96"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3078"
+lots_neighbours_124: 
+  id: "124"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "1"
+  lot_id: "3105"
+lots_neighbours_010: 
+  id: "10"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3038"
+lots_neighbours_069: 
+  id: "69"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3058"
+lots_neighbours_097: 
+  id: "97"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3079"
+lots_neighbours_125: 
+  id: "125"
+  neighbour_distance_id: "4"
+  neighbour_type_id: "1"
+  lot_id: "3106"
+lots_neighbours_098: 
+  id: "98"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3080"
+lots_neighbours_011: 
+  id: "11"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3038"
+lots_neighbours_126: 
+  id: "126"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3106"
+lots_neighbours_040: 
+  id: "40"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3048"
+lots_neighbours_099: 
+  id: "99"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3081"
+lots_neighbours_012: 
+  id: "12"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3039"
+lots_neighbours_127: 
+  id: "127"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3107"
+lots_neighbours_070: 
+  id: "70"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "3"
+  lot_id: "3059"
+lots_neighbours_041: 
+  id: "41"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3048"
+lots_neighbours_013: 
+  id: "13"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3039"
+lots_neighbours_071: 
+  id: "71"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3059"
+lots_neighbours_042: 
+  id: "42"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3049"
+lots_neighbours_014: 
+  id: "14"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3039"
+lots_neighbours_072: 
+  id: "72"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "3"
+  lot_id: "3060"
+lots_neighbours_043: 
+  id: "43"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3049"
+lots_neighbours_015: 
+  id: "15"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3040"
+lots_neighbours_044: 
+  id: "44"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3049"
+lots_neighbours_016: 
+  id: "16"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3040"
+lots_neighbours_073: 
+  id: "73"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3060"
+lots_neighbours_045: 
+  id: "45"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3050"
+lots_neighbours_100: 
+  id: "100"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3082"
+lots_neighbours_017: 
+  id: "17"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3040"
+lots_neighbours_046: 
+  id: "46"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3050"
+lots_neighbours_101: 
+  id: "101"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3083"
+lots_neighbours_018: 
+  id: "18"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3041"
+lots_neighbours_074: 
+  id: "74"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "3"
+  lot_id: "3061"
+lots_neighbours_047: 
+  id: "47"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3050"
+lots_neighbours_102: 
+  id: "102"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3084"
+lots_neighbours_019: 
+  id: "19"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3041"
+lots_neighbours_075: 
+  id: "75"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3061"
+lots_neighbours_048: 
+  id: "48"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3051"
+lots_neighbours_103: 
+  id: "103"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3085"
+lots_neighbours_076: 
+  id: "76"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "3"
+  lot_id: "3062"
+lots_neighbours_049: 
+  id: "49"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3051"
+lots_neighbours_104: 
+  id: "104"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3086"
+lots_neighbours_077: 
+  id: "77"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3062"
+lots_neighbours_105: 
+  id: "105"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3087"
+lots_neighbours_078: 
+  id: "78"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "3"
+  lot_id: "3063"
+lots_neighbours_106: 
+  id: "106"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3088"
+lots_neighbours_020: 
+  id: "20"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3041"
+lots_neighbours_079: 
+  id: "79"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "4"
+  lot_id: "3063"
+lots_neighbours_107: 
+  id: "107"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3089"
+lots_neighbours_050: 
+  id: "50"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "5"
+  lot_id: "3051"
+lots_neighbours_021: 
+  id: "21"
+  neighbour_distance_id: "3"
+  neighbour_type_id: "1"
+  lot_id: "3042"
+lots_neighbours_108: 
+  id: "108"
+  neighbour_distance_id: "1"
+  neighbour_type_id: "2"
+  lot_id: "3090"
+lots_neighbours_022: 
+  id: "22"
+  neighbour_distance_id: "2"
+  neighbour_type_id: "3"
+  lot_id: "3042"

@@ -1,0 +1,21 @@
+--- 
+new_houses: 
+  has_distance: "1"
+  id: "3"
+  neighbour: "Дома постройки 2000 г. и позже"
+building_in_progress: 
+  has_distance: "1"
+  id: "4"
+  neighbour: "Идет строительство"
+no_neighbours: 
+  has_distance: "0"
+  id: "5"
+  neighbour: "Нет соседей"
+selskiy_dom: 
+  has_distance: "1"
+  id: "1"
+  neighbour: "Сельский дом(а)"
+dachniy_dom: 
+  has_distance: "1"
+  id: "2"
+  neighbour: "Дачный дом(а)"

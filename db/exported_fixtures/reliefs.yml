@@ -1,0 +1,10 @@
+--- 
+plain:
+  id: "1"	
+  relief: "ровный"
+on_hill:
+  id: "2"
+  relief: "на склоне"
+curves:
+  id: "3"	
+  relief: "ямы на участке/яр"

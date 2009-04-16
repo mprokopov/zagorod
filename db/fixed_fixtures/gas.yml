@@ -1,0 +1,19 @@
+--- 
+in_place:
+  id: "1"
+  distance: "проведен на участок"
+less_than_10:
+  id: "2"
+  distance: "до 10 метров от участка"
+less_than_50:
+  id: "3"
+  distance: "до 50 метров"
+less_than_100:
+  id: "4"
+  distance: "до 100 метров"
+more_than_100:
+  id: "5"
+  distance: "более 100 метров"
+absent:
+  id: "6"
+  distance: "отсутствует"

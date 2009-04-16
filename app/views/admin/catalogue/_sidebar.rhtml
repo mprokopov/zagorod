@@ -1,0 +1,9 @@
+<fieldset  class="leftsubmenu">
+    <legend>Управление страницами</legend>
+    <div>
+      <%= link_current(icon('list')+"Активные участки", :action => :list) %>
+    </div>
+    <div>
+      <%= link_current(icon('list')+"Скрытые участки(#{Lot.not_reviewed.length})", :action => :not_reviewed) %><br/>
+    </div>
+</fieldset>

@@ -1,0 +1,17 @@
+<% @page_title="Редактировать владельца"%>
+<% form_for :owner, @owner,:html=>{:class=>"myform",:id=>"myform"} do |f| %>
+<%= f.hidden_field :id %>
+<div class="info">
+Дата добавления:  <%= @owner.created_on.strftime("%c") if @owner.created_on%><br/>
+Дата последнего изменения: <%= @owner.updated_on.strftime("%c") if @owner.updated_on %>
+</div>
+<label for="owner_fio">Имя:</label><%= f.text_field :fio %><br/>
+<label for="owner_phone_city">Городской телефон:</label><%= f.text_field :phone_city %><br/>
+<label for="owner_phone">телефон:</label><%= f.text_field :phone %><br/>
+<label for="owner_another_contact_fio">Контактное лицо:</label><%= f.text_field :another_contact_fio %><br/>
+<label for="owner_another_contact_phone">Тел контактного лица:</label><%= f.text_field :another_contact_phone %><br/>
+<label for="owner_email">email:</label><%= f.text_field :email %><br/>
+<label for="owner_is_other_contacts_allowed">Возможны контакты посредников?</label><%= f.check_box :is_other_contacts_allowed %><br/>
+<label for="owner_preferred_contact_type">Предпочитаемый контакт:</label>По телефону:<%= f.radio_button :preferred_contact_type,"По телефону"%>&nbsp;&nbsp;По email:<%= f.radio_button :preferred_contact_type,"По email"%><br/>
+<%= submit_tag "Сохранить" %>
+<% end %>

@@ -1,0 +1,25 @@
+--- 
+do_samoy_dorogi:
+  id: "1"
+  distance: "асфальт до участка"
+lot_do_50_metrov:
+  id: "2"
+  distance: "до 50 метров"
+lot_do_100_metrov:
+  id: "3"
+  distance: "до 100 метров"
+lot_do_200_metrov:
+  id: "4"
+  distance: "до 200 метров"
+lot_do_500_metrov:
+  id: "5"
+  distance: "до 500 метров"
+lot_do_800_metrov:
+  id: "6"
+  distance: "до 800 метров"
+lot_do_1_km:
+  id: "7"
+  distance: "до 1 километра"
+lot_bolee_1_km:
+  id: "8"
+  distance: "более 1 километра"

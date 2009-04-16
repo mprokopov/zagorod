@@ -1,0 +1,25 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: neighbour_distances
+#
+#  id       :integer(11)   not null, primary key
+#  distance :string(200)   default(), not null
+#
+
+--- 
+in_place:
+  id: "1"	
+  distance: "примыкает"
+less_100:
+  id: "2"
+  distance: "в радиусе до 100 метров"
+less_200:
+  id: "3"
+  distance: "в радиусе до 200 метров"
+less_500:
+  id: "4"	
+  distance: "в радиусе до 500 метров"
+more_500:
+  id: "5"
+  distance: "в радиусе более 500 метров"

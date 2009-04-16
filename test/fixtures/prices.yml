@@ -1,0 +1,37 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: prices
+#
+#  id        :integer(11)   not null, primary key
+#  price     :string(100)   default(0), not null
+#  min_price :float         default(0.0), not null
+#  max_price :float         default(0.0), not null
+#
+
+--- 
+prices_002: 
+  price: "\xD0\xB4\xD0\xBE $2000"
+  id: "2"
+  max_price: "2000"
+  min_price: "1000"
+prices_003: 
+  price: "\xD0\xB4\xD0\xBE $3000"
+  id: "3"
+  max_price: "3000"
+  min_price: "2000"
+prices_004: 
+  price: "\xD0\xB4\xD0\xBE $4000"
+  id: "4"
+  max_price: "4000"
+  min_price: "3000"
+prices_005: 
+  price: "\xD0\xB1\xD0\xBE\xD0\xBB\xD0\xB5\xD0\xB5 $4000"
+  id: "5"
+  max_price: 1e+08
+  min_price: "4000"
+prices_001: 
+  price: "\xD0\xB4\xD0\xBE $1000"
+  id: "1"
+  max_price: "1000"
+  min_price: "0"

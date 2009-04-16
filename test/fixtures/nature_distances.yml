@@ -1,0 +1,31 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: nature_distances
+#
+#  id       :integer(11)   not null, primary key
+#  distance :string(200)   default(), not null
+#
+
+--- 
+in_place:
+  id: "1"	
+  distance: "примыкает"
+less_20:
+  id: "2"
+  distance: "до 20 метров"
+less_50:
+  id: "3"
+  distance: "до 50 метров"
+less_100:
+  id: "4"	
+  distance: "до 100 метров"
+less_200:
+  id: "5"	
+  distance: "до 200 метров"
+more_200:
+  id: "6"
+  distance: "более 200 метров"
+in_willage:
+  id: "7"
+  distance: "есть в селе/поселке"

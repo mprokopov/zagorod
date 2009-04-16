@@ -1,0 +1,9 @@
+--- 
+nexus: 
+  id: "1"
+  password: b1ece43575cb894012ffc1e1e36004576f7e04f5
+  login: nexus
+peter: 
+  id: "2"
+  password: 56bbfd6d3862a5f49535f87cea829b7f0e79aee6
+  login: peter

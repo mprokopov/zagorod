@@ -1,0 +1,41 @@
+# delete from nature_types
+--- 
+lesoposadka:
+  nature: "Лесопосадка"
+  id: 1
+  has_distance: 1
+
+les:
+  nature: "Лес"
+  id: 2
+  has_distance: 1
+
+reka:
+  nature: "Река"
+  id: 3
+  has_distance: 1
+
+ozero:
+  nature: "Озеро"
+  id: 4
+  has_distance: 1
+
+ruchey:
+  nature: "Ручей"
+  id: 5
+  has_distance: 1
+
+prud:
+  nature: "Пруд"
+  id: 6
+  has_distance: 1
+
+holmist:
+  nature: "Холмистая местность"
+  id: 7
+  has_distance: 0
+
+nothing:
+  nature: "Нет ничего необычного"
+  id: 8
+  has_distance: 0

@@ -1,0 +1,32 @@
+<td width="20%" valign="top">
+  <table cellpadding="0" cellspacing="0" border="0" width="100%">		
+    <tr>
+      <td bgcolor="#EFEDC6"><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>
+      <td bgcolor="#EFEDC6" class="headerleft" width="100%">ИНФОРМАЦИЯ</td>
+      <td><img src="/images/p16.gif" width="2" height="19" border="0" alt="" /><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>		
+    </tr>
+    <tr>
+      <td></td>
+      <td class="search">
+        <ul class="arrow2">
+          <% if leftblock.parent_id.to_i>0 %>
+          <% myiterator=leftblock.self_and_siblings %>
+          <% else %>
+          <% myiterator=leftblock.children %>
+          <% end %>
+          <% for child in myiterator %>
+          <li>
+          <% if child.id==leftblock.id %>
+           <b><%= child.title %></b>
+          <% else %>
+          <%= link_to(child.title, {:controller=>'page',:url=>child.url},:class=>'detail') %>
+          <% end %>
+          </li>
+          <% end %>
+        </ul> 
+      </td>
+      <td></td>		   
+    </tr>
+  </table>
+</td>
+<td style="background:url('/images/dots1.gif') repeat-y center;"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td>		

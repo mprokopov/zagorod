@@ -1,0 +1,15 @@
+<% for lot in @lots do %>
+<div class="feature">
+<table border="0">
+<tr>
+    <td width="50%">
+      <%= link_to(icon('window'),{:controller=>'/catalogue', :action=>"details",:id=>lot}, :target=>"_blank")%>
+      <%= "#{lot.id.to_s} (#{lot.area})" %> <%= "[disabled]" unless lot.is_reviewed %></td>
+    <td>вес: <%= lot.weights %></td>
+    <%= nobr_td(link_to(icon('add',"изображения")+"(#{lot.photos.count})", :action=>"images", :id=>lot))%>
+    <%= nobr_td(link_to(icon('edit',"редактировать"), :action=>"edit", :id=>lot))%>
+    <%= nobr_td(link_to(icon('delete',"удалить"), {:action=>"delete", :id=>lot},:confirm=>'Вы действительно хотите удалить участок?'))%>
+</tr>
+</table>
+</div>
+<% end %>

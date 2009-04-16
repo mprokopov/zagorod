@@ -1,0 +1,80 @@
+<%= javascript_include_tag('fieldvalidator') %>
+<% @page_title="Обратная связь"%>
+	  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td width="20%">&nbsp;</td>
+	    <td width="80%" valign="top">
+		
+		 <table cellpadding="0" cellspacing="0" border="0" width="100%">
+		  <tr>
+		   <td><img src="/images/empty.gif" width="7" height="1" border="0" alt="" /></td>
+                   <td valign="top" width="100%">
+                     <%= @page.text %>
+                     <%= render :partial => '/shared/error_block' %>
+                      <% form_for :feedback,@feedback do |f|%>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	 <tr>
+           <td width="30%" align="right" class="cell4"><label for="feedback_fio">Имя</label>&#160;&#160;</td>
+	  <td width="70%" valign="bottom">
+	   <%= f.text_field :fio,:style=>'width:400px;'%>
+	  </td>
+	 </tr>
+	 <tr><td colspan="2"><img src="/images/empty.gif" width="1" height="7" border="0" alt="" /></td></tr>
+
+	 <tr>
+	  <td width="30%" align="right" class="cell4"><label for="feedback_email">E-mail</label>&#160;&#160;</td>
+	  <td width="70%"> <%= f.text_field :email,:style=>'width:400px;' %></td>
+	 </tr>
+	 <tr><td colspan="2"><img src="/images/empty.gif" width="1" height="7" border="0" alt="" /></td></tr>	 
+	 <tr>
+	  <td width="30%" align="right" class="cell4"><label for="feedback_subject">Тема</label>&#160;&#160;</td>
+	  <td width="70%"> <%= f.text_field :subject,:style=>'width:400px;' %></td>
+
+	 </tr>
+	 <tr><td colspan="2"><img src="/images/empty.gif" width="1" height="7" border="0" alt="" /></td></tr>	 
+	 <tr>
+	  <td width="30%" align="right" valign="top"><label for="feedback_message">Сообщение</label>&#160;&#160;</td>
+	  <td width="70%"><%= f.text_area :message,:style=>'width:400px;',:rows=>'15' %>
+	   </td>
+	 </tr>
+	 <tr><td colspan="2"><img src="/images/empty.gif" width="1" height="7" border="0" alt="" /></td></tr>	 	 
+	 <tr>
+	  <td></td>
+
+	  <td><%= submit_tag('Отправить')%>
+            <br/><br/>
+	  <B>Внимание! Все поля должны быть заполнены!</B>
+	  </td>	  
+	 </tr>
+       </table>
+       <% end %>
+<%= end_form_tag %>
+	
+                     <img src="/images/empty.gif" width="1" height="7" border="0" alt="" />
+                   </td>
+                   <td><img src="/images/empty.gif" width="10" height="1" border="0" alt="" /></td>
+                 </tr>
+               </table> 
+
+             </td>
+           </tr>
+         </table> 
+<script type="text/javascript">
+  var oFieldValidator1 = new FieldValidator("feedback_fio", null, SetFieldState, SetFieldState)
+  var oFieldValidator2 = new FieldValidator("feedback_email", 'Email', SetFieldState, SetFieldState)
+  var oFieldValidator3 = new FieldValidator("feedback_subject", null, SetFieldState, SetFieldState)
+  var oFieldValidator4 = new FieldValidator("feedback_message", null, SetFieldState, SetFieldState)
+function SetFieldState()
+{
+  var sId = this.oFieldNode.getAttribute('id')
+    var aLabels = this.oFieldNode.form.getElementsByTagName('label')
+    for( var i=0; i<aLabels.length; i++ )
+    {
+      if( aLabels[i].htmlFor == sId )
+      {
+        aLabels[i].style.color = this.bValidated ? '' : 'red'
+          break
+      }
+    }
+}
+</script>

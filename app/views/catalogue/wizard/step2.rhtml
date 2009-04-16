@@ -1,0 +1,632 @@
+<%= javascript_include_tag('fieldvalidator') %>
+<%= javascript_include_tag('checkboxgroup') %>
+<script type="text/javascript">
+  var route_type_group = new CheckBoxGroup()
+  route_type_group.addToGroup("route_type*")
+  route_type_group.setControlBox("route_types")
+  var neighbour_type_group = new CheckBoxGroup()
+  neighbour_type_group.addToGroup("neighbour_type*")
+  neighbour_type_group.setControlBox("neighbour_types")
+  var nature_type_group = new CheckBoxGroup()
+  nature_type_group.addToGroup("nature_type*")
+  nature_type_group.setControlBox("nature_types")
+  var green_group = new CheckBoxGroup()
+  green_group.addToGroup("green*")
+  green_group.setControlBox("greens")
+  var buildings_group = new CheckBoxGroup()
+  buildings_group.addToGroup("buildings*")
+  buildings_group.setControlBox("buildings_all")
+  var reliefs_group = new CheckBoxGroup()
+  reliefs_group.addToGroup("relief*")
+  reliefs_group.setControlBox("reliefs")
+function calc_full_price(form)
+{
+  if (form.lot_square.value>0){
+    if (form.lot_price_per_square.value>0){
+      form.full_price.value=Math.round(form.lot_price_per_square.value*form.lot_square.value*100)
+    } else
+    {
+      form.lot_price_per_square.value="0"
+    }
+  } else {
+    form.lot_square.value="0"
+  }
+}
+</script>
+<!--основная часть-->
+  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+   <tr>
+    <td width="20%" valign="top">
+     <table cellpadding="0" cellspacing="0" border="0" width="100%">		
+       <tr>
+         <td bgcolor="#EFEDC6"><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>
+         <td bgcolor="#EFEDC6" class="headerleft" width="100%">Шаг 2. <span class="normal">Заполнение анкеты</span></td>
+         <td><img src="/images/p16.gif" width="2" height="19" border="0" alt="" /><img src="/images/empty.gif" width="12" height="1" border="0" alt="" /></td>		
+      </tr>
+	  <tr>
+	   <td></td>
+	   <td class="search">
+             <ul class="arrow">
+               <li><%= link_to("Вернуться к: Шаг 1",{:action=>'step1'},{:class=>"detail"})%></li>
+             </ul>
+            <% begin %>
+            <%= Page.find_by_url('step2').text %>
+            <% rescue %>
+            <% end %>
+           </td>
+             </ul>	 
+           <td></td>		   
+         </tr>
+       </table>
+     </td>
+     <td style="background:url('/images/dots1.gif') repeat-y center;"><img src="/images/empty.gif" width="1" height="1" border="0" alt="" /></td>		
+     <td width="80%" valign="top">
+
+       <table cellpadding="0" cellspacing="0" border="0" width="100%">
+         <tr>
+           <td><img src="/images/empty.gif" width="7" height="1" border="0" alt="" /></td>
+           <td>
+             <table cellpadding="0" cellspacing="0" border="0" width="100%">
+               <tr>
+                 <td>
+                   <%=  form_tag({},{:multipart=>true}) %> 
+                   <%= hidden_field_tag('lot[owner_id]',@owner.id) if @owner %>
+                   <%= hidden_field_tag('lot[agency_id]',@agency.id) if @agency %>
+                   <input type="Checkbox" id="check1" /> <label for="check1" class="text12">Да, на этот участок имеются правоустанавливающие документы</label>. 
+                   <!-- 
+                   <p style="margin-left:23px; margin-bottom:0px; margin-top:10px;">Пожалуйста, предоставьте копию правоустанавливающего документа. Это можно сделать:</p>
+                   <ol style="margin-top:5px; margin-left:63px;"> 
+                     <li>Добавив фото/сканированное изображение акта о приватизации в анкету</li>
+                     <li>Переслав по факсу ксерокопию акта о приватизации на наш номер - ххх-хх-хх</li>
+                        </ol>
+                        --> 
+                        <!-- обработка ошибок --> 
+                        <% if @errors %>
+                        <div class="subtext">
+                          <% @errors.each do |error| %>
+                          <div class="brown">* <%= error%></div>
+                          <% end %>
+                        </div>
+                        <% end %>
+                        <!-- /обработка --> 
+                        <p class="pageheader" style="margin-bottom:5px;">БАЗОВАЯ ИНФОРМАЦИЯ</p>
+                        <table cellpadding="5" cellspacing="0" border="0" width="100%">
+                          <tr bgcolor="#ffffff">
+                            <td class="text12" width="30%">Район</td>
+                            <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                            <td class="text12" width="40%">
+                              <%= select('lot','region_id',Region.to_dropdown({:include_blank=>false}),{},{:style=>"width:100%"})%>
+                            </td>
+                            <td width="30%" bgcolor="#FCFCF1"></td>
+                          </tr>
+                          <tr>
+                            <td class="text12"><label for="lot_area">Населенный пункт</label></td>
+                            <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                            <td><%= input_text('lot','area')%></td>
+                            <td class="help">на украинском языке</td>
+                          </tr>
+                          <tr bgcolor="#ffffff">
+                            <td class="text12"><label for="lot_square">Общая площадь участка, га</label></td>
+                            <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                            <td class="text12"><%= text_field("lot","square",{:style=>'width:100%;',:value=>'0',:onblur=>'calc_full_price(this.form);'})%></td>
+                            <td width="40%" bgcolor="#FCFCF1" class="help">формат 0.06 (6 соток)</td>
+                          </tr>
+                          <tr>
+                            <td class="text12"><label for="lot_square_for_building">(из них) под застройку, га</label></td>
+                            <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                            <td><%= input_text('lot','square_for_building')%></td>
+                            <td class="help">формат: 0.01 (1 сотка)</td>
+                          </tr>
+                          <tr bgcolor="#ffffff">
+                            <td class="text12"><label for="lot_price_per_square">Цена за 1 сотку, USD</label></td>
+                            <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                            <td class="text12"><%= text_field("lot","price_per_square",{:style=>'width:100%;',:value=>'0',:onblur=>'calc_full_price(this.form);'})%></td>
+                            <td width="40%" bgcolor="#FCFCF1" class="help"></td>
+                          </tr>
+                          <tr>
+                            <td class="text12"><label for="full_price">Полная стоимость участка, USD</label></td>
+                            <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                            <td class="text12"><%= text_field_tag("full_price","0",{:style=>'width:100%;',:readonly=>'yes'}) %></td>
+                            <td width="40%" class="help"></td>
+                          </tr>
+                          <tr bgcolor="#ffffff">
+                            <td class="text12"><label for="lot[is_price_changeble]">Возможен торг</label></td>
+                            <td valign="middle"><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                            <td>
+                              <input type="Radio" id="radio1" value="true" name="lot[is_price_changeble]"/> <label for="radio1">Да</label>&#160;&#160;&#160;&#160;<input type="Radio" id="radio2" name="lot[is_price_changeble]" value="false" checked="yes"/> <label for="radio2">Нет</label></td>
+                            <td class="help" bgcolor="#FCFCF1"></td>
+                          </tr>		
+                        </table>
+
+                       <p class="pageheader" style="margin-bottom:5px;">ПОДЪЕЗДНЫЕ ПУТИ</p>
+                       <table cellpadding="5" cellspacing="0" border="0" width="100%">
+                         <tr bgcolor="#ffffff">
+                           <td class="text12" width="30%"><label for="lot_distance_to_city">Расстояние до участка от Киева, км</label></td>
+                           <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                           <td class="text12" width="40%"><%= input_text('lot','distance_to_city')%></td>
+                            <td class="help">формат: 5.1 (5 км 100 м)</td>
+                         </tr>
+                         <tr>
+                           <td class="text12">Отправная точка</td>
+                           <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                           <td>
+                             <%= select('lot','departure_id',Departure.to_dropdown(),{},{:style=>"width:100%",:name=>'kievpoint'})%>
+                           </td>
+                           <td class="help">
+                             <%= link_to('Выбрать на карте'+image_tag('arrow.gif',
+                             {
+                             :width=>"11",
+                             :height=>"11",
+                             :hspace=>"3",
+                             :border=>"0",
+                             :align=>"absmiddle"
+                             }), 
+                             { :controller=>'map', :action=>'kiev'}, 
+                             :onclick=>"window.open('/map/kiev','','directories=0,width=400,height=400,location=0,menubar=0,status=0,toolbar=0,scrollbars=0,resizable=0'); return false;",
+                             :class=>'detail')
+                             %>
+                           </td>
+                         </tr>
+                         <tr bgcolor="#ffffff">
+                           <td class="text12" colspan="4"><b>Отрезок пути от земельного участка до ближайшей асфальтированной дороги</b></td>
+                         </tr>				 
+                         <tr>
+                           <td class="subtext"><label for="lot[lotroad_distance_id]">Расстояние</label></td>
+                           <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                           <td class="text12">
+                             <%= select('lot','lotroad_distance_id',LotroadDistance.to_dropdown({:text=>'distance',:include_blank=>true,:include_blank_text=>'--- не выбрано ---'}),{},{:id=>'lot[lotroad_distance_id]',:style=>"width:100%"})%>
+                           </td>
+                           <td width="40%"></td>
+                         </tr>
+                         <tr bgcolor="#ffffff">
+                           <td class="subtext"><label for="lot[lotroad_surface_id]">Покрытие</label></td>
+                           <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                           <td>
+                             <%= select('lot','lotroad_surface_id',LotroadSurface.to_dropdown,{},{:id=>"lot[lotroad_surface_id]",:style=>"width:100%",:size=>'3', :multiple=>'1'})%>
+                           </td>
+                           <td class="help" bgcolor="#FCFCF1"></td>
+                         </tr>
+                         <tr bgcolor="#ffffff">
+                           <td colspan="2" align="right">Другое</td>
+                           <td><input type="text" name="lot[lotroad_surface_another]" style="font-size:10px; width:100%" /></td>
+                           <td class="help" bgcolor="#FCFCF1"></td>
+                         </tr>				 
+                         <tr>
+                           <td class="subtext"><label for="lot[lotroad_width_id]">Ширина</label></td>
+                           <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                           <td class="text12">
+                             <%= select('lot','lotroad_width_id',LotroadWidth.to_dropdown,{},{:id=>"lot[lotroad_width_id]",:style=>"width:100%",:size=>'3', :multiple=>'1'})%>
+                           </td>
+                           <td width="40%" class="help"></td>
+                         </tr>
+                         <tr bgcolor="#ffffff">
+                           <td class="text12">Есть ли другие подъезды к участку  </td>
+                           <td valign="top"><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                           <td><input type="Radio" id="radio11" name="lot[is_another_routes]" value="1" /> <label for="radio11">Да</label>&#160;&#160;&#160;&#160;<input type="Radio" id="radio12" name="lot[is_another_routes]" value="0" checked="yes"/> <label for="radio12">Нет</label></td>
+                           <td width="40%" class="help" bgcolor="#FCFCF1"></td>
+                         </tr>
+                       </table>
+
+
+                       <p class="pageheader" style="margin-bottom:5px;">КОММУНИКАЦИИ И ИНФРАСТРУКТУРА</p>
+                       <table cellpadding="5" cellspacing="0" border="0" width="100%">
+                         <tr bgcolor="#ffffff">
+                           <td class="text12" width="30%"><label for="lot[gas_id]">Газ</label></td>
+                           <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                           <td class="text12" width="40%">
+                             <%= select('lot','gas_id',Gas.to_dropdown,{},{:id=>'lot[gas_id]',:style=>"width:100%"})%>
+                           </td>
+                           <td width="30%" bgcolor="#FCFCF1" class="help">ГРП или труба к которой можно подключиться</td>
+                         </tr>
+                         <tr>
+                           <td class="text12"><label for="lot[electricity_id]">Электричество</label></td>
+                           <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                           <td>
+                             <%= select('lot','electricity_id',Electricity.to_dropdown,{},{:id=>'lot[electricity_id]',:style=>"width:100%"})%>
+                           </td>
+                           <td class="help">Трансформатор 220В, ближайший столб к которому можно подключиться</td>
+                         </tr>
+                         <tr bgcolor="#ffffff">
+                           <td class="text12"><label for="lot[water_id]">Вода</label></td>
+                           <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                           <td class="text12"><%= select('lot','water_id',Water.to_dropdown,{},{:id=>'lot[water_id]',:style=>"width:100%"})%>
+                           </td>
+                           <td width="40%" bgcolor="#FCFCF1"></td>
+                         </tr>
+                         <tr>
+                           <td class="text12"><label for="route_types">Сообщение с Киевом</label></td>
+                           <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                           <td>
+                             <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                               <tr>
+                                 <td width="50%" colspan="2">Тип сообщения
+                                   <input type="checkbox" name="route_types" id="route_types" style="display:none" />
+                                 </td>
+                                 <td width="50%">Расстояние до остановки</td>
+                               </tr>
+
+                               <% for route_type in RouteType.find_all do %>
+                               <tr>
+                                 <%= checkbox_label_in_td(route_type.id,"route_type[]",route_type.route,"route_type_group")%>
+                                 <td width="50%">
+                                   <%= select('route_distances','distance'+route_type.id.to_s,RouteDistance.to_dropdown,{},{:style=>"width:100%"})%>
+                                 </td>
+                               </tr>
+                               <% end %>
+                              </table>   
+			   </td>
+			  <td class="help"></td>
+			 </tr>
+			 <tr bgcolor="#ffffff">
+			  <td class="text12">Ближайший магазин, км</td>
+			  <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                          <td><%= input_text("lot","nearest_shop_distance") %></td>
+			  <td class="help" bgcolor="#FCFCF1"></td>
+			 </tr>				 
+	         <tr>
+			  <td class="text12">Ближайший киоск, км</td>
+			  <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                          <td class="text12"><%= input_text('lot','nearest_kiosk_distance')%></td>
+			  <td width="40%"></td>
+			 </tr>
+			 <tr bgcolor="#ffffff">
+			  <td class="text12" valign="top">Другое</td>
+			  <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td><textarea name="lot[nearest_commerce_another]" style="width:100%;"></textarea></td>
+			  <td class="help" bgcolor="#FCFCF1"></td>
+			 </tr>					 
+			</table> 
+			
+			
+			<p class="pageheader" style="margin-bottom:5px;">РАСПОЛОЖЕНИЕ УЧАСТКА</p>
+			<table cellpadding="5" cellspacing="0" border="0" width="100%">
+			 <tr bgcolor="#ffffff">
+                           <td class="text12" width="30%"><label for="lot[placement_id]">Участок расположен</label></td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td class="text12" width="40%">
+                            <%= select('lot','placement_id',Placement.to_dropdown({:text=>'placement',:include_blank=>false}),{},{:id=>'lot[placement_id]',:style=>"width:100%",:size=>'3',:multiple=>'1'})%>
+		</td>
+			  <td width="30%" bgcolor="#FCFCF1" class="help"></td>
+			 </tr>
+                         <tr bgcolor="#ffffff">
+			  <td colspan="2" align="right">Другое</td>
+			  <td><input type="text" name='lot[placement_another]' style="font-size:10px; width:100%" /></td>
+			  <td width="40%" bgcolor="#FCFCF1"></td>
+			 </tr>				 
+			 <tr>
+                           <td class="text12" valign="top"><label for="neighbour_types">Соседи</label></td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td>
+			    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+				 <tr>
+                                   <td width="60%" colspan="2">Тип дома
+                                   <input type="checkbox" name="neighbour_types" id="neighbour_types" style="display:none" />
+                                   </td>
+				  <td width="40%">Расстояние</td>
+				 </tr>
+                                 <% for neighbour_type in NeighbourType.find_all %>
+                                 <tr>
+                                   <%= checkbox_label_in_td(neighbour_type.id,"neighbour_type[]",neighbour_type.neighbour,"neighbour_type_group") %>
+                                   <td>
+                                     <% if neighbour_type.has_distance==1 %>
+                                     <% style="width:100%" %>
+                                     <% else %>
+                                     <% style="display:none" %>
+                                     <% end %>
+                                      <%= select('neighbour_distance','distance'+neighbour_type.id.to_s,NeighbourDistance.to_dropdown,{},{:style=>style})%>
+			     </td>
+				 </tr>	
+                                 <% end %>
+				</table>   				  
+			  
+			  </td>
+			  <td class="help"></td>
+			 </tr>
+			 <tr bgcolor="#ffffff">
+                           <td class="text12" valign="top"><label for="nature_types">Пейзаж и окружение участка</label></td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td>
+			    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+				 <tr>
+                                   <td width="50%">Тип
+                                   <input type="checkbox" name="nature_types" id="nature_types" style="display:none" />
+                                   </td>
+				  <td width="50%">Расстояние</td>
+				 </tr>
+                                      <!-- NATURE -->
+                                      <% nature_distance=NatureDistance.to_dropdown%>
+                                      <% for nature_type in NatureType.find_all %>
+                                      <tr>
+                                        <%=  td_input_label(nature_type.id,"nature_type[]",nature_type.nature,"nature_type_group")%>
+                                        <td>
+                                          <!-- если нельзя показывать селект (has_distance) - просто скроем его -->
+                                          <% if nature_type.has_distance==0 %>
+                                          <% style="display:none" %> 
+                                          <% else %>
+                                          <% style="width:100%" %>
+                                          <% end %>
+                                          <%= select('nature_distance','distance'+nature_type.id.to_s,nature_distance,{},:style=>style) %> 
+			   </td>
+				 </tr>	
+                                 <% end %>
+                                 <!-- /NATURE -->
+                                 <tr>
+                                   <td>Другое</td>
+                                   <td><%= input_text('lot','nature_types_another')%></td>
+                                 </tr>
+				</table>   				  
+			  </td>
+			  <td class="help" bgcolor="#FCFCF1"></td>
+			 </tr>				 
+			</table> 
+
+			<p class="pageheader" style="margin-bottom:5px;">ИНФОРМАЦИЯ ОБ УЧАСТКЕ</p>
+			<table cellpadding="5" cellspacing="0" border="0" width="100%">
+			 <tr bgcolor="#ffffff">
+			  <td class="text12" width="30%"><b>Размеры, м</b> </td>
+			  <td><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td class="text12" width="40%">
+			   </td>
+			  <td width="30%" bgcolor="#FCFCF1" class="help"></td>
+			 </tr>
+			 <tr>
+                           <td class="subtext"><label for="lot[lot_shape]">Форма участка</label></td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                          <td><%= select("lot","lot_shape",@shapes,{},{:id=>"lot[lot_shape]"}) %><!-- lot_shape выпадающий список --> </td>
+			  <td class="help"></td>
+			 </tr>
+			 <tr bgcolor="#ffffff">
+                           <td class="subtext"><label for="lot_lot_length">Длина</label></td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                          <td><%= input_text('lot','lot_length')%></td>
+			  <td class="help" rowspan="2">Если участок не квадратный/прямоугольный, пожалуйста укажите приблизительные размеры</td>
+			 </tr>
+			 <tr>
+                           <td class="subtext"><label for="lot_lot_width">Ширина</label></td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                          <td class="text12"><%= input_text('lot','lot_width')%></td>
+			 </tr>
+	         <tr bgcolor="#ffffff">
+                   <td class="text12"><label for="lot[ground_id]">Тип грунта</label></td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td class="text12">
+                            <%= select('lot','ground_id',Ground.to_dropdown,{},{:id=>'lot[ground_id]',:style=>"width:100%",:size=>'3',:multiple=>'1'})%>
+                          </td>
+			  <td width="40%" bgcolor="#FCFCF1" class="help"></td>
+                        </tr>
+                        <tr bgcolor="#ffffff">
+                          <td></td><td></td>
+                          <td class="text12">Другое <%= input_text('lot','ground_another')%></td>
+                        </tr>
+		     <tr>
+                       <td class="text12"><label for="greens">Насаждения</label>
+                                   <input type="checkbox" name="greens" id="greens" style="display:none" />
+                       </td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td>
+			  
+			   <table cellpadding="0" cellspacing="0" width="100%">
+			    <tr>
+                            <% Green.find_all.in_groups_of(4) do |green|%>
+                            <td width="50%">
+                              <%= input_label(green[0].id,"green[]",green[0].green,"green_group") %><br/>
+                              <%= input_label(green[1].id,"green[]",green[1].green,"green_group") %><br/>
+                              <%= input_label(green[2].id,"green[]",green[2].green,"green_group") %><br/>
+                              <%= input_label(green[3].id,"green[]",green[3].green,"green_group") if green[3]%><br/>
+                            </td>
+                            <% end %>
+                          </tr>
+                        </table>
+			  </td>
+			  <td class="help" valign="top"></td>
+			 </tr>
+		     <tr>
+			  <td colspan="2" align="right">Другое</td>
+			  <td><input type="text" name="lot[green_another]" style="font-size:10px; width:100%" /></td>
+			 </tr>					 
+	         <tr bgcolor="#ffffff">
+                   <td class="text12" valign="top"><label for="buildings_all">Строения</label>
+                                   <input type="checkbox" name="buildings_all" id="buildings_all" style="display:none" />
+                   </td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td>
+                            <% for building in Building.find_all %>
+                            <%= input_label(building.id, "buildings[]",building.building,"buildings_group") %><br/>
+                          <% end %>
+			  </td>
+			  <td width="40%" bgcolor="#FCFCF1" class="help" valign="top"></td>
+			 </tr>		
+			 <tr bgcolor="#ffffff">
+			  <td colspan="2" align="right">Подробнее</td>
+			  <td><textarea style="width:100%" rows="3" name='lot[building_another]'></textarea></td>
+			  <td width="40%" bgcolor="#FCFCF1" class="help" valign="top"></td>				  
+			 </tr>					 
+             <tr> 
+               <td class="text12" valign="top"><label for="reliefs">Рельеф</label>
+                                   <input type="checkbox" name="reliefs" id="reliefs" style="display:none" />
+               </td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td>
+                            <% for relief in Relief.find_all %>
+                            <%= input_label(relief.id, "relief[]", relief.relief,"reliefs_group") %><br/>
+               <% end %>
+			  </td>
+			  <td class="help" valign="top"></td>
+			 </tr>
+			 <tr>
+			  <td colspan="2" align="right">Другое</td>
+			  <td><input type="text" name='lot[relief_another]' style="font-size:10px; width:100%" /></td>
+			 </tr>				
+	         <tr bgcolor="#ffffff">
+                   <td class="text12"><label for="lot[groundwater_level_id]">Уровень грунтовых вод</label></td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+                          <td class="text12">
+                            <%= select('lot','groundwater_level_id',GroundwaterLevel.to_dropdown,{},{:id=>'lot[groundwater_level_id]',:style=>"width:100%",:size=>'3'})%>
+                          </td>
+			  <td width="40%" class="help" bgcolor="#FCFCF1"></td>
+			 </tr>				  
+	         <tr>
+			  <td class="text12"><b>Шум на участке</b></td>
+			  <td valign="middle"><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td>
+			  </td>
+			  <td width="40%" class="help" valign="top"></td>
+			 </tr>	
+             <tr bgcolor="#ffffff"> 
+               <td class="subtext"><label for="lot[noise_id]">Уровень шума</label></td>
+			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td>
+                            <%= select('lot','noise_id',Noise.to_dropdown,{},{:id=>'lot[noise_id]',:style=>"width:100%"})%>
+ 			  </td>
+			  <td class="help" valign="top" bgcolor="#FCFCF1"></td>
+			 </tr>
+	         <tr bgcolor="#ffffff">
+			  <td class="subtext">Причина</td>
+			  <td valign="middle"><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+			  <td>
+                            <% for noise_source in NoiseSource.find_all %>
+                            <%= input_label(noise_source.id, "noise_source[]", noise_source.source) %><br/>
+                            <% end %>
+                          </td>
+                          <td width="40%" bgcolor="#FCFCF1" class="help" valign="top"></td>
+                        </tr>		
+                        <tr bgcolor="#ffffff">
+                          <td colspan="2" align="right">Другой шум</td>
+                          <td><input type="text" name="lot[noise_source_another]" style="font-size:10px; width:100%" /></td>
+                          <td width="40%" bgcolor="#FCFCF1" class="help" valign="top"></td>				  
+                        </tr>				 
+                        <tr> 
+                          <td class="text12" valign="top"><label for="build_objects[id]">Возле участка находится</label></td>
+                          <td valign="middle"><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
+                          <td>
+                            <%= select('build_objects','id',Buildobject.to_dropdown,{},{:id=>'build_objects[id]',:style=>"width:100%",:size=>'3',:multiple=>'1'})%>
+                          </td>
+                          <td class="help" valign="top"></td>
+                        </tr>				 		 				 		 
+                        <tr>
+                          <td colspan="2" align="right">Другое</td>
+                          <td><input type="text" name="lot[buildobjects_another]" style="font-size:10px; width:100%" /></td>
+                        </tr>
+                      </table> 		
+
+            <p class="pageheader" style="margin-bottom:5px;">ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ </p>
+			<table cellpadding="5" cellspacing="0" border="0" width="100%">
+			 <tr bgcolor="#ffffff">
+			  <td class="text12">
+			   <textarea style="width:100%" rows="5" name="lot[extra_info]"></textarea>
+			  </td>
+			  <td width="30%" bgcolor="#FCFCF1" class="help"></td>
+			 </tr>		
+			</table> 	
+
+			<table cellpadding="5" cellspacing="0" border="0" width="100%">
+			 <tr>
+                           <td align="center">
+                             <input type="checkbox" id="checkbox81" value="1" name="checkbox81"/>с <%= link_to("нашими принципами работы",{:controller=>'/page',:url=>'about',:active_tab=>'3',:anchor=>'ourwork'},:target=>'_blank') %> <label for="checkbox81">ознакомлен(а) и согласен(а)</label></td>
+			 </tr>
+			 <tr> 
+			  <td class="text12" width="100%" align="center"><br /><input type="submit" style="font-size:12px;" value="Сохранить и продолжить к Шагу 3" /></td>
+			 </tr>		
+                       </table> 								
+                       <%= end_form_tag %>
+		  </td>
+		 </tr>
+		</table>  
+		<img src="/images/empty.gif" width="1" height="7" border="0" alt="" />
+	   </td>
+	   <td><img src="/images/empty.gif" width="7" height="1" border="0" alt="" /></td>
+	  </tr>
+	 </table> 
+	</td>
+   </tr>
+  </table> 			
+<!--конец:основная часть-->	  
+
+<script type="text/javascript">
+  var oFieldValidator1 = new FieldValidator('lot_area', null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator2 = new FieldValidator('lot_square', 'Float', AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator3 = new FieldValidator('lot_square_for_building', 'Float', AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator4 = new FieldValidator('lot_price_per_square', 'Int', AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator5 = new FieldValidator('check1', null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator7 = new FieldValidator('lot_distance_to_city', 'Float', AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator8 = new FieldValidator('lot[lotroad_surface_id]', null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator9 = new FieldValidator('lot[lotroad_width_id]', null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator10 = new FieldValidator('lot[placement_id]', null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator11 = new FieldValidator('lot_lot_length', null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator12 = new FieldValidator('lot_lot_width', null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator13 = new FieldValidator('lot[ground_id]', null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator14 = new FieldValidator('lot[groundwater_level_id]', null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator22 = new FieldValidator("route_types", null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator23 = new FieldValidator("neighbour_types", null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator24 = new FieldValidator("nature_types", null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator25 = new FieldValidator("greens", null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator26 = new FieldValidator("buildings_all", null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator27 = new FieldValidator("reliefs", null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator28 = new FieldValidator("lot[lotroad_distance_id]", null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator29 = new FieldValidator('lot[lot_shape]', null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator30 = new FieldValidator("lot[gas_id]", null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator31 = new FieldValidator("lot[water_id]", null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator32 = new FieldValidator("lot[electricity_id]", null, AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator33 = new FieldValidator("lot[noise_id]", null ,AddToArrayIfNotValidated, SetFieldState)
+  var oFieldValidator34 = new FieldValidator("checkbox81", null, AddToArrayIfNotValidated, SetFieldState)
+  var aNotValidatedElements=new Array() // массив непроверенных элементов
+  var bIsAllValidated=true // по-умлочанию все валидные
+
+  oForm = document.getElementById("checkbox81").form
+  sEventType = "submit"
+  if( oForm.attachEvent ) oForm.attachEvent('on' + sEventType, TestOnSubmitEvent)
+  if( oForm.addEventListener ) oForm.addEventListener(sEventType, TestOnSubmitEvent, false)
+
+function SetFieldState()
+{
+  var sId = this.oFieldNode.getAttribute('id')
+    var aLabels = this.oFieldNode.form.getElementsByTagName('label')
+    for( var i=0; i<aLabels.length; i++ )
+    {
+      if( aLabels[i].htmlFor == sId )
+      {
+        aLabels[i].style.color = this.bValidated ? '' : 'red'
+          break
+      }
+    }
+}
+
+function AddToArrayIfNotValidated()
+{
+  if(!this.bValidated) 
+  {
+    aNotValidatedElements.push( this.oFieldNode )
+      bIsAllValidated = false
+  }
+  var sId = this.oFieldNode.getAttribute('id')
+    var aLabels = this.oFieldNode.form.getElementsByTagName('label')
+    for( var i=0; i<aLabels.length; i++ )
+    {
+      if( aLabels[i].htmlFor == sId )
+      {
+        aLabels[i].style.color = this.bValidated ? '' : 'red'
+          break
+      }
+    }
+}
+function TestOnSubmitEvent()
+{
+  var sResult=""
+    if ( !bIsAllValidated ) {
+      aNotValidatedElements[0].focus()
+        var aLabels = oForm.getElementsByTagName('label')
+        for( x in aNotValidatedElements ){
+          for( var i=0; i<aLabels.length; i++ )
+          {
+            if( aLabels[i].htmlFor == aNotValidatedElements[x].id )
+            {
+              sResult += "Заполните " + aLabels[i].innerHTML + "\n"
+                break
+            }
+          }
+        }
+      alert(sResult)
+        aNotValidatedElements = [] // очистим массив
+    }
+}
+</script>

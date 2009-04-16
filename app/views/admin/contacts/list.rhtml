@@ -1,0 +1,31 @@
+<% @page_title="История запросов" %>
+
+<% for contact in @contacts do %>
+<div class="feature">
+<table border="0">
+  <tr>
+    <td width="150">
+    <%= contact.created_on.strftime("%c") if contact.created_on %>
+    </td>
+  <td width="45%">
+    <%= contact.name %><br/> (
+    тел: 
+    <%= contact.phone %>,
+    email:
+    <%= mail_to contact.email %> )
+  </td>
+  <td width="15%">
+    участок #<%= link_to(contact.lot.id.to_s, 
+    {
+    :controller=>'/catalogue', 
+    :action=>'details',
+    :id=>contact.lot
+    },
+    :target=>'_blank') if contact.lot
+    %>
+  </td>
+  <%= nobr_td(link_to(icon('delete',"удалить"), {:action=>"delete", :id=>contact},:confirm=>'Хотите удалить запрос?'))%>
+</tr>
+</table>
+</div>
+<% end %>

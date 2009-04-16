@@ -1,0 +1,3 @@
+page.replace_html 'ajaxnotice', "Успешно сохранено"
+page.visual_effect :appear, 'ajaxnotice'
+page.visual_effect :fade, 'ajaxnotice', :duration => 5

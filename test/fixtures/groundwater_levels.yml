@@ -1,0 +1,19 @@
+# == Schema Information
+# Schema version: 45
+#
+# Table name: groundwater_levels
+#
+#  id    :integer(11)   not null, primary key
+#  level :string(200)   default(), not null
+#
+
+--- 
+groundwater_levels_001: 
+  level: "высокий (весной затапливается)"
+  id: "1"
+groundwater_levels_002: 
+  level: "средний (до 5 метров)"
+  id: "2"
+groundwater_levels_003: 
+  level: "низкий (более 5 метров)"
+  id: "3"

@@ -1,0 +1,14 @@
+﻿<map>
+ <point x="153" y="65" id="1" name="Кольцевая дорога" title="(ул. Богатырская)" image="map/kiev/obolon.jpg" image2="map/kiev/borispol_map.jpg"></point>
+ <point x="100" y="181" id="2" name="Кольцевая дорога" title="(Боярка поворот)" image="map/kiev/vishnevoe.jpg" image2="map/kiev/borispol_map.jpg"></point>
+ <point x="61" y="51" id="3" name="Кольцевая дорога" title="(ул. Городская - Гостомельское шоссе)" image="map/kiev/varshavka.jpg" image2="map/kiev/borispol_map.jpg"></point>
+ <point x="77" y="140" id="4" name="Кольцевая дорога" title="(“Дачная” автостанция)" image="map/kiev/dachnaya.jpg" image2="map/kiev/borispol_map.jpg"></point>
+ <point x="304" y="30" id="5" name="Кольцевая дорога" title="(Жулянский путепровод)" image="map/kiev/puteprovod.jpg" image2="map/kiev/borispol_map.jpg"></point>
+ <point x="150" y="219" id="7" name="Кольцевая дорога" title="(Одесский мост)" image="map/kiev/odesskoe.jpg" image2="map/kiev/borispol_map.jpg"></point>
+ <point x="110" y="181" id="8" name="Кольцевая дорога" title="(Софиевская Борщаговка поворот)" image="map/kiev/sofievka.jpg" image2="map/kiev/borispol_map.jpg"></point>
+ <point x="344" y="205" id="9" name="метро Харьковская" title="" image="map/kiev/borispol.jpg" image2="map/kiev/borispol_map.jpg"></point>
+ <point x="300" y="118" id="10" name="метро Лесная" title="" image="map/kiev/metrolesnaya.jpg" image2="map/kiev/borispol_map.jpg"></point>
+ <point x="200" y="252" id="11" name="Новообуховская трасса" title="(ул. Заболотного – Днепропетровское шоссе)" image="map/kiev/novoobuxov.jpg" image2="map/kiev/borispol_map.jpg"></point>
+ <point x="210" y="252" id="12" name="Старообуховская трасса" title="(ул. Заболотного – Столичное шоссе)" image="map/kiev/staroobuxov.jpg" image2="map/kiev/borispol_map.jpg"></point>
+ <point x="284" y="35" id="13" name="Узнать на Зазимъе какую точку" title="" image="map/kiev/troeshina.jpg" image2="map/kiev/borispol_map.jpg"></point>
+</map>

@@ -1,0 +1,13 @@
+--- 
+absent:
+  id: "1"
+  object: "отсутствует"
+well:
+  id: "2"
+  object: "есть колодец"
+skvazhina:
+  id: "3"
+  object: "есть скважина"
+central:
+  id: "4"
+  object: "есть централизованная"

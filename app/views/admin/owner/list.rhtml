@@ -1,0 +1,32 @@
+<% @page_title="Список хозяев"%>
+<table>
+  <tr>
+    <td></td>
+    <td class="header">Имя</td>
+    <td class="header">Участки</td>
+    <td class="header">Телефон</td>
+    <td class="header">Городской телефон</td>
+    <td class="header">Альтернативный контакт</td>
+    <td class="header">Телефон контакта</td>
+    <td />
+    <td />
+  </tr>
+  <% for owner in @owners do %>
+  <% owner_lots=owner.lots.collect{|lot| lot.id.to_s}%>
+  <tr>
+    <td><%= icon('admin') %></td>
+    <td><%= owner.fio %></td>
+    <td><% for lot in owner_lots %>
+      <%= link_to(lot, {:controller=>'/admin/catalogue', :action=>'edit', :id=>lot})%>
+      <%= "," unless lot==owner_lots.last %>
+      <% end %>
+    </td>
+    <td><%= owner.phone %></td>
+    <td><%= owner.phone_city %></td>
+    <td><%= owner.another_contact_fio %></td>
+    <td><%= owner.another_contact_phone %></td>
+    <%= nobr_td(link_to(icon('edit',"редактировать"), :action=>"edit", :id=>owner))%>
+    <%= nobr_td(link_to(icon('delete',"удалить"), {:action=>"delete", :id=>owner}, :confirm=>"Действительно хотите удалить владельца? Ему принадлежит #{owner_lots.length} участков: #{owner_lots.join(',')}"))%>
+  </tr>
+<% end %>
+</table>
