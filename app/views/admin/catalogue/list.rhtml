@@ -1,3 +1,4 @@
+<p><%= page_entries_info @lots %></p>
 <% for lot in @lots do %>
 <div class="feature">
 <table border="0">
@@ -13,3 +14,5 @@
 </table>
 </div>
 <% end %>
+
+<%= will_paginate @lots %>

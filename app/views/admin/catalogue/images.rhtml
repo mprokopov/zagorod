@@ -1,10 +1,10 @@
 <% @page_title="Редактирования изображений участка # #{@lot.id.to_s}" %>
-<%=  form_tag({},{:class=>'myform'}) %> 
+<%  form_tag({},{:class=>'myform'}) do %> 
 <table>
 <th>
 Изображений: <%= @lot.photos.count %>
 </th>
-<% @lot.photos.find_all(nil,'weight DESC').each do |@photo| %>
+<% @lot.photos.all(nil,'weight DESC').each do |@photo| %>
 <tr>
   <% checked=@lot.selected_photo_id == @photo.id %>
   <td width="10px"><%= radio_button_tag 'selected_photo_id',@photo.id.to_s, checked %></td>
@@ -18,8 +18,8 @@
 <% end %>
 </table>
 <%= submit_tag 'Сохранить изменения' %>
-<%= end_form_tag %>
-<%=  form_tag({:action=>'addimage',:id=>@lot},{:multipart=>true,:class=>'myform'}) %> 
+<% end %>
+<%  form_tag({:action=>'addimage',:id=>@lot},{:multipart=>true,:class=>'myform'}) do %> 
 <table>
 <tr>
 <td>
@@ -27,4 +27,4 @@
 <td> <%= file_column_field('newphoto','image') %>
 <%= submit_tag 'Отправить' %></td></tr>
 </table>
-<%= end_form_tag %>
+<% end %>

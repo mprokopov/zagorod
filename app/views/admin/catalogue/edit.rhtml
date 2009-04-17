@@ -34,7 +34,7 @@
 <label for="lot_water_id">Вода:</label> <%= f.select :water_id, Water.to_dropdown%>
 <h3>Сообщение с Киевом</h3>
 <% lot_route_types=@lot.routes.collect{ |route| route.route_type.id} %>
-<% for route_type in RouteType.find_all %>
+<% for route_type in RouteType.all %>
 <label for="route_type[<%=route_type.id.to_s%>]"><%= route_type.route %></label>
 <%= check_box_tag("route_type[]",route_type.id.to_s,lot_route_types.include?(route_type.id),{:id=>"route_type[#{route_type.id.to_s}]"}) %>
 <% if lot_route_types.include?(route_type.id) %>
@@ -42,7 +42,7 @@
 <% else %>
 <% selected=nil %>
 <% end %>
-<%= select_tag("route_distances[distance#{route_type.id.to_s}]", options_for_select(RouteDistance.find_all.collect{|rd| [rd.distance,rd.id]}, selected))%>
+<%= select_tag("route_distances[distance#{route_type.id.to_s}]", options_for_select(RouteDistance.all.collect{|rd| [rd.distance,rd.id]}, selected))%>
 <br/>
 <% end %>
 <h3>Инфраструктура</h3>
@@ -54,7 +54,7 @@
 <label for="lot_placement_another">Другое:</label> <%= f.text_field :placement_another %><br/>
 <h3>Соседи</h3>
 <% lot_neighbour_types=@lot.neighbours.collect{ |neighbour| neighbour.neighbour_type.id} %>
-<% for neighbour_type in NeighbourType.find_all %>
+<% for neighbour_type in NeighbourType.all %>
 <label for="neighbour[<%= neighbour_type.id.to_s%>]"><%= neighbour_type.neighbour %></label>
 <%= check_box_tag("neighbour_type[]",neighbour_type.id.to_s,lot_neighbour_types.include?(neighbour_type.id),:id=>"neighbour[#{neighbour_type.id.to_s}]") %>
 <% if lot_neighbour_types.include?(neighbour_type.id) %>
@@ -67,12 +67,12 @@
 <% else %>
 <% html_options[:style]='display:none' %>
 <% end %>
-<%= select_tag("neighbour_distance[distance#{neighbour_type.id.to_s}]", options_for_select(NeighbourDistance.find_all.collect{|nd| [nd.distance,nd.id]}, selected),html_options) %>
+<%= select_tag("neighbour_distance[distance#{neighbour_type.id.to_s}]", options_for_select(NeighbourDistance.all.collect{|nd| [nd.distance,nd.id]}, selected),html_options) %>
 <br/>
 <% end %>
 <h3>Пейзаж и окружение</h3>
 <% lot_nature_types=@lot.natures.collect{ |nature| nature.nature_type.id} %>
-<% for nature_type in NatureType.find_all %>
+<% for nature_type in NatureType.all %>
 <label for="nature_type[<%=nature_type.id.to_s%>]"><%= nature_type.nature %></label>
 <%= check_box_tag("nature_type[]",nature_type.id.to_s,lot_nature_types.include?(nature_type.id),{:id=>"nature_type[#{nature_type.id.to_s}]"}) %>
 <% if lot_nature_types.include?(nature_type.id) %>
@@ -85,7 +85,7 @@
 <% else %>
 <% html_options[:style]='display:none' %>
 <% end %>
-<%= select_tag("nature_distance[distance#{nature_type.id.to_s}]", options_for_select(NatureDistance.find_all.collect{|nd| [nd.distance,nd.id]}, selected),html_options) %>
+<%= select_tag("nature_distance[distance#{nature_type.id.to_s}]", options_for_select(NatureDistance.all.collect{|nd| [nd.distance,nd.id]}, selected),html_options) %>
 <br/>
 <% end %>
 <label for="lot_nature_types_another">Другое:</label> <%= f.text_field :nature_types_another %><br/>
@@ -98,17 +98,17 @@
 <label for="lot_ground_id">Тип грунта:</label> <%= f.select :ground_id,  Ground.to_dropdown %><br/>
 <label for="lot_ground_another">Другое:</label> <%= f.text_field :ground_another %><br/>
 <h3>Насаждения</h3>
-<% for green in Green.find_all %>
+<% for green in Green.all %>
 <label for="green[<%=green.id.to_s%>]"><%= green.green %></label><%= check_box_tag "greens[]",green.id.to_s, @lot.greens.include?(green),{:id=>"green[#{green.id.to_s}]"} %> <br/>
 <% end %>
 <h3>Строения</h3>
-<% for building in Building.find_all %>
+<% for building in Building.all %>
 <label for="building[<%= building.id.to_s%>]"><%= building.building %></label><%= check_box_tag "buildings[]",building.id.to_s, @lot.buildings.include?(building),:id=>"building[#{building.id.to_s}]" %> <br/>
 <% end %>
 <label for="lot_building_another">Другое:</label> <%= f.text_field :building_another %><br/>
 <label for="lot_green_another">Другие:</label> <%= f.text_field :green_another %><br/>
 <h3>Рельеф</h3>
-<% for relief in Relief.find_all %>
+<% for relief in Relief.all %>
 <label for="relief[<%= relief.id.to_s%>]"><%= relief.relief %></label><%= check_box_tag "relief[]",relief.id.to_s, @lot.reliefs.include?(relief),{:id=>"relief[#{relief.id.to_s}]"} %> <br/>
 <% end %>
 <label for="lot_relief_another">Другой:</label><%= f.text_field :relief_another %><br/>
@@ -116,12 +116,12 @@
 <label for="lot_groundwater_level_id">Уровень:</label> <%= f.select :groundwater_level_id,  GroundwaterLevel.to_dropdown %><br/>
 <h3>Шум</h3>
 <label for="lot_noise_id">Наличие шума:</label><%= f.select :noise_id,  Noise.to_dropdown %><br/>
-<% for lot_noise_source in NoiseSource.find_all %>
+<% for lot_noise_source in NoiseSource.all %>
 <label for="noise_source[<%= lot_noise_source.id.to_s%>]"><%= lot_noise_source.source %></label><%= check_box_tag "noise_source[]",lot_noise_source.id.to_s, @lot.noise_sources.include?(lot_noise_source),:id=>"noise_source[#{lot_noise_source.id.to_s}]" %><br/>
 <% end %>
 <label for="lot_noise_source_another">Другой источник:</label> <%= f.text_field :noise_source_another %><br/>
 <h3>Объекты возле участка</h3>
-<% for buildobject in Buildobject.find_all %>
+<% for buildobject in Buildobject.all %>
 <label for="buildobject[<%= buildobject.id.to_s%>]"><%= buildobject.name %></label><%= check_box_tag "build_objects[]",buildobject.id.to_s, @lot.buildobjects.include?(buildobject),:id=>"buildobject[#{buildobject.id.to_s}]" %> <br/>
 <% end %>
 <label for="lot_buildobjects_another">Другие:</label> <%= f.text_field :buildobjects_another %><br/>

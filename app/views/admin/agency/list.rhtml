@@ -1,4 +1,6 @@
 <% @page_title="Список агентств"%>
+<p><%= page_entries_info @agencies %></p>
+<% paginated_section @agencies do %>
 <table>
   <tr>
     <td></td>
@@ -28,3 +30,4 @@
   </tr>
 <% end %>
 </table>
+<% end %>

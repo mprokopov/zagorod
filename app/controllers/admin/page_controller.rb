@@ -28,7 +28,7 @@ class Admin::PageController < ApplicationController
   end
   
   def list
-    @pages=Page.find_all()
+    @pages=Page.all
   end
   
   def edit

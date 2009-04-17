@@ -16,21 +16,21 @@
 <body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff">
 <table width="100%">
     	<tr>
-    	   <td width="80%"><%= render_partial('admin/topbar')%></td>
+    	   <td width="80%"><%= render(:partial=>'admin/topbar')%></td>
         	<td align="right"><%= link_to(icon('admin')+"Logout #{session['user'].login}",:controller=>'/admin',:action=>'logout')%></td>
     	</tr>
 </table>
 <table border="0" cellpadding="0" width="100%" cellspacing="0">
  <tr>
-  <td valign="top" width="20%"><%= sidebar() %>	</td>
+  <td valign="top" width="20%"><%= render :partial => "sidebar" %>	</td>
 	  <td valign="top">
 	   <fieldset class="main">
     <legend><%= @page_title if @page_title%></legend>
-	   <% if @flash[:notice] %>
-	       <div id="notice"><%= image_tag('notice.gif', :align=>'absmiddle')+'&nbsp;'+@flash[:notice]%></div>
+	   <% if flash[:notice] %>
+	       <div id="notice"><%= image_tag('notice.gif', :align=>'absmiddle')+'&nbsp;'+flash[:notice]%></div>
 	   <% end %>
-   <% if @flash[:error] %>
-	       <div id="error"><%= image_tag('error.gif', :align=>'absmiddle')+'&nbsp;'+@flash[:error]%></div><br/>
+   <% if flash[:error] %>
+	       <div id="error"><%= image_tag('error.gif', :align=>'absmiddle')+'&nbsp;'+flash[:error]%></div><br/>
 	   <% end %>	   
       <div id="ajaxdiv">
             <%= @content_for_layout %>

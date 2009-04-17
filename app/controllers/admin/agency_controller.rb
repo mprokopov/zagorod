@@ -5,7 +5,7 @@ class Admin::AgencyController < ApplicationController
     redirect_to :action=>'list'
   end
   def list
-    @agencies=Agency.find(:all,:order=>'id DESC')
+    @agencies=Agency.paginate :page=>params[:page], :order=>'id DESC'
   end
   def edit
     if request.post?

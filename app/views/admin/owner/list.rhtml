@@ -1,4 +1,7 @@
 <% @page_title="Список хозяев"%>
+<% paginated_section @owners do %>
+  <br/><%= page_entries_info @owners %>
+
 <table>
   <tr>
     <td></td>
@@ -14,7 +17,7 @@
   <% for owner in @owners do %>
   <% owner_lots=owner.lots.collect{|lot| lot.id.to_s}%>
   <tr>
-    <td><%= icon('admin') %></td>
+    <td><%= icon('admin')+owner.id.to_s %></td>
     <td><%= owner.fio %></td>
     <td><% for lot in owner_lots %>
       <%= link_to(lot, {:controller=>'/admin/catalogue', :action=>'edit', :id=>lot})%>
@@ -30,3 +33,4 @@
   </tr>
 <% end %>
 </table>
+<% end %>

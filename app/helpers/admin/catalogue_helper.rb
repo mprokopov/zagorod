@@ -1,5 +1,5 @@
 module Admin::CatalogueHelper
   def sidebar
-    render_partial('sidebar')
+    render (:partial=>'sidebar')
   end
 end

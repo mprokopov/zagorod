@@ -102,6 +102,7 @@ class Lot < ActiveRecord::Base
   has_and_belongs_to_many :noise_sources
   has_and_belongs_to_many :buildobjects
   has_many :contact_requests
+  named_scope :active, :conditions=>{:is_reviewed=>true}
   def before_save
     self.full_price=self.price_per_square*self.square*100
   end

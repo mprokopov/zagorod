@@ -69,7 +69,7 @@ function calc_full_price(form)
              <table cellpadding="0" cellspacing="0" border="0" width="100%">
                <tr>
                  <td>
-                   <%=  form_tag({},{:multipart=>true}) %> 
+                   <%  form_tag({},{:multipart=>true}) do %> 
                    <%= hidden_field_tag('lot[owner_id]',@owner.id) if @owner %>
                    <%= hidden_field_tag('lot[agency_id]',@agency.id) if @agency %>
                    <input type="Checkbox" id="check1" /> <label for="check1" class="text12">Да, на этот участок имеются правоустанавливающие документы</label>. 
@@ -245,7 +245,7 @@ function calc_full_price(form)
                                  <td width="50%">Расстояние до остановки</td>
                                </tr>
 
-                               <% for route_type in RouteType.find_all do %>
+                               <% for route_type in RouteType.all do %>
                                <tr>
                                  <%= checkbox_label_in_td(route_type.id,"route_type[]",route_type.route,"route_type_group")%>
                                  <td width="50%">
@@ -304,7 +304,7 @@ function calc_full_price(form)
                                    </td>
 				  <td width="40%">Расстояние</td>
 				 </tr>
-                                 <% for neighbour_type in NeighbourType.find_all %>
+                                 <% for neighbour_type in NeighbourType.all %>
                                  <tr>
                                    <%= checkbox_label_in_td(neighbour_type.id,"neighbour_type[]",neighbour_type.neighbour,"neighbour_type_group") %>
                                    <td>
@@ -335,7 +335,7 @@ function calc_full_price(form)
 				 </tr>
                                       <!-- NATURE -->
                                       <% nature_distance=NatureDistance.to_dropdown%>
-                                      <% for nature_type in NatureType.find_all %>
+                                      <% for nature_type in NatureType.all %>
                                       <tr>
                                         <%=  td_input_label(nature_type.id,"nature_type[]",nature_type.nature,"nature_type_group")%>
                                         <td>
@@ -407,7 +407,7 @@ function calc_full_price(form)
 			  
 			   <table cellpadding="0" cellspacing="0" width="100%">
 			    <tr>
-                            <% Green.find_all.in_groups_of(4) do |green|%>
+                            <% Green.all.in_groups_of(4) do |green|%>
                             <td width="50%">
                               <%= input_label(green[0].id,"green[]",green[0].green,"green_group") %><br/>
                               <%= input_label(green[1].id,"green[]",green[1].green,"green_group") %><br/>
@@ -430,7 +430,7 @@ function calc_full_price(form)
                    </td>
 			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
 			  <td>
-                            <% for building in Building.find_all %>
+                            <% for building in Building.all %>
                             <%= input_label(building.id, "buildings[]",building.building,"buildings_group") %><br/>
                           <% end %>
 			  </td>
@@ -447,7 +447,7 @@ function calc_full_price(form)
                </td>
 			  <td valign="middle"><img src="/images/star.gif" width="11" height="11" border="0" alt="" /></td>
 			  <td>
-                            <% for relief in Relief.find_all %>
+                            <% for relief in Relief.all %>
                             <%= input_label(relief.id, "relief[]", relief.relief,"reliefs_group") %><br/>
                <% end %>
 			  </td>
@@ -484,7 +484,7 @@ function calc_full_price(form)
 			  <td class="subtext">Причина</td>
 			  <td valign="middle"><img src="/images/empty.gif" width="11" height="11" border="0" alt="" /></td>
 			  <td>
-                            <% for noise_source in NoiseSource.find_all %>
+                            <% for noise_source in NoiseSource.all %>
                             <%= input_label(noise_source.id, "noise_source[]", noise_source.source) %><br/>
                             <% end %>
                           </td>
@@ -528,7 +528,7 @@ function calc_full_price(form)
 			  <td class="text12" width="100%" align="center"><br /><input type="submit" style="font-size:12px;" value="Сохранить и продолжить к Шагу 3" /></td>
 			 </tr>		
                        </table> 								
-                       <%= end_form_tag %>
+                       <% end %>
 		  </td>
 		 </tr>
 		</table>  

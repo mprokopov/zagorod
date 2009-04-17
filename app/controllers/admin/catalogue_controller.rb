@@ -6,16 +6,16 @@ class Admin::CatalogueController < ApplicationController
   end
   def list
     @page_title="Список участков"
-    @lots=Lot.reviewed
+    @lots=Lot.reviewed.paginate :page=>params[:page]
   end
   def not_reviewed
     @page_title="Список непоказанных участков"
-    @lots=Lot.not_reviewed
+    @lots=Lot.not_reviewed.paginate :page=>params[:page]
     render :action=>'list'
   end
   def without_map
     @page_title="Список участков не на карте"
-    @lots=Lot.without_map
+    @lots=Lot.without_map.paginate :page=>params[:page]
     render :action=>'list'
   end
   def delete_image

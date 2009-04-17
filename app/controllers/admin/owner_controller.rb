@@ -5,7 +5,7 @@ class Admin::OwnerController < ApplicationController
     redirect_to :action=>'list'
   end
   def list
-    @owners=Owner.find(:all,:order=>'id DESC')
+    @owners=Owner.paginate(:page=>params[:page],:order=>'id DESC')
   end
   def edit
     if request.post?
