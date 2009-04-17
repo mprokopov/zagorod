@@ -34,7 +34,7 @@ class MapController < ApplicationController
       point_y>0
       is_reviewed=='1'
     end
-    @lots=Lot.find(
+    @lots=Lot.find(:all,
       :include=>['region', 'gas','electricity','water', 'lotroad_distance','departure'],
       :conditions=>@conditions.to_sql
     )

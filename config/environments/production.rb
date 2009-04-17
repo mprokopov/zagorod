@@ -21,7 +21,7 @@ config.action_mailer.raise_delivery_errors = false
 
 ADMIN_EMAIL="nexus@vsezagorod.com.ua,pd@vsezagorod.com.ua,pdmitrenko@it-link.com.ua"
 
-ActionMailer::Base.server_settings = {
+config.action_mailer.smtp_settings = {
   :address  => "localhost",
   :port  => 25, 
   :domain  => 'it-link.com.ua',

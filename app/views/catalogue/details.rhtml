@@ -293,7 +293,7 @@
 		   </td>
 		   <td><img src="/images/empty.gif" width="15" height="1" border="0" alt="" /></td>
                    <td valign="top">
-                     <% @lot.photos.find_all(nil,'weight DESC').each do |@photo| %>
+                     <% @lot.photos.find(:all,nil,'weight DESC').each do |@photo| %>
                      <%= link_to(image_tag(url_for_file_column('photo','image','thumb'),{:width=>'174', :height=>'121', :border=>'0',:class=>'preview'}),url_for_file_column('photo','image','large'),{:popup=>['preview','width=800,height=600']})%><br/><br/>
             <% end %>
 		   </td>

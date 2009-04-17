@@ -17,4 +17,23 @@ module CatalogueHelper
     def input_text(name)
         tag('input',{:type=>'text',:name=>name,:style=>'width:100%;',:id=>name})
     end
+    
+    def page_entries_info(collection, options = {})
+      entry_name = options[:entry_name] ||
+        (collection.empty?? 'entry' : collection.first.class.name.underscore.sub('_', ' '))
+      
+      if collection.total_pages < 2
+        case collection.size
+        when 0; "записей не найдено"
+        when 1; "<b>1</b> элемент"
+        else;   "<b>всего #{collection.size}</b> позиции"
+        end
+      else
+        %{позиции с <b>%d&nbsp;по&nbsp;%d</b> из <b>%d</b>} % [
+          collection.offset + 1,
+          collection.offset + collection.length,
+          collection.total_entries
+        ]
+      end
+    end
 end

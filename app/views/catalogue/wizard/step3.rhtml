@@ -38,7 +38,7 @@
                <tr>
                  <td>
                    <p class="pageheader" style="margin-bottom:5px;">ФОТОГРАФИИ ОБЪЕКТА</p>
-                    <%=  form_tag({},{:multipart=>true}) %> 
+                    <%   form_tag({},{:multipart=>true}) do %> 
                         <!-- обработка ошибок --> 
                         <% if @errors %>
                         <div class="subtext">
@@ -85,7 +85,7 @@
             			  <td></td>
             		 </tr>		
                    </table>
-                   <%= end_form_tag %>
+                   <% end %>
 
                  </td>
                </tr>

@@ -149,7 +149,7 @@ module SortHelper
   #   </th>
   #
   def sort_header_tag(column, options = {})
-    text = options.delete(:text) || Inflector::titleize(column.humanize)
+    text = options.delete(:text) || (column.humanize).titleize
     options[:title]= "Sort by #{text}" unless options[:title]
 
     key, order = session[@sort_name][:key], session[@sort_name][:order]

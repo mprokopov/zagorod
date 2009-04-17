@@ -1,7 +1,7 @@
 <% @page_title=@page.title%>
 	  <table cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr>
-              <%= render_partial('leftblock', @page) if @page.has_left_menu==1%>
+              <%= render(:partial=>'leftblock', :object=>@page) if @page.has_left_menu==1%>
 	    <td width="80%" valign="top">
 		
 		 <table cellpadding="8" cellspacing="0" border="0" width="100%">

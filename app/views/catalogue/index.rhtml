@@ -18,7 +18,8 @@
                     <td width="100%">
                       <table cellpadding="0" cellspacing="0" border="0" width="100%">
                         <tr>
-                          <td><span class="pageheader">РЕЗУЛЬТАТЫ ПОИСКА</span>&#160;&#160;&#160;<b><%= @lot_pages.current.first_item%>-<%= @lot_pages.current.last_item%></b> из <%= @lot_pages.item_count%></td>
+                          <td><span class="pageheader">РЕЗУЛЬТАТЫ ПОИСКА</span>&#160;&#160;&#160;
+                            <%= page_entries_info @lots %>
                           <td align="right" class="sorting">Сортировать: <%= sort_header_tag('region_id', :title => 'район') %>&#160;&#160;|&#160;&#160;<%= sort_header_tag('square', :title => 'площадь') %>&#160;&#160;|&#160;&#160;<%= sort_header_tag('price_per_square', :title => 'цена') %>&#160;&#160;|&#160;&#160;<%= sort_header_tag('distance_to_city', :title => 'расстояние') %></td>
                         </tr>
                       </table>  
@@ -29,10 +30,10 @@
                   <tr>
                     <td></td> 
                     <td>
-                      <%= render_partial_collection 'lot',@lots %>
+                      <%= render :partial=>'lot',:collection=>@lots %>
                       <br />
                       <!--пейджер-->
-                      <%= render_partial 'paginator', @lot_pages %>
+                        <%= will_paginate @lots, :next_label=>image_tag('/images/next.gif'), :previous_label=>image_tag('/images/prev.gif') %>
                       <!--конец:пейджер-->		 
                     </td>
                     <td></td> 

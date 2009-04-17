@@ -35,12 +35,19 @@ include SortHelper
 #     sort_init 'price_per_square'
      sort_init 'weights'
      sort_update 
-    @lot_pages, @lots=paginate(:lots,
+    # @lot_pages, @lots=paginate(:lots,
+      # :include=>['region', 'gas','electricity','water', 'lotroad_distance','departure','photos','natures'],
+      # :order=>sort_clause,
+      # :conditions=>@conditions.to_sql,
+      # :per_page=>5
+    # )
+
+    @lots = Lot.paginate(:page=>params[:page],
       :include=>['region', 'gas','electricity','water', 'lotroad_distance','departure','photos','natures'],
       :order=>sort_clause,
       :conditions=>@conditions.to_sql,
-      :per_page=>5
-    )
+      :per_page=>5)
+
 #    session[:search]=nil unless request.post?
   end
 ## фильтр по каталогу  
@@ -80,9 +87,9 @@ class SearchFilterParams
   attr :placement
   attr :point_x
   attr :point_y
-  def initialize(lparams={:id=>'',:region_id=>'0',:square=>'0',:price_per_square=>'0',:full_price=>'0',:distance_to_city=>'0',:placement=>'0',:point_x=>'0',:point_y=>'0'})
+  def initialize(lparams={:id=>'',:region_id=>['0'],:square=>'0',:price_per_square=>'0',:full_price=>'0',:distance_to_city=>'0',:placement=>'0',:point_x=>'0',:point_y=>'0'})
     @id=lparams[:id]
-    @region_id=lparams[:region_id].to_i
+    @region_id=lparams[:region_id].type == Array ?lparams[:region_id].first.to_i :  lparams[:region_id].to_i
     @square=lparams[:square].to_i
     @price_per_square=lparams[:price_per_square].to_i
     @full_price=lparams[:full_price].to_i

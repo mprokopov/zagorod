@@ -34,9 +34,9 @@
             <!-- обработка ошибок --> 
             <%= render :partial => '/catalogue/errors' %>
             <!-- /обработка --> 
-            <% if @flash[:notice] %>
+            <% if flash[:notice] %>
             <div class="notice">
-              <%= @flash[:notice]%> 
+              <%= flash[:notice]%> 
             </div>
             <% end %>
             <table cellpadding="0" cellspacing="0" border="0" width="100%">
@@ -48,7 +48,7 @@
 
                   <p class="pageheader" style="margin-bottom:5px;">КОНТАКТНАЯ ИНФОРМАЦИЯ</p>
                   <div id="owner" style="position: relative; display: <%= @agency?"none":"block"%>;">
-                    <%= form_tag %>
+                    <%  form_tag do %>
                     <table cellpadding="5" cellspacing="0" border="0" width="100%">
                       <tr bgcolor="#ffffff">
                         <td class="text12" width="30%"><label for="owner[fio]">Имя</label></td>
@@ -122,9 +122,9 @@
                     </tr>		
                   </table> 														
                   </div>
-                  <%= end_form_tag %>				
+                  <% end %>				
                   <div id="agent" style="position: relative; display: <%= @agency?"block":"none"%>;">
-                    <%= form_tag %>
+                    <% form_tag do %>
                     <table cellpadding="5" cellspacing="0" border="0" width="100%">
                       <tr bgcolor="#ffffff">
                         <td class="text12" width="30%"><label for="agency[fio]">Ваше имя</label></td>
@@ -173,7 +173,7 @@
 
                     </tr>		
                   </table> 														
-                    <%= end_form_tag %>				
+                    <% end %>				
                   </div>		
                 </td>
               </tr>

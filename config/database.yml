@@ -12,10 +12,10 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development:
   adapter: mysql
-  database: zagorod_development
-  username: zagorod
-  password: zagorod256
-  host: gate-vasil2
+  database: zagorod
+  username: root
+  password: 
+  host: localhost
   encoding: utf8  
 
 # Warning: The database defined as 'test' will be erased and
@@ -31,8 +31,8 @@ test:
 
 production:
   adapter: mysql
-  database: zagorod_development
+  database: zagorod
   username: zagorod
   password: zagorod256
-  host: gate-vasil2
+  host: localhost
   encoding: utf8  

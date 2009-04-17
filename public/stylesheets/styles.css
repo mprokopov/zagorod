@@ -102,3 +102,32 @@ hr.picbrowser{
 h1 {font-size: 1.5em; color:#981111; margin-top: 0.5em; margin-bottom: 0.5em;}
 h2 {font-size: 1em; color:#981111; margin-top: 0.5em; margin-bottom: 0.5em;}
 h3 {font-size: 1em; color:#59550D; margin-top: 0.5em; margin-bottom: 0.5em;font-weight:bold;}
+
+
+span.page {border:solid 1px #DEB6A6; width:16px; text-align:center; background:#ffffff;}
+.pagination a {border:solid 1px #DEB6A6;color:#981111; text-decoration:none; width:16px; height:16px;
+	padding: 2 6 2 6px;
+}
+
+.pagination a.prev_page, .pagination a.next_page {
+	border:0px;
+	color:#981111; 
+	text-decoration:none; 
+	width:16px; 
+	height:16px;
+}
+div.pagination {
+	text-align:center;
+}
+.pagination a img{
+	vertical-align:middle;
+	margin-top:-2px;
+}
+
+.pagination .disabled {display:none;}
+.pagination span.current {
+	border:solid 1px #981111; 
+	width:16px; text-align:center; 
+	background:#981111; color:#ffffff; font-weight:bold;
+	padding: 2 6 2 6px;
+	}

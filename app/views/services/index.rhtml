@@ -15,9 +15,9 @@
                      <%= @page.text %>
                      <% end %>
                      <!--
-                     <%= form_tag(:action=>'getcontacts')%>
+                     <% form_tag(:action=>'getcontacts') do %>
                      <%= text_field_tag 'id',"", {:size=>'5'} %><%= submit_tag 'Получить контактную информацию владельца' %>
-                     <%= end_form_tag%>
+                     <% end %>
                      -->
                      <img src="/images/empty.gif" width="1" height="7" border="0" alt="" />
                    </td>

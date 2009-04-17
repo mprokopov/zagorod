@@ -8,7 +8,7 @@
 		  <tr>
 		   <td></td>
 		   <td class="search">
-		   <%= form_tag() %>
+		   <% form_tag do %>
 # участка<br />
 <%= text_field('search','id',:size=>"10") %>
 <br /><img src="/images/empty.gif" width="1" height="5" border="0" alt="" /><br />
@@ -32,7 +32,7 @@
 <%= select('search','placement',Placement.to_dropdown,{},{:style=>"width:100%"})%>
 <br /><img src="/images/empty.gif" width="1" height="5" border="0" alt="" /><br />
 <div align="right"><%= submit_tag('Искать')%></div>
-<%= end_form_tag %>
+<% end %>
                    </td>
                    <td></td>		   
                  </tr>
