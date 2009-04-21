@@ -76,7 +76,11 @@ class SearchFilterParams
   attr :placement
   def initialize(lparams={:id=>'',:region_id=>'0',:square=>'0',:price_per_square=>'0',:full_price=>'0',:distance_to_city=>'0',:placement=>'0'})
     @id=lparams[:id]
+    begin
     @region_id=lparams[:region_id].to_i
+  rescue
+    @region_id=lparams[:region_id].first.to_i
+  end
     @square=lparams[:square].to_i
     @price_per_square=lparams[:price_per_square].to_i
     @full_price=lparams[:full_price].to_i
