@@ -4,6 +4,7 @@ require 'login_system'
 
 class ApplicationController < ActionController::Base
   include LoginSystem
+  before_filter :sape_init
   
   def collect_errors(object)
       @error_message=''
@@ -11,4 +12,8 @@ class ApplicationController < ActionController::Base
       @errors=object.errors.collect{|attr, msg| msg}
       flash[:error]=@error_message;
   end
+  
+  def sape_init
+    @sape = Sape.from_request('bb864d84ebe5fc2bcbbfc92f276a5569', request)
+  end  
 end
