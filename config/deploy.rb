@@ -1,5 +1,5 @@
 set :application, "zagorod"
-set :repository,  "nexus@colo2.it-link.com.ua:/home/nexus/repo/zagorod.git"
+set :repository,  "nexus@colo.it-premium.com.ua:/home/nexus/repo/zagorod.git"
 set :scm, :git
 set :branch, "master"
 ssh_options[:paranoid]=false
